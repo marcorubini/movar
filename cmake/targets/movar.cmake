@@ -1,0 +1,22 @@
+add_library(ml-movar INTERFACE)
+add_library(ml::movar ALIAS ml-movar)
+target_compile_features(ml-movar INTERFACE cxx_std_20)
+target_link_libraries(ml-movar INTERFACE ${BOOST_MP11_TARGET})
+
+if(ML_MOVAR_INCLUDES_WITH_SYSTEM)
+  target_include_directories(ml-movar SYSTEM INTERFACE include)
+else()
+  target_include_directories(ml-movar INTERFACE include)
+endif()
+
+if(ML_MOVAR_THROWING_CAST)
+target_compile_definitions(ml-movar INTERFACE -DML_MOVAR_THROWING_CAST=1)
+else()
+  target_compile_definitions(ml-movar INTERFACE -DML_MOVAR_THROWING_CAST=0)
+endif()
+
+if(ML_MOVAR_THROWING_ACCESS)
+  target_compile_definitions(ml-movar INTERFACE -DML_MOVAR_THROWING_ACCESS=1)
+else()
+  target_compile_definitions(ml-movar INTERFACE -DML_MOVAR_THROWING_ACCESS=0)
+endif()
