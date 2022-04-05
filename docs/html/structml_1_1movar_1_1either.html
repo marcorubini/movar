@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ml::movar::either class | MOVAR C++
+variant
+with
+monadic
+interface</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
+  <link rel="stylesheet" href="m-dark+documentation.compiled.css" />
+  <link rel="icon" href="favicon-dark.png" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#22272e" />
+</head>
+<body>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a href="index.html" id="m-navbar-brand" class="m-col-t-8 m-col-m-none m-left-m">MOVAR <span class="m-thin">C++
+variant
+with
+monadic
+interface</span></a>
+      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+        <a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path id="m-doc-search-icon-path" d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z"/>
+        </svg></a>
+        <a id="m-navbar-show" href="#navigation" title="Show navigation"></a>
+        <a id="m-navbar-hide" href="#" title="Hide navigation"></a>
+      </div>
+      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li><a href="pages.html">Pages</a></li>
+            <li><a href="modules.html">Modules</a></li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li><a href="annotated.html">Classes</a></li>
+            <li><a href="files.html">Files</a></li>
+            <li class="m-show-m"><a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path" />
+            </svg></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main><article>
+  <div class="m-container m-container-inflatable">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <h1>
+          <div class="m-doc-template">template&lt;class T1, class T2&gt;</div>
+          <span class="m-breadcrumb"><a href="namespaceml.html">ml</a>::<wbr/></span><span class="m-breadcrumb"><a href="namespaceml_1_1movar.html">movar</a>::<wbr/></span>either <span class="m-thin">class</span>
+        </h1>
+        <p>A variant type with two alternatives.</p>
+        <nav class="m-block m-default">
+          <h3>Contents</h3>
+          <ul>
+            <li>
+              Reference
+              <ul>
+                <li><a href="#typeless-methods">Constructors, destructors, conversion operators</a></li>
+                <li><a href="#pub-methods">Public functions</a></li>
+                <li><a href="#observers">Observers</a></li>
+                <li><a href="#getters">Getters</a></li>
+                <li><a href="#pipeline">Pipeline</a></li>
+                <li><a href="#friends">Friends</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+<p><a href="structml_1_1movar_1_1either.html" class="m-doc">ml::<wbr />movar::<wbr />either</a> is a Variant of size 2 that always has a value.</p>
+        <section id="typeless-methods">
+          <h2><a href="#typeless-methods">Constructors, destructors, conversion operators</a></h2>
+          <dl class="m-doc">
+            <dt id="a6e74df0931ffa32e13756a543713dde6">
+              <span class="m-doc-wrap-bumper"><a href="#a6e74df0931ffa32e13756a543713dde6" class="m-doc-self">either</a>(</span><span class="m-doc-wrap">) <span class="m-label m-flat m-info">defaulted</span> <span class="m-label m-flat m-primary">constexpr</span></span>
+            </dt>
+            <dd>default constructor</dd>
+            <dt id="a423f2e56f77a10554dbf1172e85afb64">
+              <span class="m-doc-wrap-bumper"><a href="#a423f2e56f77a10554dbf1172e85afb64" class="m-doc-self">either</a>(</span><span class="m-doc-wrap">T1 value) <span class="m-label m-flat m-primary">constexpr</span> <span class="m-label m-flat m-success">noexcept(…)</span></span>
+            </dt>
+            <dd>Move-constructs an instance of <em>T1</em>.</dd>
+            <dt id="a0dbf4efea6c175c894d731fad18fc2fd">
+              <span class="m-doc-wrap-bumper"><a href="#a0dbf4efea6c175c894d731fad18fc2fd" class="m-doc-self">either</a>(</span><span class="m-doc-wrap">T2 value) <span class="m-label m-flat m-primary">constexpr</span> <span class="m-label m-flat m-success">noexcept(…)</span></span>
+            </dt>
+            <dd>Move-constructs an instance of <em>T2</em>.</dd>
+          </dl>
+        </section>
+        <section id="pub-methods">
+          <h2><a href="#pub-methods">Public functions</a></h2>
+          <dl class="m-doc">
+            <dt id="a5b4c2175cf148968d706ab56a1edbb58">
+              <span class="m-doc-wrap-bumper">auto <a href="#a5b4c2175cf148968d706ab56a1edbb58" class="m-doc-self">operator==</a>(</span><span class="m-doc-wrap"><a href="structml_1_1movar_1_1either.html" class="m-doc">either</a> const&amp;) const -&gt; bool <span class="m-label m-flat m-info">defaulted</span></span>
+            </dt>
+            <dd>defaulf equality</dd>
+            <dt id="a8b9ecbe54869bec0aa25b8f0db8a2d55">
+              <span class="m-doc-wrap-bumper">auto <a href="#a8b9ecbe54869bec0aa25b8f0db8a2d55" class="m-doc-self">operator&lt;=&gt;</a>(</span><span class="m-doc-wrap"><a href="structml_1_1movar_1_1either.html" class="m-doc">either</a> const&amp;) const -&gt; auto <span class="m-label m-flat m-info">defaulted</span></span>
+            </dt>
+            <dd>default comparison</dd>
+          </dl>
+        </section>
+        <section id="observers">
+          <h2><a href="#observers">Observers</a></h2>
+          <dl class="m-doc">
+            <dt id="afc90161c5008fe756b4d3eb0d58af881">
+              <span class="m-doc-wrap-bumper">auto <a href="#afc90161c5008fe756b4d3eb0d58af881" class="m-doc-self">index</a>(</span><span class="m-doc-wrap">) const -&gt; long <span class="m-label m-flat m-primary">constexpr</span> <span class="m-label m-flat m-success">noexcept</span></span>
+            </dt>
+            <dd>Returns the active index.</dd>
+            <dt id="ad599c6230af91595fab18e1adbff1316">
+              <span class="m-doc-wrap-bumper">auto <a href="#ad599c6230af91595fab18e1adbff1316" class="m-doc-self">is_nothing</a>(</span><span class="m-doc-wrap">) const -&gt; bool <span class="m-label m-flat m-primary">constexpr</span> <span class="m-label m-flat m-success">noexcept</span></span>
+            </dt>
+            <dd>Returns false.</dd>
+            <dt id="ac576547644cf58fc96def76bc99922d0">
+              <span class="m-doc-wrap-bumper">auto <a href="#ac576547644cf58fc96def76bc99922d0" class="m-doc-self">is_something</a>(</span><span class="m-doc-wrap">) const -&gt; bool <span class="m-label m-flat m-primary">constexpr</span> <span class="m-label m-flat m-success">noexcept</span></span>
+            </dt>
+            <dd>Returns true.</dd>
+            <dt>
+              <div class="m-doc-template">template&lt;long Index&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a href="#a7ecc412256c70b2132d4053d109f171c" class="m-doc">is</a>(</span><span class="m-doc-wrap">) const -&gt; bool <span class="m-label m-flat m-primary">constexpr</span> <span class="m-label m-flat m-success">noexcept</span></span>
+            </dt>
+            <dd>Returns true if <em>Index</em> equals the active index.</dd>
+            <dt>
+              <div class="m-doc-template">template&lt;class T&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a href="#ab0f88c3e2a3464f54db1e0e527f80104" class="m-doc">is</a>(</span><span class="m-doc-wrap">) const -&gt; bool <span class="m-label m-flat m-primary">constexpr</span> <span class="m-label m-flat m-success">noexcept</span></span>
+            </dt>
+            <dd>Returns true if <em>T</em> equals the active type.</dd>
+          </dl>
+        </section>
+        <section id="getters">
+          <h2><a href="#getters">Getters</a></h2>
+          <dl class="m-doc">
+            <dt>
+              <div class="m-doc-template">template&lt;long Index&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a href="#a9ad46e06d12e34ac068b3d7c43a3d221" class="m-doc">get</a>(</span><span class="m-doc-wrap">) const &amp; -&gt; auto const&amp; <span class="m-label m-flat m-primary">constexpr</span> <span class="m-label m-flat m-success">noexcept</span></span>
+            </dt>
+            <dd>get with index (overload 1)</dd>
+            <dt>
+              <div class="m-doc-template">template&lt;long Index&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a href="#a525ee481ea495a3ad1481757d62d21bf" class="m-doc">get</a>(</span><span class="m-doc-wrap">) &amp; -&gt; auto&amp; <span class="m-label m-flat m-primary">constexpr</span> <span class="m-label m-flat m-success">noexcept</span></span>
+            </dt>
+            <dd>get with index (overload 2)</dd>
+            <dt>
+              <div class="m-doc-template">template&lt;long Index&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a href="#a11b9e5cd56b3378977924eefc7b85e18" class="m-doc">get</a>(</span><span class="m-doc-wrap">) &amp;&amp; -&gt; auto <span class="m-label m-flat m-primary">constexpr</span> <span class="m-label m-flat m-success">noexcept(…)</span></span>
+            </dt>
+            <dd>get with index (overload 3)</dd>
+            <dt>
+              <div class="m-doc-template">template&lt;class T&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a href="#a84efa6eb0e478381da5ae8bba91a2b67" class="m-doc">get</a>(</span><span class="m-doc-wrap">) const &amp; -&gt; T const&amp; <span class="m-label m-flat m-primary">constexpr</span> <span class="m-label m-flat m-success">noexcept</span></span>
+            </dt>
+            <dd>get with type (overload 1)</dd>
+            <dt>
+              <div class="m-doc-template">template&lt;class T&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a href="#a044a812dee94baaedfb66c4c1475eab8" class="m-doc">get</a>(</span><span class="m-doc-wrap">) &amp; -&gt; T&amp; <span class="m-label m-flat m-primary">constexpr</span> <span class="m-label m-flat m-success">noexcept</span></span>
+            </dt>
+            <dd>get with type (overload 2)</dd>
+            <dt>
+              <div class="m-doc-template">template&lt;class T&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a href="#af0df64f1679021e4a43003666bb4785b" class="m-doc">get</a>(</span><span class="m-doc-wrap">) &amp;&amp; -&gt; T <span class="m-label m-flat m-primary">constexpr</span> <span class="m-label m-flat m-success">noexcept(…)</span></span>
+            </dt>
+            <dd>get with type (overload 3)</dd>
+          </dl>
+        </section>
+        <section id="pipeline">
+          <h2><a href="#pipeline">Pipeline</a></h2>
+          <dl class="m-doc">
+            <dt id="adbc8a974e9f2a0056124871978e04ccf">
+              <div class="m-doc-template">template&lt;internal::movar::WeakVisitor&lt;<a href="structml_1_1movar_1_1either.html" class="m-doc">either</a> const&amp;&gt; Vis&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a href="#adbc8a974e9f2a0056124871978e04ccf" class="m-doc-self">map</a>(</span><span class="m-doc-wrap">Vis vis) const &amp; -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+            </dt>
+            <dd>see <a href="pipelines.html#pipelines-map" class="m-doc">pipelines documentation</a></dd>
+            <dt id="ac75b5be2de337b52f827c536ecd388be">
+              <div class="m-doc-template">template&lt;internal::movar::WeakVisitor&lt;<a href="structml_1_1movar_1_1either.html" class="m-doc">either</a> &amp;&amp; &gt; Vis&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a href="#ac75b5be2de337b52f827c536ecd388be" class="m-doc-self">map</a>(</span><span class="m-doc-wrap">Vis vis) &amp;&amp; -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+            </dt>
+            <dd>see <a href="pipelines.html#pipelines-map" class="m-doc">pipelines documentation</a></dd>
+            <dt id="ab15d03d3b3afe208fdc0c64c07a6ede0">
+              <div class="m-doc-template">template&lt;internal::movar::Visitor&lt;<a href="structml_1_1movar_1_1either.html" class="m-doc">either</a> const&amp;&gt; Vis&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a href="#ab15d03d3b3afe208fdc0c64c07a6ede0" class="m-doc-self">match</a>(</span><span class="m-doc-wrap">Vis vis) const &amp; -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+            </dt>
+            <dd>see <a href="pipelines.html#pipelines-match" class="m-doc">pipelines documentation</a></dd>
+            <dt id="aa046fc5dae6434e08e80985151f792df">
+              <div class="m-doc-template">template&lt;internal::movar::Visitor&lt;<a href="structml_1_1movar_1_1either.html" class="m-doc">either</a> &amp;&amp; &gt; Vis&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a href="#aa046fc5dae6434e08e80985151f792df" class="m-doc-self">match</a>(</span><span class="m-doc-wrap">Vis vis) &amp;&amp; -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+            </dt>
+            <dd>see <a href="pipelines.html#pipelines-match" class="m-doc">pipelines documentation</a></dd>
+            <dt id="a67575998e49fe669adbd6cc19eaefaf3">
+              <div class="m-doc-template">template&lt;internal::movar::WeakVisitor&lt;<a href="structml_1_1movar_1_1either.html" class="m-doc">either</a> const&amp;&gt; Vis, std::move_constructible Default&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a href="#a67575998e49fe669adbd6cc19eaefaf3" class="m-doc-self">map_or</a>(</span><span class="m-doc-wrap">Vis vis,
+              Default def) const &amp; -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+            </dt>
+            <dd>see <a href="pipelines.html#pipelines-map_or" class="m-doc">pipelines documentation</a></dd>
+            <dt id="a7ef75c4e9ee0b0eca6a29cffea7304f8">
+              <div class="m-doc-template">template&lt;internal::movar::WeakVisitor&lt;<a href="structml_1_1movar_1_1either.html" class="m-doc">either</a> &amp;&amp; &gt; Vis, std::move_constructible Default&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a href="#a7ef75c4e9ee0b0eca6a29cffea7304f8" class="m-doc-self">map_or</a>(</span><span class="m-doc-wrap">Vis vis,
+              Default def) &amp;&amp; -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+            </dt>
+            <dd>see <a href="pipelines.html#pipelines-map_or" class="m-doc">pipelines documentation</a></dd>
+            <dt id="abcb072de128461d360f7b91553fbfe40">
+              <div class="m-doc-template">template&lt;internal::movar::WeakVisitor&lt;<a href="structml_1_1movar_1_1either.html" class="m-doc">either</a> const&amp;&gt; Vis, internal::movar::Lazy Default&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a href="#abcb072de128461d360f7b91553fbfe40" class="m-doc-self">map_or_else</a>(</span><span class="m-doc-wrap">Vis vis,
+              Default def) const &amp; -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+            </dt>
+            <dd>see <a href="pipelines.html#pipelines-map_or_else" class="m-doc">pipelines documentation</a></dd>
+            <dt id="a756f01934fcf37fe08924741f89fb72c">
+              <div class="m-doc-template">template&lt;internal::movar::WeakVisitor&lt;<a href="structml_1_1movar_1_1either.html" class="m-doc">either</a> &amp;&amp; &gt; Vis, internal::movar::Lazy Default&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a href="#a756f01934fcf37fe08924741f89fb72c" class="m-doc-self">map_or_else</a>(</span><span class="m-doc-wrap">Vis vis,
+              Default def) &amp;&amp; -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+            </dt>
+            <dd>see <a href="pipelines.html#pipelines-map_or_else" class="m-doc">pipelines documentation</a></dd>
+            <dt id="a1a943c5bd4552fe963c80703b6d9734a">
+              <div class="m-doc-template">template&lt;internal::movar::Lazy Default&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a href="#a1a943c5bd4552fe963c80703b6d9734a" class="m-doc-self">or_else</a>(</span><span class="m-doc-wrap">Default def) const &amp; -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+            </dt>
+            <dd>see <a href="pipelines.html#pipelines-or_else" class="m-doc">pipelines documentation</a></dd>
+            <dt id="ab998e790ff529301062be23c6145fd84">
+              <div class="m-doc-template">template&lt;internal::movar::Lazy Default&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a href="#ab998e790ff529301062be23c6145fd84" class="m-doc-self">or_else</a>(</span><span class="m-doc-wrap">Default def) &amp;&amp; -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+            </dt>
+            <dd>see <a href="pipelines.html#pipelines-or_else" class="m-doc">pipelines documentation</a></dd>
+            <dt id="a6dab623fafb77477b5560b66a1f08b6b">
+              <span class="m-doc-wrap-bumper">auto <a href="#a6dab623fafb77477b5560b66a1f08b6b" class="m-doc-self">take</a>(</span><span class="m-doc-wrap">) -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+            </dt>
+            <dd>see <a href="pipelines.html#pipelines-take" class="m-doc">pipelines documentation</a></dd>
+          </dl>
+        </section>
+        <section id="friends">
+          <h2><a href="#friends">Friends</a></h2>
+          <dl class="m-doc">
+            <dt>
+              <div class="m-doc-template">template&lt;long Index&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a href="#a67536cc0e8a041806741b95220dd5442" class="m-doc">is</a>(</span><span class="m-doc-wrap"><a href="structml_1_1movar_1_1either.html" class="m-doc">either</a> const&amp; self) -&gt; bool <span class="m-label m-flat m-primary">constexpr</span> <span class="m-label m-flat m-success">noexcept</span></span>
+            </dt>
+            <dd>Returns true if <em>Index</em> equals the active index.</dd>
+            <dt>
+              <div class="m-doc-template">template&lt;class T&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a href="#a021343ca4c54d37c8e102cb5af94fa9f" class="m-doc">is</a>(</span><span class="m-doc-wrap"><a href="structml_1_1movar_1_1either.html" class="m-doc">either</a> const&amp; self) -&gt; bool <span class="m-label m-flat m-primary">constexpr</span> <span class="m-label m-flat m-success">noexcept</span></span>
+            </dt>
+            <dd>Returns true if <em>T</em> equals the active type.</dd>
+            <dt>
+              <div class="m-doc-template">template&lt;long Index, internal::movar::SameUnqual&lt;<a href="structml_1_1movar_1_1either.html" class="m-doc">either</a>&gt; Self&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a href="#acd91369713d227368381ce72c6292389" class="m-doc">get</a>(</span><span class="m-doc-wrap">Self&amp;&amp; self) -&gt; decltype(auto) <span class="m-label m-flat m-primary">constexpr</span> <span class="m-label m-flat m-success">noexcept(…)</span></span>
+            </dt>
+            <dd>get with Index</dd>
+            <dt>
+              <div class="m-doc-template">template&lt;class T, internal::movar::SameUnqual&lt;<a href="structml_1_1movar_1_1either.html" class="m-doc">either</a>&gt; Self&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a href="#af180e8de0d9aeb6815765ba41b039e2b" class="m-doc">get</a>(</span><span class="m-doc-wrap">Self&amp;&amp; self) -&gt; decltype(auto) <span class="m-label m-flat m-primary">constexpr</span> <span class="m-label m-flat m-success">noexcept(…)</span></span>
+            </dt>
+            <dd>get with type</dd>
+          </dl>
+        </section>
+        <section>
+          <h2>Function documentation</h2>
+          <section class="m-doc-details" id="a7ecc412256c70b2132d4053d109f171c"><div>
+            <h3>
+              <div class="m-doc-template">
+                template&lt;class T1, class T2&gt;
+                template&lt;long Index&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">bool ml::<wbr />movar::<wbr />either&lt;T1, T2&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a7ecc412256c70b2132d4053d109f171c" class="m-doc-self">is</a>(</span><span class="m-doc-wrap">) const <span class="m-label m-primary">constexpr</span> <span class="m-label m-success">noexcept</span></span></span>
+            </h3>
+            <p>Returns true if <em>Index</em> equals the active index.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Template parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">Index</td>
+                  <td>can be 0, 1 or -1</td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="ab0f88c3e2a3464f54db1e0e527f80104"><div>
+            <h3>
+              <div class="m-doc-template">
+                template&lt;class T1, class T2&gt;
+                template&lt;class T&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">bool ml::<wbr />movar::<wbr />either&lt;T1, T2&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ab0f88c3e2a3464f54db1e0e527f80104" class="m-doc-self">is</a>(</span><span class="m-doc-wrap">) const <span class="m-label m-primary">constexpr</span> <span class="m-label m-success">noexcept</span></span></span>
+            </h3>
+            <p>Returns true if <em>T</em> equals the active type.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Template parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">T</td>
+                  <td>can be T1, T2 or <a href="structml_1_1movar_1_1nothing.html" class="m-doc">ml::<wbr />movar::<wbr />nothing</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a9ad46e06d12e34ac068b3d7c43a3d221"><div>
+            <h3>
+              <div class="m-doc-template">
+                template&lt;class T1, class T2&gt;
+                template&lt;long Index&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">auto const&amp; ml::<wbr />movar::<wbr />either&lt;T1, T2&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a9ad46e06d12e34ac068b3d7c43a3d221" class="m-doc-self">get</a>(</span><span class="m-doc-wrap">) const &amp; <span class="m-label m-primary">constexpr</span> <span class="m-label m-success">noexcept</span></span></span>
+            </h3>
+            <p>get with index (overload 1)</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Template parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">Index</td>
+                  <td>can be 0 or 1</td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a525ee481ea495a3ad1481757d62d21bf"><div>
+            <h3>
+              <div class="m-doc-template">
+                template&lt;class T1, class T2&gt;
+                template&lt;long Index&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">auto&amp; ml::<wbr />movar::<wbr />either&lt;T1, T2&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a525ee481ea495a3ad1481757d62d21bf" class="m-doc-self">get</a>(</span><span class="m-doc-wrap">) &amp; <span class="m-label m-primary">constexpr</span> <span class="m-label m-success">noexcept</span></span></span>
+            </h3>
+            <p>get with index (overload 2)</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Template parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">Index</td>
+                  <td>can be 0 or 1</td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a11b9e5cd56b3378977924eefc7b85e18"><div>
+            <h3>
+              <div class="m-doc-template">
+                template&lt;class T1, class T2&gt;
+                template&lt;long Index&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">auto ml::<wbr />movar::<wbr />either&lt;T1, T2&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a11b9e5cd56b3378977924eefc7b85e18" class="m-doc-self">get</a>(</span><span class="m-doc-wrap">) &amp;&amp; <span class="m-label m-primary">constexpr</span> <span class="m-label m-success">noexcept(…)</span></span></span>
+            </h3>
+            <p>get with index (overload 3)</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Template parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">Index</td>
+                  <td>can be 0 or 1</td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a84efa6eb0e478381da5ae8bba91a2b67"><div>
+            <h3>
+              <div class="m-doc-template">
+                template&lt;class T1, class T2&gt;
+                template&lt;class T&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">T const&amp; ml::<wbr />movar::<wbr />either&lt;T1, T2&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a84efa6eb0e478381da5ae8bba91a2b67" class="m-doc-self">get</a>(</span><span class="m-doc-wrap">) const &amp; <span class="m-label m-primary">constexpr</span> <span class="m-label m-success">noexcept</span></span></span>
+            </h3>
+            <p>get with type (overload 1)</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Template parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">T</td>
+                  <td>can be <em>T1</em> or <em>T2</em></td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a044a812dee94baaedfb66c4c1475eab8"><div>
+            <h3>
+              <div class="m-doc-template">
+                template&lt;class T1, class T2&gt;
+                template&lt;class T&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">T&amp; ml::<wbr />movar::<wbr />either&lt;T1, T2&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a044a812dee94baaedfb66c4c1475eab8" class="m-doc-self">get</a>(</span><span class="m-doc-wrap">) &amp; <span class="m-label m-primary">constexpr</span> <span class="m-label m-success">noexcept</span></span></span>
+            </h3>
+            <p>get with type (overload 2)</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Template parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">T</td>
+                  <td>can be <em>T1</em> or <em>T2</em></td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="af0df64f1679021e4a43003666bb4785b"><div>
+            <h3>
+              <div class="m-doc-template">
+                template&lt;class T1, class T2&gt;
+                template&lt;class T&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">T ml::<wbr />movar::<wbr />either&lt;T1, T2&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#af0df64f1679021e4a43003666bb4785b" class="m-doc-self">get</a>(</span><span class="m-doc-wrap">) &amp;&amp; <span class="m-label m-primary">constexpr</span> <span class="m-label m-success">noexcept(…)</span></span></span>
+            </h3>
+            <p>get with type (overload 3)</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Template parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">T</td>
+                  <td>can be <em>T1</em> or <em>T2</em></td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a67536cc0e8a041806741b95220dd5442"><div>
+            <h3>
+              <div class="m-doc-template">
+                template&lt;class T1, class T2&gt;
+                template&lt;long Index&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">bool ml::<wbr />movar::<wbr />either&lt;T1, T2&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a67536cc0e8a041806741b95220dd5442" class="m-doc-self">is</a>(</span><span class="m-doc-wrap"><a href="structml_1_1movar_1_1either.html" class="m-doc">either</a> const&amp; self) <span class="m-label m-primary">constexpr</span> <span class="m-label m-success">noexcept</span></span></span>
+            </h3>
+            <p>Returns true if <em>Index</em> equals the active index.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Template parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">Index</td>
+                  <td>can be 0, 1 or -1</td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a021343ca4c54d37c8e102cb5af94fa9f"><div>
+            <h3>
+              <div class="m-doc-template">
+                template&lt;class T1, class T2&gt;
+                template&lt;class T&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">bool ml::<wbr />movar::<wbr />either&lt;T1, T2&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a021343ca4c54d37c8e102cb5af94fa9f" class="m-doc-self">is</a>(</span><span class="m-doc-wrap"><a href="structml_1_1movar_1_1either.html" class="m-doc">either</a> const&amp; self) <span class="m-label m-primary">constexpr</span> <span class="m-label m-success">noexcept</span></span></span>
+            </h3>
+            <p>Returns true if <em>T</em> equals the active type.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Template parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">T</td>
+                  <td>can be <em>T1</em>, <em>T2</em> or <a href="structml_1_1movar_1_1nothing.html" class="m-doc">ml::<wbr />movar::<wbr />nothing</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="acd91369713d227368381ce72c6292389"><div>
+            <h3>
+              <div class="m-doc-template">
+                template&lt;class T1, class T2&gt;
+                template&lt;long Index, internal::movar::SameUnqual&lt;<a href="structml_1_1movar_1_1either.html" class="m-doc">either</a>&gt; Self&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">decltype(auto) ml::<wbr />movar::<wbr />either&lt;T1, T2&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#acd91369713d227368381ce72c6292389" class="m-doc-self">get</a>(</span><span class="m-doc-wrap">Self&amp;&amp; self) <span class="m-label m-primary">constexpr</span> <span class="m-label m-success">noexcept(…)</span></span></span>
+            </h3>
+            <p>get with Index</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Template parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">Index</td>
+                  <td>can be 0, 1</td>
+                </tr>
+                <tr>
+                  <td>Self</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="af180e8de0d9aeb6815765ba41b039e2b"><div>
+            <h3>
+              <div class="m-doc-template">
+                template&lt;class T1, class T2&gt;
+                template&lt;class T, internal::movar::SameUnqual&lt;<a href="structml_1_1movar_1_1either.html" class="m-doc">either</a>&gt; Self&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">decltype(auto) ml::<wbr />movar::<wbr />either&lt;T1, T2&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#af180e8de0d9aeb6815765ba41b039e2b" class="m-doc-self">get</a>(</span><span class="m-doc-wrap">Self&amp;&amp; self) <span class="m-label m-primary">constexpr</span> <span class="m-label m-success">noexcept(…)</span></span></span>
+            </h3>
+            <p>get with type</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Template parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">T</td>
+                  <td>can be <em>T1</em> or <em>T2</em></td>
+                </tr>
+                <tr>
+                  <td>Self</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+        </section>
+      </div>
+    </div>
+  </div>
+</article></main>
+<div class="m-doc-search" id="search">
+  <a href="#!" onclick="return hideSearch()"></a>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-m-8 m-push-m-2">
+        <div class="m-doc-search-header m-text m-small">
+          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+          <div id="search-symbolcount">&hellip;</div>
+        </div>
+        <div class="m-doc-search-content">
+          <form>
+            <input type="search" name="q" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" autocomplete="off" spellcheck="false" />
+          </form>
+          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+          <div id="search-help" class="m-text m-dim m-text-center">
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">&darr;</span>
+            / <span class="m-label m-dim">&uarr;</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
+          </div>
+          <div id="search-notfound" class="m-text m-warning m-text-center">Sorry, nothing was found.</div>
+          <ul id="search-results"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="search-v2.js"></script>
+<script src="searchdata-v2.js" async="async"></script>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <p>MOVAR C++
+variant
+with
+monadic
+interface. Created with <a href="https://doxygen.org/">Doxygen</a> 1.9.3 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
+      </div>
+    </div>
+  </div>
+</nav></footer>
+</body>
+</html>

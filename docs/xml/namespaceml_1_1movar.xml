@@ -1,0 +1,606 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="namespaceml_1_1movar" kind="namespace" language="C++">
+    <compoundname>ml::movar</compoundname>
+    <innerclass refid="structml_1_1movar_1_1either" prot="public">ml::movar::either</innerclass>
+    <innerclass refid="structml_1_1movar_1_1filter" prot="public">ml::movar::filter</innerclass>
+    <innerclass refid="structml_1_1movar_1_1filter__type" prot="public">ml::movar::filter_type</innerclass>
+    <innerclass refid="structml_1_1movar_1_1fork" prot="public">ml::movar::fork</innerclass>
+    <innerclass refid="structml_1_1movar_1_1fork_3_01T1_01_4" prot="public">ml::movar::fork&lt; T1 &gt;</innerclass>
+    <innerclass refid="structml_1_1movar_1_1fork_3_01T1_00_01T2_01_4" prot="public">ml::movar::fork&lt; T1, T2 &gt;</innerclass>
+    <innerclass refid="structml_1_1movar_1_1just" prot="public">ml::movar::just</innerclass>
+    <innerclass refid="structml_1_1movar_1_1maybe" prot="public">ml::movar::maybe</innerclass>
+    <innerclass refid="structml_1_1movar_1_1nothing" prot="public">ml::movar::nothing</innerclass>
+    <innerclass refid="structml_1_1movar_1_1option" prot="public">ml::movar::option</innerclass>
+    <innerclass refid="structml_1_1movar_1_1sequence" prot="public">ml::movar::sequence</innerclass>
+    <innerclass refid="structml_1_1movar_1_1sequence_3_01T1_01_4" prot="public">ml::movar::sequence&lt; T1 &gt;</innerclass>
+    <innerclass refid="structml_1_1movar_1_1sequence_3_01T1_00_01T2_01_4" prot="public">ml::movar::sequence&lt; T1, T2 &gt;</innerclass>
+    <innerclass refid="structml_1_1movar_1_1sequence_3_4" prot="public">ml::movar::sequence&lt;&gt;</innerclass>
+    <innerclass refid="structml_1_1movar_1_1variant" prot="public">ml::movar::variant</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceml_1_1movar_1a04519f44f711a7473cc893ab79681aac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Predicate</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ml::movar::filter</definition>
+        <argsstring>(Predicate) -&gt; filter&lt; Predicate &gt;</argsstring>
+        <name>filter</name>
+        <qualifiedname>ml::movar::filter</qualifiedname>
+        <param>
+          <type>Predicate</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/pipe/filter.hpp" line="78" column="3" declfile="ml/movar/internal/pipe/filter.hpp" declline="78" declcolumn="3"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceml_1_1movar_1a87df131db5d2c040496d22221f791464" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ml::movar::fork</definition>
+        <argsstring>(T) -&gt; fork&lt; T &gt;</argsstring>
+        <name>fork</name>
+        <qualifiedname>ml::movar::fork</qualifiedname>
+        <param>
+          <type>T</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/pipe/fork.hpp" line="126" column="3" declfile="ml/movar/internal/pipe/fork.hpp" declline="126" declcolumn="3"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceml_1_1movar_1a5f8e1642cbd933f77942312507bb138c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T1</type>
+          </param>
+          <param>
+            <type>class T2</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ml::movar::fork</definition>
+        <argsstring>(T1, T2) -&gt; fork&lt; T1, T2 &gt;</argsstring>
+        <name>fork</name>
+        <qualifiedname>ml::movar::fork</qualifiedname>
+        <param>
+          <type>T1</type>
+        </param>
+        <param>
+          <type>T2</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/pipe/fork.hpp" line="129" column="3" declfile="ml/movar/internal/pipe/fork.hpp" declline="129" declcolumn="3"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceml_1_1movar_1afa63e5f19a2e753aeabb9c3a58c26a0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ml::movar::sequence</definition>
+        <argsstring>() -&gt; sequence&lt;&gt;</argsstring>
+        <name>sequence</name>
+        <qualifiedname>ml::movar::sequence</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/pipe/sequence.hpp" line="157" column="3" declfile="ml/movar/internal/pipe/sequence.hpp" declline="157" declcolumn="3"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceml_1_1movar_1a014e8b970c37cad44180143ea7be69a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ml::movar::sequence</definition>
+        <argsstring>(T) -&gt; sequence&lt; T &gt;</argsstring>
+        <name>sequence</name>
+        <qualifiedname>ml::movar::sequence</qualifiedname>
+        <param>
+          <type>T</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/pipe/sequence.hpp" line="160" column="3" declfile="ml/movar/internal/pipe/sequence.hpp" declline="160" declcolumn="3"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceml_1_1movar_1ab62b7f468a05ddadf4dbc16d84a16a51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T1</type>
+          </param>
+          <param>
+            <type>class T2</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ml::movar::sequence</definition>
+        <argsstring>(T1, T2) -&gt; sequence&lt; T1, T2 &gt;</argsstring>
+        <name>sequence</name>
+        <qualifiedname>ml::movar::sequence</qualifiedname>
+        <param>
+          <type>T1</type>
+        </param>
+        <param>
+          <type>T2</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/pipe/sequence.hpp" line="163" column="3" declfile="ml/movar/internal/pipe/sequence.hpp" declline="163" declcolumn="3"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceml_1_1movar_1a325fcc998a3898bc41f54d83f96a2ae8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T1</type>
+          </param>
+          <param>
+            <type>class T2</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ml::movar::either</definition>
+        <argsstring>(T1, T2) -&gt; either&lt; T1, T2 &gt;</argsstring>
+        <name>either</name>
+        <qualifiedname>ml::movar::either</qualifiedname>
+        <param>
+          <type>T1</type>
+        </param>
+        <param>
+          <type>T2</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/either.hpp" line="358" column="3" declfile="ml/movar/internal/type/either.hpp" declline="358" declcolumn="3"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceml_1_1movar_1a4f3c4c2e2b7b811f2b87e319b43d0cf7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T1</type>
+          </param>
+          <param>
+            <type>class T2</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ml::movar::either</definition>
+        <argsstring>(variant&lt; T1, T2 &gt;) -&gt; either&lt; T1, T2 &gt;</argsstring>
+        <name>either</name>
+        <qualifiedname>ml::movar::either</qualifiedname>
+        <param>
+          <type><ref refid="structml_1_1movar_1_1variant" kindref="compound">variant</ref>&lt; T1, T2 &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/either.hpp" line="361" column="3" declfile="ml/movar/internal/type/either.hpp" declline="361" declcolumn="3"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceml_1_1movar_1ad688be43b2c07ebabe06c52960f58543" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T1</type>
+          </param>
+          <param>
+            <type>class T2</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ml::movar::either</definition>
+        <argsstring>(maybe&lt; T1, T2 &gt;) -&gt; either&lt; T1, T2 &gt;</argsstring>
+        <name>either</name>
+        <qualifiedname>ml::movar::either</qualifiedname>
+        <param>
+          <type><ref refid="structml_1_1movar_1_1maybe" kindref="compound">maybe</ref>&lt; T1, T2 &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/either.hpp" line="364" column="3" declfile="ml/movar/internal/type/either.hpp" declline="364" declcolumn="3"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceml_1_1movar_1a65fa2f8f83a44ef28eb8852738b751b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ml::movar::just</definition>
+        <argsstring>(T) -&gt; just&lt; T &gt;</argsstring>
+        <name>just</name>
+        <qualifiedname>ml::movar::just</qualifiedname>
+        <param>
+          <type>T</type>
+        </param>
+    <requiresclause>(!Variant&lt;T&gt;)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="364" column="3" declfile="ml/movar/internal/type/just.hpp" declline="364" declcolumn="3"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceml_1_1movar_1acd2674e96e9ddc79a24713c8d163618f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ml::movar::just</definition>
+        <argsstring>(option&lt; T &gt;) -&gt; just&lt; T &gt;</argsstring>
+        <name>just</name>
+        <qualifiedname>ml::movar::just</qualifiedname>
+        <param>
+          <type><ref refid="structml_1_1movar_1_1option" kindref="compound">option</ref>&lt; T &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="368" column="3" declfile="ml/movar/internal/type/just.hpp" declline="368" declcolumn="3"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceml_1_1movar_1aeca84915fcc9c855fe4f6ce5480fba84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ml::movar::just</definition>
+        <argsstring>(variant&lt; T &gt;) -&gt; just&lt; T &gt;</argsstring>
+        <name>just</name>
+        <qualifiedname>ml::movar::just</qualifiedname>
+        <param>
+          <type><ref refid="structml_1_1movar_1_1variant" kindref="compound">variant</ref>&lt; T &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="371" column="3" declfile="ml/movar/internal/type/just.hpp" declline="371" declcolumn="3"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceml_1_1movar_1ae968bb6a983033fbfde0bee5a626c485" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ml::movar::just</definition>
+        <argsstring>(maybe&lt; T &gt;) -&gt; just&lt; T &gt;</argsstring>
+        <name>just</name>
+        <qualifiedname>ml::movar::just</qualifiedname>
+        <param>
+          <type><ref refid="structml_1_1movar_1_1maybe" kindref="compound">maybe</ref>&lt; T &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="374" column="3" declfile="ml/movar/internal/type/just.hpp" declline="374" declcolumn="3"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceml_1_1movar_1a7fd9a36bc06e946f1fc5ef14c1c43c9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ml::movar::maybe</definition>
+        <argsstring>(just&lt; T &gt;) -&gt; maybe&lt; T &gt;</argsstring>
+        <name>maybe</name>
+        <qualifiedname>ml::movar::maybe</qualifiedname>
+        <param>
+          <type><ref refid="structml_1_1movar_1_1just" kindref="compound">just</ref>&lt; T &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="358" column="3" declfile="ml/movar/internal/type/maybe.hpp" declline="358" declcolumn="3"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceml_1_1movar_1a2549af4bf959c781ac3e6f39d1cfd17b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T1</type>
+          </param>
+          <param>
+            <type>class T2</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ml::movar::maybe</definition>
+        <argsstring>(either&lt; T1, T2 &gt;) -&gt; maybe&lt; T1, T2 &gt;</argsstring>
+        <name>maybe</name>
+        <qualifiedname>ml::movar::maybe</qualifiedname>
+        <param>
+          <type><ref refid="structml_1_1movar_1_1either" kindref="compound">either</ref>&lt; T1, T2 &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="361" column="3" declfile="ml/movar/internal/type/maybe.hpp" declline="361" declcolumn="3"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceml_1_1movar_1ac3e077950406a2314c52f25a5d9d0b26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ml::movar::maybe</definition>
+        <argsstring>(variant&lt; Ts... &gt;) -&gt; maybe&lt; Ts... &gt;</argsstring>
+        <name>maybe</name>
+        <qualifiedname>ml::movar::maybe</qualifiedname>
+        <param>
+          <type><ref refid="structml_1_1movar_1_1variant" kindref="compound">variant</ref>&lt; Ts... &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="364" column="3" declfile="ml/movar/internal/type/maybe.hpp" declline="364" declcolumn="3"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceml_1_1movar_1af4a904fb5aeaa232386f7b21c4b99ef3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ml::movar::maybe</definition>
+        <argsstring>(option&lt; T &gt;) -&gt; maybe&lt; T &gt;</argsstring>
+        <name>maybe</name>
+        <qualifiedname>ml::movar::maybe</qualifiedname>
+        <param>
+          <type><ref refid="structml_1_1movar_1_1option" kindref="compound">option</ref>&lt; T &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="367" column="3" declfile="ml/movar/internal/type/maybe.hpp" declline="367" declcolumn="3"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceml_1_1movar_1a64f9d5c3630e3c87600954ccc259e28c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ml::movar::option</definition>
+        <argsstring>(T) -&gt; option&lt; T &gt;</argsstring>
+        <name>option</name>
+        <qualifiedname>ml::movar::option</qualifiedname>
+        <param>
+          <type>T</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="355" column="3" declfile="ml/movar/internal/type/option.hpp" declline="355" declcolumn="3"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceml_1_1movar_1a6562221fd8c3955b80c945726cc8a16f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ml::movar::option</definition>
+        <argsstring>(just&lt; T &gt;) -&gt; option&lt; T &gt;</argsstring>
+        <name>option</name>
+        <qualifiedname>ml::movar::option</qualifiedname>
+        <param>
+          <type><ref refid="structml_1_1movar_1_1just" kindref="compound">just</ref>&lt; T &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="358" column="3" declfile="ml/movar/internal/type/option.hpp" declline="358" declcolumn="3"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceml_1_1movar_1a94cfff03bd212bf60eec5762ea7894a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ml::movar::option</definition>
+        <argsstring>(maybe&lt; T &gt;) -&gt; option&lt; T &gt;</argsstring>
+        <name>option</name>
+        <qualifiedname>ml::movar::option</qualifiedname>
+        <param>
+          <type><ref refid="structml_1_1movar_1_1maybe" kindref="compound">maybe</ref>&lt; T &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="361" column="3" declfile="ml/movar/internal/type/option.hpp" declline="361" declcolumn="3"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceml_1_1movar_1a82e4690e9f6167a65ef359809670fca4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ml::movar::option</definition>
+        <argsstring>(variant&lt; T &gt;) -&gt; option&lt; T &gt;</argsstring>
+        <name>option</name>
+        <qualifiedname>ml::movar::option</qualifiedname>
+        <param>
+          <type><ref refid="structml_1_1movar_1_1variant" kindref="compound">variant</ref>&lt; T &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="364" column="3" declfile="ml/movar/internal/type/option.hpp" declline="364" declcolumn="3"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceml_1_1movar_1a66b15dcec8e126d099745d76a2b3985a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ml::movar::variant</definition>
+        <argsstring>(just&lt; T &gt;) -&gt; variant&lt; T &gt;</argsstring>
+        <name>variant</name>
+        <qualifiedname>ml::movar::variant</qualifiedname>
+        <param>
+          <type><ref refid="structml_1_1movar_1_1just" kindref="compound">just</ref>&lt; T &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/variant.hpp" line="339" column="3" declfile="ml/movar/internal/type/variant.hpp" declline="339" declcolumn="3"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceml_1_1movar_1a9ab52ccbdb92821d1789698e79400a16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T1</type>
+          </param>
+          <param>
+            <type>class T2</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ml::movar::variant</definition>
+        <argsstring>(either&lt; T1, T2 &gt;) -&gt; variant&lt; T1, T2 &gt;</argsstring>
+        <name>variant</name>
+        <qualifiedname>ml::movar::variant</qualifiedname>
+        <param>
+          <type><ref refid="structml_1_1movar_1_1either" kindref="compound">either</ref>&lt; T1, T2 &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/variant.hpp" line="342" column="3" declfile="ml/movar/internal/type/variant.hpp" declline="342" declcolumn="3"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceml_1_1movar_1ae349e088ee5dce6c2e4e9c306d0afa61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ml::movar::variant</definition>
+        <argsstring>(maybe&lt; Ts... &gt;) -&gt; variant&lt; Ts... &gt;</argsstring>
+        <name>variant</name>
+        <qualifiedname>ml::movar::variant</qualifiedname>
+        <param>
+          <type><ref refid="structml_1_1movar_1_1maybe" kindref="compound">maybe</ref>&lt; Ts... &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/variant.hpp" line="345" column="3" declfile="ml/movar/internal/type/variant.hpp" declline="345" declcolumn="3"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceml_1_1movar_1a69b2d3779ec4a7857b5f412417574f6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ml::movar::variant</definition>
+        <argsstring>(option&lt; T &gt;) -&gt; variant&lt; T &gt;</argsstring>
+        <name>variant</name>
+        <qualifiedname>ml::movar::variant</qualifiedname>
+        <param>
+          <type><ref refid="structml_1_1movar_1_1option" kindref="compound">option</ref>&lt; T &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/variant.hpp" line="348" column="3" declfile="ml/movar/internal/type/variant.hpp" declline="348" declcolumn="3"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Library namespace. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ml/movar/internal/pipe/filter.hpp" line="4" column="1"/>
+  </compounddef>
+</doxygen>

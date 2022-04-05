@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="pipelines" kind="page">
+    <compoundname>pipelines</compoundname>
+    <title>Pipelines</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="pipelines_1md__home_malorubi_projects_tmp_movar_build_docs_pipelines"/></para>
+<para>Pipelines allow to describe a sequence of operations on a variant type.</para>
+<para>Every pipeline operation returns an instance of one of:</para>
+<para><orderedlist>
+<listitem><para><ref refid="structml_1_1movar_1_1nothing" kindref="compound">ml::movar::nothing</ref></para>
+</listitem><listitem><para><ref refid="structml_1_1movar_1_1just" kindref="compound">ml::movar::just</ref></para>
+</listitem><listitem><para><ref refid="structml_1_1movar_1_1either" kindref="compound">ml::movar::either</ref></para>
+</listitem><listitem><para><ref refid="structml_1_1movar_1_1variant" kindref="compound">ml::movar::variant</ref></para>
+</listitem><listitem><para><ref refid="structml_1_1movar_1_1option" kindref="compound">ml::movar::option</ref></para>
+</listitem><listitem><para><ref refid="structml_1_1movar_1_1maybe" kindref="compound">ml::movar::maybe</ref></para>
+</listitem></orderedlist>
+</para>
+<para>All operations visit the variant so they must be invocable with every variant alternative.</para>
+<sect1 id="pipelines_1pipelines-map">
+<title>map</title>
+<para><programlisting filename=".cpp"><codeline><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>map(unary-invocable<sp/>fn);</highlight></codeline>
+</programlisting></para>
+<para><bold>fn</bold>: a transformation to apply to the active alternative. <verbatim>auto add_one = [](int x) { return x+1; };
+auto result = option(10).map(add_one);
+// the result type is deduced to be ml::movar::option&lt;int&gt;
+// the result value is 11
+</verbatim> If the variant has value <bold>x</bold>, returns <bold>fn</bold>( <bold>x</bold> ) Otherwise, returns <ref refid="structml_1_1movar_1_1nothing" kindref="compound">ml::movar::nothing</ref>.</para>
+</sect1>
+<sect1 id="pipelines_1pipelines-map_or">
+<title>map_or</title>
+<para><programlisting filename=".cpp"><codeline><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>map_or(unary-invocable<sp/>fn,<sp/>move-constructible<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting></para>
+<para><bold>fn</bold>: a transformation to apply to the active alternative.</para>
+<para><bold>default</bold>: a default value</para>
+<para>If the variant has value <bold>x</bold>, returns <bold>fn</bold>( <bold>x</bold> ) Otherwise, returns <bold>default</bold></para>
+<para><programlisting filename=".cpp"><codeline><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>add_one<sp/>=<sp/>[](</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x+1;<sp/>};</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>result<sp/>=<sp/>option&lt;int&gt;().map_or(add_one,<sp/>42);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>result<sp/>type<sp/>is<sp/>deduced<sp/>to<sp/>be<sp/>ml::movar::just&lt;int&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>result<sp/>value<sp/>is<sp/>42</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="pipelines_1pipelines-map_or_else">
+<title>map_or_else</title>
+<para><programlisting filename=".cpp"><codeline><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>map_or_else(unary-invocable<sp/>fn,<sp/>invocable<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting></para>
+<para><bold>fn</bold>: a transformation to apply to the active alternative.</para>
+<para><bold>default</bold>: a lazy default value</para>
+<para>If the variant has value <bold>x</bold>, returns <bold>fn</bold>( <bold>x</bold> ) Otherwise, returns <bold>defaut</bold>()</para>
+<para>This overload is similar to <bold>map_or</bold>, but the default value is computed lazily by invoking a function object.</para>
+<para><programlisting filename=".cpp"><codeline><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>add_one<sp/>=<sp/>[](</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x+1;<sp/>};</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lazy_42<sp/>=<sp/>[]()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>42;<sp/>};</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>result<sp/>=<sp/>option&lt;int&gt;().map_or_else(add_one,<sp/>lazy_42);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>result<sp/>type<sp/>is<sp/>deduced<sp/>to<sp/>be<sp/>ml::movar::just&lt;int&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>result<sp/>value<sp/>is<sp/>42</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="pipelines_1pipelines-or_else">
+<title>or_else</title>
+<para><verbatim>auto or_else(invocable default);
+</verbatim> <bold>default</bold>: a lazy default value</para>
+<para>If the variant has a value <bold>x</bold>, returns <bold>x</bold> Otherwise, returns <bold>default</bold>()</para>
+<para><programlisting filename=".cpp"><codeline><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lazy_42<sp/>=<sp/>[]()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>42;<sp/>};</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>result<sp/>=<sp/>option&lt;int&gt;().or_else(lazy_42);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>result<sp/>type<sp/>is<sp/>deduced<sp/>to<sp/>be<sp/>ml::movar::just&lt;int&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>result<sp/>value<sp/>is<sp/>42</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="pipelines_1pipelines-take">
+<title>take</title>
+<para><verbatim>auto take();
+</verbatim> This operation moves out the active variant alternative, leaving the variant in an undeterminate state.</para>
+<para>Use <bold>take</bold> to transform a variant that can be empty (like <ref refid="structml_1_1movar_1_1option" kindref="compound">ml::movar::option</ref> or <ref refid="structml_1_1movar_1_1maybe" kindref="compound">ml::movar::maybe</ref>) to a variant that is never empty.</para>
+<para><programlisting filename=".cpp"><codeline><highlight class="comment">//<sp/>result1<sp/>is<sp/>deduced<sp/>to<sp/>ml::movar::just&lt;int&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>resul1<sp/>=<sp/>option(10).take();<sp/></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>result2<sp/>is<sp/>deduced<sp/>to<sp/>ml::movar::variant&lt;int,<sp/>double&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>resul2<sp/>=<sp/>maybe&lt;int,<sp/>double&gt;(10.).take()<sp/></highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="pipelines_1pipelines-match">
+<title>match</title>
+<para><programlisting filename=".cpp"><codeline><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>match(unary-invocable<sp/>fn);</highlight></codeline>
+</programlisting></para>
+<para><bold>fn</bold>: a function object to invoke with the active alternative or <ref refid="structml_1_1movar_1_1nothing" kindref="compound">ml::movar::nothing</ref></para>
+<para><bold>match</bold> invokes fn with the active alternative and returns the result.</para>
+<para>Unlike <bold>map</bold>, <bold>match</bold> requires <bold>fn</bold> to handle the <ref refid="structml_1_1movar_1_1nothing" kindref="compound">ml::movar::nothing</ref> case. </para>
+</sect1>
+    </detaileddescription>
+    <location file="/home/malorubi/projects/tmp/movar/build/docs/pipelines.md"/>
+  </compounddef>
+</doxygen>

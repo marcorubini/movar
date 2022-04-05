@@ -1,0 +1,1058 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="structml_1_1movar_1_1just" kind="class" language="C++" prot="public">
+    <compoundname>ml::movar::just</compoundname>
+    <includes local="no">ml/movar/internal/type/just.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>class ValueType</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="user-defined">
+      <header>Observers</header>
+      <memberdef kind="function" id="structml_1_1movar_1_1just_1a12d5be0c2e2cece60460ffa412be84d7" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr long</type>
+        <definition>constexpr long ml::movar::just&lt; ValueType &gt;::index</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>index</name>
+        <qualifiedname>ml::movar::just::index</qualifiedname>
+        <briefdescription>
+<para>Returns 0. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="80" column="21" bodyfile="ml/movar/internal/type/just.hpp" bodystart="80" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1just_1a5f8aa4b52ca4515b07cd1d81553fd8c9" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr bool</type>
+        <definition>constexpr bool ml::movar::just&lt; ValueType &gt;::is_nothing</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>is_nothing</name>
+        <qualifiedname>ml::movar::just::is_nothing</qualifiedname>
+        <briefdescription>
+<para>Returns false. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="88" column="21" bodyfile="ml/movar/internal/type/just.hpp" bodystart="88" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1just_1a7523a3ecc4e5e365507abdea92111ea8" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr bool</type>
+        <definition>constexpr bool ml::movar::just&lt; ValueType &gt;::is_something</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>is_something</name>
+        <qualifiedname>ml::movar::just::is_something</qualifiedname>
+        <briefdescription>
+<para>Returns true. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="96" column="21" bodyfile="ml/movar/internal/type/just.hpp" bodystart="96" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1just_1aa9642649c724790b017af9f6d0a9578c" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>long</type>
+            <declname>Index</declname>
+            <defname>Index</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr bool</type>
+        <definition>constexpr bool ml::movar::just&lt; ValueType &gt;::is</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>is</name>
+        <qualifiedname>ml::movar::just::is</qualifiedname>
+    <requiresclause>(internal::movar::ContainsIndex&lt;just, Index&gt; || Index == -1)    </requiresclause>
+        <briefdescription>
+<para>Returns true if <emphasis>Index</emphasis> equals the active index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>can be 0 or -1 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="107" column="21" bodyfile="ml/movar/internal/type/just.hpp" bodystart="107" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1just_1a91b30cd7890f91b6f04862ff1639df14" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr bool</type>
+        <definition>constexpr bool ml::movar::just&lt; ValueType &gt;::is</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>is</name>
+        <qualifiedname>ml::movar::just::is</qualifiedname>
+    <requiresclause>(internal::movar::ContainsAlternative&lt;just, T&gt; || std::same_as&lt;T, nothing&gt;)    </requiresclause>
+        <briefdescription>
+<para>Returns true if <emphasis>T</emphasis> equals the active type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>can be ValueType or nothing </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="118" column="21" bodyfile="ml/movar/internal/type/just.hpp" bodystart="118" bodyend="121"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Getters</header>
+      <memberdef kind="function" id="structml_1_1movar_1_1just_1a88a42265cc9580bcbb6c2efe56369162" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" refqual="lvalue" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>long</type>
+            <declname>Index</declname>
+            <defname>Index</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr const_reference</type>
+        <definition>constexpr const_reference ml::movar::just&lt; ValueType &gt;::get</definition>
+        <argsstring>() const &amp;noexcept</argsstring>
+        <name>get</name>
+        <qualifiedname>ml::movar::just::get</qualifiedname>
+    <requiresclause>(internal::movar::ContainsIndex&lt;just, Index&gt;)    </requiresclause>
+        <briefdescription>
+<para>get with index (overload 1) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be 0 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="133" column="32" bodyfile="ml/movar/internal/type/just.hpp" bodystart="133" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1just_1aa277cece3db3f4e9ee9da00af166d01d" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" refqual="lvalue" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>long</type>
+            <declname>Index</declname>
+            <defname>Index</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr reference</type>
+        <definition>constexpr reference ml::movar::just&lt; ValueType &gt;::get</definition>
+        <argsstring>() &amp;noexcept</argsstring>
+        <name>get</name>
+        <qualifiedname>ml::movar::just::get</qualifiedname>
+    <requiresclause>(internal::movar::ContainsIndex&lt;just, Index&gt;)    </requiresclause>
+        <briefdescription>
+<para>get with index (overload 2) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be 0 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="144" column="26" bodyfile="ml/movar/internal/type/just.hpp" bodystart="144" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1just_1a4cbe4fd30b69b09d66fd31fc6b93596a" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" refqual="rvalue" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>long</type>
+            <declname>Index</declname>
+            <defname>Index</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr value_type</type>
+        <definition>constexpr value_type ml::movar::just&lt; ValueType &gt;::get</definition>
+        <argsstring>() &amp;&amp;noexcept(std::is_nothrow_move_constructible_v&lt; value_type &gt;)</argsstring>
+        <name>get</name>
+        <qualifiedname>ml::movar::just::get</qualifiedname>
+    <requiresclause>(internal::movar::ContainsIndex&lt;just, Index&gt;)    </requiresclause>
+        <briefdescription>
+<para>get with index (overload 3) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be 0 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="155" column="27" bodyfile="ml/movar/internal/type/just.hpp" bodystart="155" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1just_1aeb49354d3aeb5cf3f5d24b82ab2bff72" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" refqual="lvalue" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+            <defval>value_type</defval>
+          </param>
+        </templateparamlist>
+        <type>constexpr const_reference</type>
+        <definition>constexpr const_reference ml::movar::just&lt; ValueType &gt;::get</definition>
+        <argsstring>() const &amp;noexcept</argsstring>
+        <name>get</name>
+        <qualifiedname>ml::movar::just::get</qualifiedname>
+    <requiresclause>(ml::internal::movar::ContainsAlternative&lt;just, T&gt;)    </requiresclause>
+        <briefdescription>
+<para>get with type (overload 1) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be ValueType </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="167" column="32" bodyfile="ml/movar/internal/type/just.hpp" bodystart="167" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1just_1adfc414e4c19ccc4b462ab76e32bfed18" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" refqual="lvalue" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+            <defval>value_type</defval>
+          </param>
+        </templateparamlist>
+        <type>constexpr reference</type>
+        <definition>constexpr reference ml::movar::just&lt; ValueType &gt;::get</definition>
+        <argsstring>() &amp;noexcept</argsstring>
+        <name>get</name>
+        <qualifiedname>ml::movar::just::get</qualifiedname>
+    <requiresclause>(ml::internal::movar::ContainsAlternative&lt;just, T&gt;)    </requiresclause>
+        <briefdescription>
+<para>get with type (overload 2) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be ValueType </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="178" column="26" bodyfile="ml/movar/internal/type/just.hpp" bodystart="178" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1just_1a2767c65cbec5a68e83c4a55a808ade9b" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" refqual="rvalue" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+            <defval>value_type</defval>
+          </param>
+        </templateparamlist>
+        <type>constexpr value_type</type>
+        <definition>constexpr value_type ml::movar::just&lt; ValueType &gt;::get</definition>
+        <argsstring>() &amp;&amp;noexcept(std::is_nothrow_move_constructible_v&lt; value_type &gt;)</argsstring>
+        <name>get</name>
+        <qualifiedname>ml::movar::just::get</qualifiedname>
+    <requiresclause>(ml::internal::movar::ContainsAlternative&lt;just, T&gt;)    </requiresclause>
+        <briefdescription>
+<para>get with type (overload 3) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be ValueType </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="189" column="27" bodyfile="ml/movar/internal/type/just.hpp" bodystart="189" bodyend="193"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Pipeline</header>
+      <memberdef kind="function" id="structml_1_1movar_1_1just_1ad627f30f018de2ecaeb87f1c70964c91" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" refqual="lvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>internal::movar::WeakVisitor&lt; <ref refid="structml_1_1movar_1_1just" kindref="compound">just</ref> const &amp; &gt;</type>
+            <declname>Vis</declname>
+            <defname>Vis</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::just&lt; ValueType &gt;::map</definition>
+        <argsstring>(Vis vis) const &amp;</argsstring>
+        <name>map</name>
+        <qualifiedname>ml::movar::just::map</qualifiedname>
+        <param>
+          <type>Vis</type>
+          <declname>vis</declname>
+        </param>
+        <briefdescription>
+<para>see <ref refid="pipelines_1pipelines-map" kindref="member">pipelines documentation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="255" column="21" bodyfile="ml/movar/internal/type/just.hpp" bodystart="255" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1just_1a65423113067ead8f73c711cc714f020d" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" refqual="rvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>internal::movar::WeakVisitor&lt; <ref refid="structml_1_1movar_1_1just" kindref="compound">just</ref> &amp;&amp; &gt;</type>
+            <declname>Vis</declname>
+            <defname>Vis</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::just&lt; ValueType &gt;::map</definition>
+        <argsstring>(Vis vis) &amp;&amp;</argsstring>
+        <name>map</name>
+        <qualifiedname>ml::movar::just::map</qualifiedname>
+        <param>
+          <type>Vis</type>
+          <declname>vis</declname>
+        </param>
+        <briefdescription>
+<para>see <ref refid="pipelines_1pipelines-map" kindref="member">pipelines documentation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="264" column="21" bodyfile="ml/movar/internal/type/just.hpp" bodystart="264" bodyend="267"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1just_1a2327da00ba684998b5f5a58de73b140b" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" refqual="lvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>internal::movar::Visitor&lt; <ref refid="structml_1_1movar_1_1just" kindref="compound">just</ref> const &amp; &gt;</type>
+            <declname>Vis</declname>
+            <defname>Vis</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::just&lt; ValueType &gt;::match</definition>
+        <argsstring>(Vis vis) const &amp;</argsstring>
+        <name>match</name>
+        <qualifiedname>ml::movar::just::match</qualifiedname>
+        <param>
+          <type>Vis</type>
+          <declname>vis</declname>
+        </param>
+        <briefdescription>
+<para>see <ref refid="pipelines_1pipelines-match" kindref="member">pipelines documentation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="273" column="20" bodyfile="ml/movar/internal/type/just.hpp" bodystart="273" bodyend="276"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1just_1a56984d020fe36254c9a77007e9476123" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" refqual="rvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>internal::movar::Visitor&lt; <ref refid="structml_1_1movar_1_1just" kindref="compound">just</ref> &amp;&amp; &gt;</type>
+            <declname>Vis</declname>
+            <defname>Vis</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::just&lt; ValueType &gt;::match</definition>
+        <argsstring>(Vis vis) &amp;&amp;</argsstring>
+        <name>match</name>
+        <qualifiedname>ml::movar::just::match</qualifiedname>
+        <param>
+          <type>Vis</type>
+          <declname>vis</declname>
+        </param>
+        <briefdescription>
+<para>see <ref refid="pipelines_1pipelines-match" kindref="member">pipelines documentation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="282" column="20" bodyfile="ml/movar/internal/type/just.hpp" bodystart="282" bodyend="285"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1just_1ad6ede402c5fcf7e0f05a0b8015944c71" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" refqual="lvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>internal::movar::WeakVisitor&lt; <ref refid="structml_1_1movar_1_1just" kindref="compound">just</ref> const &amp; &gt;</type>
+            <declname>Vis</declname>
+            <defname>Vis</defname>
+          </param>
+          <param>
+            <type>std::move_constructible</type>
+            <declname>Default</declname>
+            <defname>Default</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::just&lt; ValueType &gt;::map_or</definition>
+        <argsstring>(Vis vis, Default def) const &amp;</argsstring>
+        <name>map_or</name>
+        <qualifiedname>ml::movar::just::map_or</qualifiedname>
+        <param>
+          <type>Vis</type>
+          <declname>vis</declname>
+        </param>
+        <param>
+          <type>Default</type>
+          <declname>def</declname>
+        </param>
+        <briefdescription>
+<para>see <ref refid="pipelines_1pipelines-map_or" kindref="member">pipelines documentation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="291" column="21" bodyfile="ml/movar/internal/type/just.hpp" bodystart="291" bodyend="294"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1just_1af8ae471725d509332ee82c3bd6b70be1" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" refqual="rvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>internal::movar::WeakVisitor&lt; <ref refid="structml_1_1movar_1_1just" kindref="compound">just</ref> &amp;&amp; &gt;</type>
+            <declname>Vis</declname>
+            <defname>Vis</defname>
+          </param>
+          <param>
+            <type>std::move_constructible</type>
+            <declname>Default</declname>
+            <defname>Default</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::just&lt; ValueType &gt;::map_or</definition>
+        <argsstring>(Vis vis, Default def) &amp;&amp;</argsstring>
+        <name>map_or</name>
+        <qualifiedname>ml::movar::just::map_or</qualifiedname>
+        <param>
+          <type>Vis</type>
+          <declname>vis</declname>
+        </param>
+        <param>
+          <type>Default</type>
+          <declname>def</declname>
+        </param>
+        <briefdescription>
+<para>see <ref refid="pipelines_1pipelines-map_or" kindref="member">pipelines documentation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="300" column="21" bodyfile="ml/movar/internal/type/just.hpp" bodystart="300" bodyend="303"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1just_1a5a3e699dc7ce24a37ba5f85c940ab90e" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" refqual="lvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>internal::movar::WeakVisitor&lt; <ref refid="structml_1_1movar_1_1just" kindref="compound">just</ref> const &amp; &gt;</type>
+            <declname>Vis</declname>
+            <defname>Vis</defname>
+          </param>
+          <param>
+            <type>internal::movar::Lazy</type>
+            <declname>Default</declname>
+            <defname>Default</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::just&lt; ValueType &gt;::map_or_else</definition>
+        <argsstring>(Vis vis, Default def) const &amp;</argsstring>
+        <name>map_or_else</name>
+        <qualifiedname>ml::movar::just::map_or_else</qualifiedname>
+        <param>
+          <type>Vis</type>
+          <declname>vis</declname>
+        </param>
+        <param>
+          <type>Default</type>
+          <declname>def</declname>
+        </param>
+        <briefdescription>
+<para>see <ref refid="pipelines_1pipelines-map_or_else" kindref="member">pipelines documentation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="309" column="21" bodyfile="ml/movar/internal/type/just.hpp" bodystart="309" bodyend="312"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1just_1ac4ad52af4286a41c829895c22333f7b1" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" refqual="rvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>internal::movar::WeakVisitor&lt; <ref refid="structml_1_1movar_1_1just" kindref="compound">just</ref> &amp;&amp; &gt;</type>
+            <declname>Vis</declname>
+            <defname>Vis</defname>
+          </param>
+          <param>
+            <type>internal::movar::Lazy</type>
+            <declname>Default</declname>
+            <defname>Default</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::just&lt; ValueType &gt;::map_or_else</definition>
+        <argsstring>(Vis vis, Default def) &amp;&amp;</argsstring>
+        <name>map_or_else</name>
+        <qualifiedname>ml::movar::just::map_or_else</qualifiedname>
+        <param>
+          <type>Vis</type>
+          <declname>vis</declname>
+        </param>
+        <param>
+          <type>Default</type>
+          <declname>def</declname>
+        </param>
+        <briefdescription>
+<para>see <ref refid="pipelines_1pipelines-map_or_else" kindref="member">pipelines documentation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="318" column="21" bodyfile="ml/movar/internal/type/just.hpp" bodystart="318" bodyend="321"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1just_1abf3caeb22efa5234f4378ea23372c93c" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" refqual="lvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>internal::movar::Lazy</type>
+            <declname>Default</declname>
+            <defname>Default</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::just&lt; ValueType &gt;::or_else</definition>
+        <argsstring>(Default def) const &amp;</argsstring>
+        <name>or_else</name>
+        <qualifiedname>ml::movar::just::or_else</qualifiedname>
+        <param>
+          <type>Default</type>
+          <declname>def</declname>
+        </param>
+        <briefdescription>
+<para>see <ref refid="pipelines_1pipelines-or_else" kindref="member">pipelines documentation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="327" column="21" bodyfile="ml/movar/internal/type/just.hpp" bodystart="327" bodyend="330"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1just_1aede4e3e6c02d068a0374a7a1ed9292ca" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" refqual="rvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>internal::movar::Lazy</type>
+            <declname>Default</declname>
+            <defname>Default</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::just&lt; ValueType &gt;::or_else</definition>
+        <argsstring>(Default def) &amp;&amp;</argsstring>
+        <name>or_else</name>
+        <qualifiedname>ml::movar::just::or_else</qualifiedname>
+        <param>
+          <type>Default</type>
+          <declname>def</declname>
+        </param>
+        <briefdescription>
+<para>see <ref refid="pipelines_1pipelines-or_else" kindref="member">pipelines documentation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="336" column="21" bodyfile="ml/movar/internal/type/just.hpp" bodystart="336" bodyend="339"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1just_1a050df688f41243a9155ede3f7919b6d7" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::just&lt; ValueType &gt;::take</definition>
+        <argsstring>()</argsstring>
+        <name>take</name>
+        <qualifiedname>ml::movar::just::take</qualifiedname>
+        <briefdescription>
+<para>see <ref refid="pipelines_1pipelines-take" kindref="member">pipelines documentation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="344" column="21" bodyfile="ml/movar/internal/type/just.hpp" bodystart="344" bodyend="347"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Friends</header>
+      <memberdef kind="friend" id="structml_1_1movar_1_1just_1a801f484360bd24b1c7ccc7deb57c7a57" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>long</type>
+            <declname>Index</declname>
+            <defname>Index</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr bool</type>
+        <definition>constexpr bool is</definition>
+        <argsstring>(just const &amp;self) noexcept</argsstring>
+        <name>is</name>
+        <qualifiedname>ml::movar::just::is</qualifiedname>
+        <param>
+          <type><ref refid="structml_1_1movar_1_1just" kindref="compound">just</ref> const &amp;</type>
+          <declname>self</declname>
+        </param>
+    <requiresclause>(internal::movar::ContainsIndex&lt;just, Index&gt; || Index == -1)    </requiresclause>
+        <briefdescription>
+<para>Returns true if <emphasis>Index</emphasis> equals the active index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="205" column="28" bodyfile="ml/movar/internal/type/just.hpp" bodystart="205" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="friend" id="structml_1_1movar_1_1just_1af5c82b7d8a437302ba9a358b3429db57" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr bool</type>
+        <definition>constexpr bool is</definition>
+        <argsstring>(just const &amp;self) noexcept</argsstring>
+        <name>is</name>
+        <qualifiedname>ml::movar::just::is</qualifiedname>
+        <param>
+          <type><ref refid="structml_1_1movar_1_1just" kindref="compound">just</ref> const &amp;</type>
+          <declname>self</declname>
+        </param>
+    <requiresclause>(internal::movar::ContainsAlternative&lt;just, T&gt; || std::same_as&lt;T, nothing&gt;)    </requiresclause>
+        <briefdescription>
+<para>Returns true if <emphasis>T</emphasis> equals the active type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="216" column="28" bodyfile="ml/movar/internal/type/just.hpp" bodystart="216" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="friend" id="structml_1_1movar_1_1just_1a28ad67e2000f364ffb12a4079c30cbbb" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>long</type>
+            <declname>Index</declname>
+            <defname>Index</defname>
+          </param>
+          <param>
+            <type>internal::movar::SameUnqual&lt; <ref refid="structml_1_1movar_1_1just" kindref="compound">just</ref> &gt;</type>
+            <declname>Self</declname>
+            <defname>Self</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr decltype(auto)</type>
+        <definition>constexpr decltype(auto) get</definition>
+        <argsstring>(Self &amp;&amp;self) noexcept(noexcept(std::forward&lt; Self &gt;(self).template get&lt; Index &gt;()))</argsstring>
+        <name>get</name>
+        <qualifiedname>ml::movar::just::get</qualifiedname>
+        <param>
+          <type>Self &amp;&amp;</type>
+          <declname>self</declname>
+        </param>
+    <requiresclause>(internal::movar::ContainsIndex&lt;just, Index&gt;)    </requiresclause>
+        <briefdescription>
+<para>get with Index </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be 0 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="228" column="33" bodyfile="ml/movar/internal/type/just.hpp" bodystart="228" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="friend" id="structml_1_1movar_1_1just_1a0472a46ae6497ade1ebdda3556d5ce90" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+          <param>
+            <type>internal::movar::SameUnqual&lt; <ref refid="structml_1_1movar_1_1just" kindref="compound">just</ref> &gt;</type>
+            <declname>Self</declname>
+            <defname>Self</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr decltype(auto)</type>
+        <definition>constexpr decltype(auto) get</definition>
+        <argsstring>(Self &amp;&amp;self) noexcept(noexcept(std::forward&lt; Self &gt;(self).template get&lt; T &gt;()))</argsstring>
+        <name>get</name>
+        <qualifiedname>ml::movar::just::get</qualifiedname>
+        <param>
+          <type>Self &amp;&amp;</type>
+          <declname>self</declname>
+        </param>
+    <requiresclause>(internal::movar::ContainsAlternative&lt;just, T&gt;)    </requiresclause>
+        <briefdescription>
+<para>get with type </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be ValueType </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="241" column="33" bodyfile="ml/movar/internal/type/just.hpp" bodystart="241" bodyend="245"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structml_1_1movar_1_1just_1ac077a27fb54c3328dcb1516862bb7409" prot="public" static="no">
+        <type>ValueType</type>
+        <definition>using ml::movar::just&lt; ValueType &gt;::value_type =  ValueType</definition>
+        <argsstring></argsstring>
+        <name>value_type</name>
+        <qualifiedname>ml::movar::just::value_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="23" column="5" bodyfile="ml/movar/internal/type/just.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structml_1_1movar_1_1just_1a094887e243c7256c1523552680d463a5" prot="public" static="no">
+        <type>value_type &amp;</type>
+        <definition>using ml::movar::just&lt; ValueType &gt;::reference =  value_type&amp;</definition>
+        <argsstring></argsstring>
+        <name>reference</name>
+        <qualifiedname>ml::movar::just::reference</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="24" column="5" bodyfile="ml/movar/internal/type/just.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structml_1_1movar_1_1just_1a66ce0ab9d998fd5931d72df5c600a0a0" prot="public" static="no">
+        <type>value_type const  &amp;</type>
+        <definition>using ml::movar::just&lt; ValueType &gt;::const_reference =  value_type const&amp;</definition>
+        <argsstring></argsstring>
+        <name>const_reference</name>
+        <qualifiedname>ml::movar::just::const_reference</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="25" column="5" bodyfile="ml/movar/internal/type/just.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structml_1_1movar_1_1just_1a28203ccc65570e44dbbdbc2f7214d5da" prot="public" static="no" mutable="no">
+        <type>ValueType</type>
+        <definition>ValueType ml::movar::just&lt; ValueType &gt;::_value</definition>
+        <argsstring></argsstring>
+        <name>_value</name>
+        <qualifiedname>ml::movar::just::_value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="27" column="15" bodyfile="ml/movar/internal/type/just.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structml_1_1movar_1_1just_1a49b6a9fa5df8d6ce75119a3d4ec15237" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr ml::movar::just&lt; ValueType &gt;::just</definition>
+        <argsstring>()=default</argsstring>
+        <name>just</name>
+        <qualifiedname>ml::movar::just::just</qualifiedname>
+        <briefdescription>
+<para>default constructor </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="32" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1just_1a63cc7721d13863b277b3e71e6c9908ce" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr ml::movar::just&lt; ValueType &gt;::just</definition>
+        <argsstring>(ValueType value) noexcept(std::is_nothrow_move_constructible_v&lt; value_type &gt;)</argsstring>
+        <name>just</name>
+        <qualifiedname>ml::movar::just::just</qualifiedname>
+        <param>
+          <type>ValueType</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Move-constructs ValueType. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="37" column="15" bodyfile="ml/movar/internal/type/just.hpp" bodystart="37" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1just_1a316ec08dc4e7462a9946f65b641426b9" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>internal::movar::DiffUnqual&lt; <ref refid="structml_1_1movar_1_1just" kindref="compound">just</ref> &gt;</type>
+            <declname>Other</declname>
+            <defname>Other</defname>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ml::movar::just&lt; ValueType &gt;::explicit</definition>
+        <argsstring>(!internal::movar::can_implicit_cast&lt; Other, just &gt;) const expr just(Other other) noexcept(noexcept(just(internal::movar::impl::cast&lt; just &gt;(std::move(other)))))</argsstring>
+        <name>explicit</name>
+        <qualifiedname>ml::movar::just::explicit</qualifiedname>
+        <param>
+          <type>!internal::movar::can_implicit_cast&lt; Other, <ref refid="structml_1_1movar_1_1just" kindref="compound">just</ref> &gt;</type>
+        </param>
+    <requiresclause>(internal::movar::can_explicit_cast&lt;Other, just&gt;)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="44" column="5" bodyfile="ml/movar/internal/type/just.hpp" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1just_1a1784e20ac1ea623df1100a96a19f5dbd" prot="public" static="no" constexpr="yes" const="yes" explicit="yes" inline="yes" refqual="lvalue" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr ml::movar::just&lt; ValueType &gt;::operator const_reference</definition>
+        <argsstring>() const &amp;noexcept</argsstring>
+        <name>operator const_reference</name>
+        <qualifiedname>ml::movar::just::operator const_reference</qualifiedname>
+        <briefdescription>
+<para>Explicit const reference conversion. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="52" column="25" bodyfile="ml/movar/internal/type/just.hpp" bodystart="52" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1just_1af61c37a9e562c198a464910b038f1790" prot="public" static="no" constexpr="yes" const="no" explicit="yes" inline="yes" refqual="lvalue" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr ml::movar::just&lt; ValueType &gt;::operator reference</definition>
+        <argsstring>() &amp;noexcept</argsstring>
+        <name>operator reference</name>
+        <qualifiedname>ml::movar::just::operator reference</qualifiedname>
+        <briefdescription>
+<para>Explicit reference conversion. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="60" column="25" bodyfile="ml/movar/internal/type/just.hpp" bodystart="60" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1just_1ac46c72ac43ff56ccbfeb63be0f9f427c" prot="public" static="no" constexpr="yes" const="no" explicit="yes" inline="yes" refqual="rvalue" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr ml::movar::just&lt; ValueType &gt;::operator value_type</definition>
+        <argsstring>() &amp;&amp;noexcept(std::is_nothrow_move_constructible_v&lt; value_type &gt;)</argsstring>
+        <name>operator value_type</name>
+        <qualifiedname>ml::movar::just::operator value_type</qualifiedname>
+        <briefdescription>
+<para>Explicit value conversion. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="68" column="25" bodyfile="ml/movar/internal/type/just.hpp" bodystart="68" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1just_1a3b7b1c43cc64dbe6e8127077ad39c119" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ml::movar::just&lt; ValueType &gt;::operator==</definition>
+        <argsstring>(just const &amp;) const =default</argsstring>
+        <name>operator==</name>
+        <qualifiedname>ml::movar::just::operator==</qualifiedname>
+        <param>
+          <type><ref refid="structml_1_1movar_1_1just" kindref="compound">just</ref> const &amp;</type>
+        </param>
+        <briefdescription>
+<para>default equality </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="354" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1just_1ab7d9ae3320e642c88fa620e0ef6671a3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto ml::movar::just&lt; ValueType &gt;::operator&lt;=&gt;</definition>
+        <argsstring>(just const &amp;) const =default</argsstring>
+        <name>operator&lt;=&gt;</name>
+        <qualifiedname>ml::movar::just::operator&lt;=&gt;</qualifiedname>
+        <param>
+          <type><ref refid="structml_1_1movar_1_1just" kindref="compound">just</ref> const &amp;</type>
+        </param>
+        <briefdescription>
+<para>default compare </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/just.hpp" line="359" column="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A variant type with only one alternative. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="structml_1_1movar_1_1just" kindref="compound">ml::movar::just</ref> is a Variant of size 1 that always has a value. </para>
+    </detaileddescription>
+    <location file="ml/movar/internal/type/just.hpp" line="16" column="3" bodyfile="ml/movar/internal/type/just.hpp" bodystart="17" bodyend="360"/>
+    <listofallmembers>
+      <member refid="structml_1_1movar_1_1just_1a28203ccc65570e44dbbdbc2f7214d5da" prot="public" virt="non-virtual"><scope>ml::movar::just</scope><name>_value</name></member>
+      <member refid="structml_1_1movar_1_1just_1a66ce0ab9d998fd5931d72df5c600a0a0" prot="public" virt="non-virtual"><scope>ml::movar::just</scope><name>const_reference</name></member>
+      <member refid="structml_1_1movar_1_1just_1a316ec08dc4e7462a9946f65b641426b9" prot="public" virt="non-virtual"><scope>ml::movar::just</scope><name>explicit</name></member>
+      <member refid="structml_1_1movar_1_1just_1a88a42265cc9580bcbb6c2efe56369162" prot="public" virt="non-virtual"><scope>ml::movar::just</scope><name>get</name></member>
+      <member refid="structml_1_1movar_1_1just_1aa277cece3db3f4e9ee9da00af166d01d" prot="public" virt="non-virtual"><scope>ml::movar::just</scope><name>get</name></member>
+      <member refid="structml_1_1movar_1_1just_1a4cbe4fd30b69b09d66fd31fc6b93596a" prot="public" virt="non-virtual"><scope>ml::movar::just</scope><name>get</name></member>
+      <member refid="structml_1_1movar_1_1just_1aeb49354d3aeb5cf3f5d24b82ab2bff72" prot="public" virt="non-virtual"><scope>ml::movar::just</scope><name>get</name></member>
+      <member refid="structml_1_1movar_1_1just_1adfc414e4c19ccc4b462ab76e32bfed18" prot="public" virt="non-virtual"><scope>ml::movar::just</scope><name>get</name></member>
+      <member refid="structml_1_1movar_1_1just_1a2767c65cbec5a68e83c4a55a808ade9b" prot="public" virt="non-virtual"><scope>ml::movar::just</scope><name>get</name></member>
+      <member refid="structml_1_1movar_1_1just_1a28ad67e2000f364ffb12a4079c30cbbb" prot="public" virt="non-virtual"><scope>ml::movar::just</scope><name>get</name></member>
+      <member refid="structml_1_1movar_1_1just_1a0472a46ae6497ade1ebdda3556d5ce90" prot="public" virt="non-virtual"><scope>ml::movar::just</scope><name>get</name></member>
+      <member refid="structml_1_1movar_1_1just_1a12d5be0c2e2cece60460ffa412be84d7" prot="public" virt="non-virtual"><scope>ml::movar::just</scope><name>index</name></member>
+      <member refid="structml_1_1movar_1_1just_1aa9642649c724790b017af9f6d0a9578c" prot="public" virt="non-virtual"><scope>ml::movar::just</scope><name>is</name></member>
+      <member refid="structml_1_1movar_1_1just_1a91b30cd7890f91b6f04862ff1639df14" prot="public" virt="non-virtual"><scope>ml::movar::just</scope><name>is</name></member>
+      <member refid="structml_1_1movar_1_1just_1a801f484360bd24b1c7ccc7deb57c7a57" prot="public" virt="non-virtual"><scope>ml::movar::just</scope><name>is</name></member>
+      <member refid="structml_1_1movar_1_1just_1af5c82b7d8a437302ba9a358b3429db57" prot="public" virt="non-virtual"><scope>ml::movar::just</scope><name>is</name></member>
+      <member refid="structml_1_1movar_1_1just_1a5f8aa4b52ca4515b07cd1d81553fd8c9" prot="public" virt="non-virtual"><scope>ml::movar::just</scope><name>is_nothing</name></member>
+      <member refid="structml_1_1movar_1_1just_1a7523a3ecc4e5e365507abdea92111ea8" prot="public" virt="non-virtual"><scope>ml::movar::just</scope><name>is_something</name></member>
+      <member refid="structml_1_1movar_1_1just_1a49b6a9fa5df8d6ce75119a3d4ec15237" prot="public" virt="non-virtual"><scope>ml::movar::just</scope><name>just</name></member>
+      <member refid="structml_1_1movar_1_1just_1a63cc7721d13863b277b3e71e6c9908ce" prot="public" virt="non-virtual"><scope>ml::movar::just</scope><name>just</name></member>
+      <member refid="structml_1_1movar_1_1just_1ad627f30f018de2ecaeb87f1c70964c91" prot="public" virt="non-virtual"><scope>ml::movar::just</scope><name>map</name></member>
+      <member refid="structml_1_1movar_1_1just_1a65423113067ead8f73c711cc714f020d" prot="public" virt="non-virtual"><scope>ml::movar::just</scope><name>map</name></member>
+      <member refid="structml_1_1movar_1_1just_1ad6ede402c5fcf7e0f05a0b8015944c71" prot="public" virt="non-virtual"><scope>ml::movar::just</scope><name>map_or</name></member>
+      <member refid="structml_1_1movar_1_1just_1af8ae471725d509332ee82c3bd6b70be1" prot="public" virt="non-virtual"><scope>ml::movar::just</scope><name>map_or</name></member>
+      <member refid="structml_1_1movar_1_1just_1a5a3e699dc7ce24a37ba5f85c940ab90e" prot="public" virt="non-virtual"><scope>ml::movar::just</scope><name>map_or_else</name></member>
+      <member refid="structml_1_1movar_1_1just_1ac4ad52af4286a41c829895c22333f7b1" prot="public" virt="non-virtual"><scope>ml::movar::just</scope><name>map_or_else</name></member>
+      <member refid="structml_1_1movar_1_1just_1a2327da00ba684998b5f5a58de73b140b" prot="public" virt="non-virtual"><scope>ml::movar::just</scope><name>match</name></member>
+      <member refid="structml_1_1movar_1_1just_1a56984d020fe36254c9a77007e9476123" prot="public" virt="non-virtual"><scope>ml::movar::just</scope><name>match</name></member>
+      <member refid="structml_1_1movar_1_1just_1a1784e20ac1ea623df1100a96a19f5dbd" prot="public" virt="non-virtual"><scope>ml::movar::just</scope><name>operator const_reference</name></member>
+      <member refid="structml_1_1movar_1_1just_1af61c37a9e562c198a464910b038f1790" prot="public" virt="non-virtual"><scope>ml::movar::just</scope><name>operator reference</name></member>
+      <member refid="structml_1_1movar_1_1just_1ac46c72ac43ff56ccbfeb63be0f9f427c" prot="public" virt="non-virtual"><scope>ml::movar::just</scope><name>operator value_type</name></member>
+      <member refid="structml_1_1movar_1_1just_1ab7d9ae3320e642c88fa620e0ef6671a3" prot="public" virt="non-virtual"><scope>ml::movar::just</scope><name>operator&lt;=&gt;</name></member>
+      <member refid="structml_1_1movar_1_1just_1a3b7b1c43cc64dbe6e8127077ad39c119" prot="public" virt="non-virtual"><scope>ml::movar::just</scope><name>operator==</name></member>
+      <member refid="structml_1_1movar_1_1just_1abf3caeb22efa5234f4378ea23372c93c" prot="public" virt="non-virtual"><scope>ml::movar::just</scope><name>or_else</name></member>
+      <member refid="structml_1_1movar_1_1just_1aede4e3e6c02d068a0374a7a1ed9292ca" prot="public" virt="non-virtual"><scope>ml::movar::just</scope><name>or_else</name></member>
+      <member refid="structml_1_1movar_1_1just_1a094887e243c7256c1523552680d463a5" prot="public" virt="non-virtual"><scope>ml::movar::just</scope><name>reference</name></member>
+      <member refid="structml_1_1movar_1_1just_1a050df688f41243a9155ede3f7919b6d7" prot="public" virt="non-virtual"><scope>ml::movar::just</scope><name>take</name></member>
+      <member refid="structml_1_1movar_1_1just_1ac077a27fb54c3328dcb1516862bb7409" prot="public" virt="non-virtual"><scope>ml::movar::just</scope><name>value_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

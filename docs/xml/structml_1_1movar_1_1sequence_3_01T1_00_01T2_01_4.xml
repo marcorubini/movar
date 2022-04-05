@@ -1,0 +1,203 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="structml_1_1movar_1_1sequence_3_01T1_00_01T2_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>ml::movar::sequence&lt; T1, T2 &gt;</compoundname>
+    <templateparamlist>
+      <param>
+        <type>std::move_constructible</type>
+        <declname>T1</declname>
+        <defname>T1</defname>
+      </param>
+      <param>
+        <type>std::move_constructible</type>
+        <declname>T2</declname>
+        <defname>T2</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structml_1_1movar_1_1sequence_3_01T1_00_01T2_01_4_1a10236372edf13da726f684eb597adeaf" prot="public" static="no" mutable="no">
+        <type>T1</type>
+        <definition>T1 ml::movar::sequence&lt; T1, T2 &gt;::_fn1</definition>
+        <argsstring></argsstring>
+        <name>_fn1</name>
+        <qualifiedname>ml::movar::sequence&lt; T1, T2 &gt;::_fn1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/pipe/sequence.hpp" line="106" column="8" bodyfile="ml/movar/internal/pipe/sequence.hpp" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structml_1_1movar_1_1sequence_3_01T1_00_01T2_01_4_1a1c3d0a65cf07fbc5fce96d23ebc9d7f6" prot="public" static="no" mutable="no">
+        <type>T2</type>
+        <definition>T2 ml::movar::sequence&lt; T1, T2 &gt;::_fn2</definition>
+        <argsstring></argsstring>
+        <name>_fn2</name>
+        <qualifiedname>ml::movar::sequence&lt; T1, T2 &gt;::_fn2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/pipe/sequence.hpp" line="107" column="8" bodyfile="ml/movar/internal/pipe/sequence.hpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structml_1_1movar_1_1sequence_3_01T1_00_01T2_01_4_1aaea9c9b3fd3d51c99e6e5845b47c0d19" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr ml::movar::sequence&lt; T1, T2 &gt;::sequence</definition>
+        <argsstring>(T1 t1, T2 t2) noexcept(std::is_nothrow_move_constructible_v&lt; T1 &gt;//&amp;&amp;std::is_nothrow_constructible_v&lt; T2 &gt;)</argsstring>
+        <name>sequence</name>
+        <qualifiedname>ml::movar::sequence&lt; T1, T2 &gt;::sequence</qualifiedname>
+        <param>
+          <type>T1</type>
+          <declname>t1</declname>
+        </param>
+        <param>
+          <type>T2</type>
+          <declname>t2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/pipe/sequence.hpp" line="109" column="16" bodyfile="ml/movar/internal/pipe/sequence.hpp" bodystart="109" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1sequence_3_01T1_00_01T2_01_4_1a0f8e0525fe5436b817ee1413e831c78d" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" refqual="lvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Arg</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::sequence&lt; T1, T2 &gt;::operator()</definition>
+        <argsstring>(Arg &amp;&amp;arg) const &amp;</argsstring>
+        <name>operator()</name>
+        <qualifiedname>ml::movar::sequence&lt; T1, T2 &gt;::operator()</qualifiedname>
+        <param>
+          <type>Arg &amp;&amp;</type>
+          <declname>arg</declname>
+        </param>
+    <requiresclause>(ml::internal::movar::WrapInvocable&lt;T1 const&amp;, Arg&gt; // &amp;&amp; ml::internal::movar::WeakVisitor&lt;T2 const&amp;, ml::internal::movar::wrap_invoke_result&lt;T1 const&amp;, Arg&gt;&gt;)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/pipe/sequence.hpp" line="119" column="21" bodyfile="ml/movar/internal/pipe/sequence.hpp" bodystart="119" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1sequence_3_01T1_00_01T2_01_4_1a2283d9517b3364e3297bed1f4edb27fd" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" refqual="lvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Other</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::sequence&lt; T1, T2 &gt;::operator&gt;&gt;</definition>
+        <argsstring>(Other &amp;&amp;other) const &amp;</argsstring>
+        <name>operator&gt;&gt;</name>
+        <qualifiedname>ml::movar::sequence&lt; T1, T2 &gt;::operator&gt;&gt;</qualifiedname>
+        <param>
+          <type>Other &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/pipe/sequence.hpp" line="129" column="21" bodyfile="ml/movar/internal/pipe/sequence.hpp" bodystart="129" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1sequence_3_01T1_00_01T2_01_4_1ad7673710b62b945c56ad2b39137d54bd" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" refqual="rvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Other</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::sequence&lt; T1, T2 &gt;::operator&gt;&gt;</definition>
+        <argsstring>(Other &amp;&amp;other) &amp;&amp;</argsstring>
+        <name>operator&gt;&gt;</name>
+        <qualifiedname>ml::movar::sequence&lt; T1, T2 &gt;::operator&gt;&gt;</qualifiedname>
+        <param>
+          <type>Other &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/pipe/sequence.hpp" line="136" column="21" bodyfile="ml/movar/internal/pipe/sequence.hpp" bodystart="136" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1sequence_3_01T1_00_01T2_01_4_1a9827b475ef2de2cf19227f610d8a1f4b" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" refqual="lvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Other</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::sequence&lt; T1, T2 &gt;::operator|</definition>
+        <argsstring>(Other &amp;&amp;other) const &amp;</argsstring>
+        <name>operator|</name>
+        <qualifiedname>ml::movar::sequence&lt; T1, T2 &gt;::operator|</qualifiedname>
+        <param>
+          <type>Other &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/pipe/sequence.hpp" line="143" column="21" bodyfile="ml/movar/internal/pipe/sequence.hpp" bodystart="143" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1sequence_3_01T1_00_01T2_01_4_1a7e6e8b1eecac340d1f797672c6b02061" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" refqual="rvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Other</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::sequence&lt; T1, T2 &gt;::operator|</definition>
+        <argsstring>(Other &amp;&amp;other) &amp;&amp;</argsstring>
+        <name>operator|</name>
+        <qualifiedname>ml::movar::sequence&lt; T1, T2 &gt;::operator|</qualifiedname>
+        <param>
+          <type>Other &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/pipe/sequence.hpp" line="150" column="21" bodyfile="ml/movar/internal/pipe/sequence.hpp" bodystart="150" bodyend="154"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ml/movar/internal/pipe/sequence.hpp" line="104" column="3" bodyfile="ml/movar/internal/pipe/sequence.hpp" bodystart="105" bodyend="155"/>
+    <listofallmembers>
+      <member refid="structml_1_1movar_1_1sequence_3_01T1_00_01T2_01_4_1a10236372edf13da726f684eb597adeaf" prot="public" virt="non-virtual"><scope>ml::movar::sequence&lt; T1, T2 &gt;</scope><name>_fn1</name></member>
+      <member refid="structml_1_1movar_1_1sequence_3_01T1_00_01T2_01_4_1a1c3d0a65cf07fbc5fce96d23ebc9d7f6" prot="public" virt="non-virtual"><scope>ml::movar::sequence&lt; T1, T2 &gt;</scope><name>_fn2</name></member>
+      <member refid="structml_1_1movar_1_1sequence_3_01T1_00_01T2_01_4_1a0f8e0525fe5436b817ee1413e831c78d" prot="public" virt="non-virtual"><scope>ml::movar::sequence&lt; T1, T2 &gt;</scope><name>operator()</name></member>
+      <member refid="structml_1_1movar_1_1sequence_3_01T1_00_01T2_01_4_1a2283d9517b3364e3297bed1f4edb27fd" prot="public" virt="non-virtual"><scope>ml::movar::sequence&lt; T1, T2 &gt;</scope><name>operator&gt;&gt;</name></member>
+      <member refid="structml_1_1movar_1_1sequence_3_01T1_00_01T2_01_4_1ad7673710b62b945c56ad2b39137d54bd" prot="public" virt="non-virtual"><scope>ml::movar::sequence&lt; T1, T2 &gt;</scope><name>operator&gt;&gt;</name></member>
+      <member refid="structml_1_1movar_1_1sequence_3_01T1_00_01T2_01_4_1a9827b475ef2de2cf19227f610d8a1f4b" prot="public" virt="non-virtual"><scope>ml::movar::sequence&lt; T1, T2 &gt;</scope><name>operator|</name></member>
+      <member refid="structml_1_1movar_1_1sequence_3_01T1_00_01T2_01_4_1a7e6e8b1eecac340d1f797672c6b02061" prot="public" virt="non-virtual"><scope>ml::movar::sequence&lt; T1, T2 &gt;</scope><name>operator|</name></member>
+      <member refid="structml_1_1movar_1_1sequence_3_01T1_00_01T2_01_4_1aaea9c9b3fd3d51c99e6e5845b47c0d19" prot="public" virt="non-virtual"><scope>ml::movar::sequence&lt; T1, T2 &gt;</scope><name>sequence</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

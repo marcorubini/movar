@@ -1,0 +1,1058 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="structml_1_1movar_1_1option" kind="class" language="C++" prot="public">
+    <compoundname>ml::movar::option</compoundname>
+    <includes local="no">ml/movar/internal/type/option.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>class ValueType</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="user-defined">
+      <header>Observers</header>
+      <memberdef kind="function" id="structml_1_1movar_1_1option_1a9bd0dc4dc71f5bc2c5aa0503462b1427" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr long</type>
+        <definition>constexpr long ml::movar::option&lt; ValueType &gt;::index</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>index</name>
+        <qualifiedname>ml::movar::option::index</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the active index, 0 or -1 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="64" column="21" bodyfile="ml/movar/internal/type/option.hpp" bodystart="64" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1option_1a77fbd7249200ecad960be5aa7b3df119" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr bool</type>
+        <definition>constexpr bool ml::movar::option&lt; ValueType &gt;::is_nothing</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>is_nothing</name>
+        <qualifiedname>ml::movar::option::is_nothing</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if the option is empty </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="72" column="21" bodyfile="ml/movar/internal/type/option.hpp" bodystart="72" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1option_1a9e8cc983d8cc3ae3833dea92b1e9d004" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr bool</type>
+        <definition>constexpr bool ml::movar::option&lt; ValueType &gt;::is_something</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>is_something</name>
+        <qualifiedname>ml::movar::option::is_something</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>false if the option is empty </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="80" column="21" bodyfile="ml/movar/internal/type/option.hpp" bodystart="80" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1option_1a49e1a14f62ad4a6af5c27bf2bfa8911e" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>long</type>
+            <declname>Index</declname>
+            <defname>Index</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr bool</type>
+        <definition>constexpr bool ml::movar::option&lt; ValueType &gt;::is</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>is</name>
+        <qualifiedname>ml::movar::option::is</qualifiedname>
+    <requiresclause>(internal::movar::ContainsIndex&lt;option, Index&gt; || Index == -1)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if <emphasis>Index</emphasis> equals the active index </para>
+</simplesect>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>can be 0 or -1 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="91" column="21" bodyfile="ml/movar/internal/type/option.hpp" bodystart="91" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1option_1aed962cc3b5fb9e1a41ae03b95a426d7c" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr bool</type>
+        <definition>constexpr bool ml::movar::option&lt; ValueType &gt;::is</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>is</name>
+        <qualifiedname>ml::movar::option::is</qualifiedname>
+    <requiresclause>(internal::movar::ContainsAlternative&lt;option, T&gt; || std::same_as&lt;T, nothing&gt;)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if <emphasis>T</emphasis> equals the active type </para>
+</simplesect>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>can be <emphasis>ValueType</emphasis> or <ref refid="structml_1_1movar_1_1nothing" kindref="compound">ml::movar::nothing</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="106" column="21" bodyfile="ml/movar/internal/type/option.hpp" bodystart="106" bodyend="113"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Getters</header>
+      <memberdef kind="function" id="structml_1_1movar_1_1option_1a0ac4caef6ac3fe4437639806b275aedb" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" refqual="lvalue" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>long</type>
+            <declname>Index</declname>
+            <defname>Index</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr const_reference</type>
+        <definition>constexpr const_reference ml::movar::option&lt; ValueType &gt;::get</definition>
+        <argsstring>() const &amp;noexcept</argsstring>
+        <name>get</name>
+        <qualifiedname>ml::movar::option::get</qualifiedname>
+    <requiresclause>(internal::movar::ContainsIndex&lt;option, Index&gt;)    </requiresclause>
+        <briefdescription>
+<para>getter given index (overload 1) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be 0 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="125" column="32" bodyfile="ml/movar/internal/type/option.hpp" bodystart="125" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1option_1a326194f000d752d6f6323b903d7022f2" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" refqual="lvalue" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>long</type>
+            <declname>Index</declname>
+            <defname>Index</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr reference</type>
+        <definition>constexpr reference ml::movar::option&lt; ValueType &gt;::get</definition>
+        <argsstring>() &amp;noexcept</argsstring>
+        <name>get</name>
+        <qualifiedname>ml::movar::option::get</qualifiedname>
+    <requiresclause>(internal::movar::ContainsIndex&lt;option, Index&gt;)    </requiresclause>
+        <briefdescription>
+<para>getter given index (overload 2) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be 0 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="136" column="26" bodyfile="ml/movar/internal/type/option.hpp" bodystart="136" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1option_1a36920e2c72074fad726d1fa4bc9a0c95" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" refqual="rvalue" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>long</type>
+            <declname>Index</declname>
+            <defname>Index</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr value_type</type>
+        <definition>constexpr value_type ml::movar::option&lt; ValueType &gt;::get</definition>
+        <argsstring>() &amp;&amp;noexcept(std::is_nothrow_move_constructible_v&lt; value_type &gt;)</argsstring>
+        <name>get</name>
+        <qualifiedname>ml::movar::option::get</qualifiedname>
+    <requiresclause>(internal::movar::ContainsIndex&lt;option, Index&gt;)    </requiresclause>
+        <briefdescription>
+<para>getter given index (overload 3) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be 0 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="147" column="27" bodyfile="ml/movar/internal/type/option.hpp" bodystart="147" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1option_1a5b488c06bf3f4f41d88b9064c9ca9525" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" refqual="lvalue" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+            <defval>value_type</defval>
+          </param>
+        </templateparamlist>
+        <type>constexpr const_reference</type>
+        <definition>constexpr const_reference ml::movar::option&lt; ValueType &gt;::get</definition>
+        <argsstring>() const &amp;noexcept</argsstring>
+        <name>get</name>
+        <qualifiedname>ml::movar::option::get</qualifiedname>
+    <requiresclause>(internal::movar::ContainsAlternative&lt;option, T&gt;)    </requiresclause>
+        <briefdescription>
+<para>getter given type (overload 1) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be <emphasis>ValueType</emphasis> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="159" column="32" bodyfile="ml/movar/internal/type/option.hpp" bodystart="159" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1option_1a964efab7de28a7d49b614457498d1f90" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" refqual="lvalue" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+            <defval>value_type</defval>
+          </param>
+        </templateparamlist>
+        <type>constexpr reference</type>
+        <definition>constexpr reference ml::movar::option&lt; ValueType &gt;::get</definition>
+        <argsstring>() &amp;noexcept</argsstring>
+        <name>get</name>
+        <qualifiedname>ml::movar::option::get</qualifiedname>
+    <requiresclause>(internal::movar::ContainsAlternative&lt;option, T&gt;)    </requiresclause>
+        <briefdescription>
+<para>getter given type (overload 1) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be <emphasis>ValueType</emphasis> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="170" column="26" bodyfile="ml/movar/internal/type/option.hpp" bodystart="170" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1option_1a768753ddc57d68aadadfbf7eece5068f" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" refqual="rvalue" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+            <defval>value_type</defval>
+          </param>
+        </templateparamlist>
+        <type>constexpr value_type</type>
+        <definition>constexpr value_type ml::movar::option&lt; ValueType &gt;::get</definition>
+        <argsstring>() &amp;&amp;noexcept(std::is_nothrow_move_constructible_v&lt; value_type &gt;)</argsstring>
+        <name>get</name>
+        <qualifiedname>ml::movar::option::get</qualifiedname>
+    <requiresclause>(internal::movar::ContainsAlternative&lt;option, T&gt;)    </requiresclause>
+        <briefdescription>
+<para>getter given type (overload 1) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be <emphasis>ValueType</emphasis> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="181" column="27" bodyfile="ml/movar/internal/type/option.hpp" bodystart="181" bodyend="185"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Pipeline</header>
+      <memberdef kind="function" id="structml_1_1movar_1_1option_1a2269475cff5e40046b2a77837446bc54" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" refqual="lvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>internal::movar::WeakVisitor&lt; <ref refid="structml_1_1movar_1_1option" kindref="compound">option</ref> const &amp; &gt;</type>
+            <declname>Vis</declname>
+            <defname>Vis</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::option&lt; ValueType &gt;::map</definition>
+        <argsstring>(Vis vis) const &amp;</argsstring>
+        <name>map</name>
+        <qualifiedname>ml::movar::option::map</qualifiedname>
+        <param>
+          <type>Vis</type>
+          <declname>vis</declname>
+        </param>
+        <briefdescription>
+<para>see <ref refid="pipelines_1pipelines-map" kindref="member">pipelines documentation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="247" column="21" bodyfile="ml/movar/internal/type/option.hpp" bodystart="247" bodyend="250"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1option_1ac4c977c1c130e5c5d05fb78c24cdec66" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" refqual="rvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>internal::movar::WeakVisitor&lt; <ref refid="structml_1_1movar_1_1option" kindref="compound">option</ref> &amp;&amp; &gt;</type>
+            <declname>Vis</declname>
+            <defname>Vis</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::option&lt; ValueType &gt;::map</definition>
+        <argsstring>(Vis vis) &amp;&amp;</argsstring>
+        <name>map</name>
+        <qualifiedname>ml::movar::option::map</qualifiedname>
+        <param>
+          <type>Vis</type>
+          <declname>vis</declname>
+        </param>
+        <briefdescription>
+<para>see <ref refid="pipelines_1pipelines-map" kindref="member">pipelines documentation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="256" column="21" bodyfile="ml/movar/internal/type/option.hpp" bodystart="256" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1option_1a36b1184f4ca5ffdd1eda3dfc1e83c8ee" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" refqual="lvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>internal::movar::Visitor&lt; <ref refid="structml_1_1movar_1_1option" kindref="compound">option</ref> const &amp; &gt;</type>
+            <declname>Vis</declname>
+            <defname>Vis</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::option&lt; ValueType &gt;::match</definition>
+        <argsstring>(Vis vis) const &amp;</argsstring>
+        <name>match</name>
+        <qualifiedname>ml::movar::option::match</qualifiedname>
+        <param>
+          <type>Vis</type>
+          <declname>vis</declname>
+        </param>
+        <briefdescription>
+<para>see <ref refid="pipelines_1pipelines-match" kindref="member">pipelines documentation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="265" column="20" bodyfile="ml/movar/internal/type/option.hpp" bodystart="265" bodyend="268"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1option_1a09c82ff5c5d3980df6e582a7ea43e4ac" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" refqual="rvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>internal::movar::Visitor&lt; <ref refid="structml_1_1movar_1_1option" kindref="compound">option</ref> &amp;&amp; &gt;</type>
+            <declname>Vis</declname>
+            <defname>Vis</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::option&lt; ValueType &gt;::match</definition>
+        <argsstring>(Vis vis) &amp;&amp;</argsstring>
+        <name>match</name>
+        <qualifiedname>ml::movar::option::match</qualifiedname>
+        <param>
+          <type>Vis</type>
+          <declname>vis</declname>
+        </param>
+        <briefdescription>
+<para>see <ref refid="pipelines_1pipelines-match" kindref="member">pipelines documentation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="274" column="20" bodyfile="ml/movar/internal/type/option.hpp" bodystart="274" bodyend="277"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1option_1a3db3e17244951c35c47eebf45354e8dd" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" refqual="lvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>internal::movar::WeakVisitor&lt; <ref refid="structml_1_1movar_1_1option" kindref="compound">option</ref> const &amp; &gt;</type>
+            <declname>Vis</declname>
+            <defname>Vis</defname>
+          </param>
+          <param>
+            <type>std::move_constructible</type>
+            <declname>Default</declname>
+            <defname>Default</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::option&lt; ValueType &gt;::map_or</definition>
+        <argsstring>(Vis vis, Default def) const &amp;</argsstring>
+        <name>map_or</name>
+        <qualifiedname>ml::movar::option::map_or</qualifiedname>
+        <param>
+          <type>Vis</type>
+          <declname>vis</declname>
+        </param>
+        <param>
+          <type>Default</type>
+          <declname>def</declname>
+        </param>
+        <briefdescription>
+<para>see <ref refid="pipelines_1pipelines-map_or" kindref="member">pipelines documentation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="283" column="21" bodyfile="ml/movar/internal/type/option.hpp" bodystart="283" bodyend="286"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1option_1ac895f2643943b09883dba97d545691ee" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" refqual="rvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>internal::movar::WeakVisitor&lt; <ref refid="structml_1_1movar_1_1option" kindref="compound">option</ref> &amp;&amp; &gt;</type>
+            <declname>Vis</declname>
+            <defname>Vis</defname>
+          </param>
+          <param>
+            <type>std::move_constructible</type>
+            <declname>Default</declname>
+            <defname>Default</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::option&lt; ValueType &gt;::map_or</definition>
+        <argsstring>(Vis vis, Default def) &amp;&amp;</argsstring>
+        <name>map_or</name>
+        <qualifiedname>ml::movar::option::map_or</qualifiedname>
+        <param>
+          <type>Vis</type>
+          <declname>vis</declname>
+        </param>
+        <param>
+          <type>Default</type>
+          <declname>def</declname>
+        </param>
+        <briefdescription>
+<para>see <ref refid="pipelines_1pipelines-map_or" kindref="member">pipelines documentation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="292" column="21" bodyfile="ml/movar/internal/type/option.hpp" bodystart="292" bodyend="295"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1option_1a572e8dc152162672f8103c4a9346cde7" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" refqual="lvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>internal::movar::WeakVisitor&lt; <ref refid="structml_1_1movar_1_1option" kindref="compound">option</ref> const &amp; &gt;</type>
+            <declname>Vis</declname>
+            <defname>Vis</defname>
+          </param>
+          <param>
+            <type>internal::movar::Lazy</type>
+            <declname>Default</declname>
+            <defname>Default</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::option&lt; ValueType &gt;::map_or_else</definition>
+        <argsstring>(Vis vis, Default def) const &amp;</argsstring>
+        <name>map_or_else</name>
+        <qualifiedname>ml::movar::option::map_or_else</qualifiedname>
+        <param>
+          <type>Vis</type>
+          <declname>vis</declname>
+        </param>
+        <param>
+          <type>Default</type>
+          <declname>def</declname>
+        </param>
+        <briefdescription>
+<para>see <ref refid="pipelines_1pipelines-map_or_else" kindref="member">pipelines documentation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="301" column="21" bodyfile="ml/movar/internal/type/option.hpp" bodystart="301" bodyend="304"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1option_1ad2c06aeed1114c9cefaaecc111c0a204" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" refqual="rvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>internal::movar::WeakVisitor&lt; <ref refid="structml_1_1movar_1_1option" kindref="compound">option</ref> &amp;&amp; &gt;</type>
+            <declname>Vis</declname>
+            <defname>Vis</defname>
+          </param>
+          <param>
+            <type>internal::movar::Lazy</type>
+            <declname>Default</declname>
+            <defname>Default</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::option&lt; ValueType &gt;::map_or_else</definition>
+        <argsstring>(Vis vis, Default def) &amp;&amp;</argsstring>
+        <name>map_or_else</name>
+        <qualifiedname>ml::movar::option::map_or_else</qualifiedname>
+        <param>
+          <type>Vis</type>
+          <declname>vis</declname>
+        </param>
+        <param>
+          <type>Default</type>
+          <declname>def</declname>
+        </param>
+        <briefdescription>
+<para>see <ref refid="pipelines_1pipelines-map_or_else" kindref="member">pipelines documentation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="310" column="21" bodyfile="ml/movar/internal/type/option.hpp" bodystart="310" bodyend="313"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1option_1aa329de883a202b7efe14142b360c6136" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" refqual="lvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>internal::movar::Lazy</type>
+            <declname>Default</declname>
+            <defname>Default</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::option&lt; ValueType &gt;::or_else</definition>
+        <argsstring>(Default def) const &amp;</argsstring>
+        <name>or_else</name>
+        <qualifiedname>ml::movar::option::or_else</qualifiedname>
+        <param>
+          <type>Default</type>
+          <declname>def</declname>
+        </param>
+        <briefdescription>
+<para>see <ref refid="pipelines_1pipelines-or_else" kindref="member">pipelines documentation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="319" column="21" bodyfile="ml/movar/internal/type/option.hpp" bodystart="319" bodyend="322"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1option_1a55f44ff34556efe406751c269582e741" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" refqual="rvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>internal::movar::Lazy</type>
+            <declname>Default</declname>
+            <defname>Default</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::option&lt; ValueType &gt;::or_else</definition>
+        <argsstring>(Default def) &amp;&amp;</argsstring>
+        <name>or_else</name>
+        <qualifiedname>ml::movar::option::or_else</qualifiedname>
+        <param>
+          <type>Default</type>
+          <declname>def</declname>
+        </param>
+        <briefdescription>
+<para>see <ref refid="pipelines_1pipelines-or_else" kindref="member">pipelines documentation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="328" column="21" bodyfile="ml/movar/internal/type/option.hpp" bodystart="328" bodyend="331"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1option_1af2994fb9d144bec96fd40ac4c8cc2ccf" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::option&lt; ValueType &gt;::take</definition>
+        <argsstring>()</argsstring>
+        <name>take</name>
+        <qualifiedname>ml::movar::option::take</qualifiedname>
+        <briefdescription>
+<para>see <ref refid="pipelines_1pipelines-take" kindref="member">pipelines documentation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="336" column="21" bodyfile="ml/movar/internal/type/option.hpp" bodystart="336" bodyend="339"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Friends</header>
+      <memberdef kind="friend" id="structml_1_1movar_1_1option_1a363ed3200b9e7768d9ba5bbc03105887" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>long</type>
+            <declname>Index</declname>
+            <defname>Index</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr bool</type>
+        <definition>constexpr bool is</definition>
+        <argsstring>(option const &amp;self) noexcept</argsstring>
+        <name>is</name>
+        <qualifiedname>ml::movar::option::is</qualifiedname>
+        <param>
+          <type><ref refid="structml_1_1movar_1_1option" kindref="compound">option</ref> const &amp;</type>
+          <declname>self</declname>
+        </param>
+    <requiresclause>(internal::movar::ContainsIndex&lt;option, Index&gt; || Index == -1)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if <emphasis>Index</emphasis> equals the active index </para>
+</simplesect>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be 0 or -1 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="197" column="28" bodyfile="ml/movar/internal/type/option.hpp" bodystart="197" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="friend" id="structml_1_1movar_1_1option_1a08a15a6f16503b165ebfd427cdb28850" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr bool</type>
+        <definition>constexpr bool is</definition>
+        <argsstring>(option const &amp;self) noexcept</argsstring>
+        <name>is</name>
+        <qualifiedname>ml::movar::option::is</qualifiedname>
+        <param>
+          <type><ref refid="structml_1_1movar_1_1option" kindref="compound">option</ref> const &amp;</type>
+          <declname>self</declname>
+        </param>
+    <requiresclause>(internal::movar::ContainsAlternative&lt;option, T&gt; || std::same_as&lt;T, nothing&gt;)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if <emphasis>T</emphasis> equals the active type </para>
+</simplesect>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be <emphasis>ValueType</emphasis> or <ref refid="structml_1_1movar_1_1nothing" kindref="compound">ml::movar::nothing</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="208" column="28" bodyfile="ml/movar/internal/type/option.hpp" bodystart="208" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="friend" id="structml_1_1movar_1_1option_1a33630de5a69e1c5babccb0d087feeb5c" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>long</type>
+            <declname>Index</declname>
+            <defname>Index</defname>
+          </param>
+          <param>
+            <type>internal::movar::SameUnqual&lt; <ref refid="structml_1_1movar_1_1option" kindref="compound">option</ref> &gt;</type>
+            <declname>Self</declname>
+            <defname>Self</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr decltype(auto)</type>
+        <definition>constexpr decltype(auto) get</definition>
+        <argsstring>(Self &amp;&amp;self) noexcept(noexcept(std::forward&lt; Self &gt;(self).template get&lt; Index &gt;()))</argsstring>
+        <name>get</name>
+        <qualifiedname>ml::movar::option::get</qualifiedname>
+        <param>
+          <type>Self &amp;&amp;</type>
+          <declname>self</declname>
+        </param>
+    <requiresclause>(internal::movar::ContainsIndex&lt;option, Index&gt;)    </requiresclause>
+        <briefdescription>
+<para>getter given index </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be 0 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be an instance of <ref refid="structml_1_1movar_1_1option" kindref="compound">ml::movar::option</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="220" column="33" bodyfile="ml/movar/internal/type/option.hpp" bodystart="220" bodyend="224"/>
+      </memberdef>
+      <memberdef kind="friend" id="structml_1_1movar_1_1option_1a62fd2dc862ebfb1c2c81e7989f16ba1e" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+          <param>
+            <type>internal::movar::SameUnqual&lt; <ref refid="structml_1_1movar_1_1option" kindref="compound">option</ref> &gt;</type>
+            <declname>Self</declname>
+            <defname>Self</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr decltype(auto)</type>
+        <definition>constexpr decltype(auto) get</definition>
+        <argsstring>(Self &amp;&amp;self) noexcept(noexcept(std::forward&lt; Self &gt;(self).template get&lt; T &gt;()))</argsstring>
+        <name>get</name>
+        <qualifiedname>ml::movar::option::get</qualifiedname>
+        <param>
+          <type>Self &amp;&amp;</type>
+          <declname>self</declname>
+        </param>
+    <requiresclause>(internal::movar::ContainsAlternative&lt;option, T&gt;)    </requiresclause>
+        <briefdescription>
+<para>getter given type </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be <emphasis>ValueType</emphasis> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be an instance of <ref refid="structml_1_1movar_1_1option" kindref="compound">ml::movar::option</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="233" column="33" bodyfile="ml/movar/internal/type/option.hpp" bodystart="233" bodyend="237"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structml_1_1movar_1_1option_1acc3ae4488e0e95d89f17ff6b097f6a50" prot="public" static="no">
+        <type>ValueType</type>
+        <definition>using ml::movar::option&lt; ValueType &gt;::value_type =  ValueType</definition>
+        <argsstring></argsstring>
+        <name>value_type</name>
+        <qualifiedname>ml::movar::option::value_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="19" column="5" bodyfile="ml/movar/internal/type/option.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structml_1_1movar_1_1option_1a067bcc1688c116b51fc022c512b4be58" prot="public" static="no">
+        <type>value_type &amp;</type>
+        <definition>using ml::movar::option&lt; ValueType &gt;::reference =  value_type&amp;</definition>
+        <argsstring></argsstring>
+        <name>reference</name>
+        <qualifiedname>ml::movar::option::reference</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="20" column="5" bodyfile="ml/movar/internal/type/option.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structml_1_1movar_1_1option_1a90fadb3e534193939db82eaddf211f5e" prot="public" static="no">
+        <type>value_type const  &amp;</type>
+        <definition>using ml::movar::option&lt; ValueType &gt;::const_reference =  value_type const&amp;</definition>
+        <argsstring></argsstring>
+        <name>const_reference</name>
+        <qualifiedname>ml::movar::option::const_reference</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="21" column="5" bodyfile="ml/movar/internal/type/option.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structml_1_1movar_1_1option_1a9add3082ef6096e4775586b394d751d3" prot="public" static="no" mutable="no">
+        <type>std::optional&lt; ValueType &gt;</type>
+        <definition>std::optional&lt;ValueType&gt; ml::movar::option&lt; ValueType &gt;::_value</definition>
+        <argsstring></argsstring>
+        <name>_value</name>
+        <qualifiedname>ml::movar::option::_value</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="23" column="19" bodyfile="ml/movar/internal/type/option.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structml_1_1movar_1_1option_1a63ad23d089c8ed331fae4b6c8b92760f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ml::movar::option&lt; ValueType &gt;::option</definition>
+        <argsstring>()=default</argsstring>
+        <name>option</name>
+        <qualifiedname>ml::movar::option::option</qualifiedname>
+        <briefdescription>
+<para>default constructor </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="28" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1option_1af4595de37f17c9faa0aa0a914fbde8c3" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr ml::movar::option&lt; ValueType &gt;::option</definition>
+        <argsstring>(ValueType value) noexcept</argsstring>
+        <name>option</name>
+        <qualifiedname>ml::movar::option::option</qualifiedname>
+        <param>
+          <type>ValueType</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Move-constructs ValueType. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="33" column="15" bodyfile="ml/movar/internal/type/option.hpp" bodystart="33" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1option_1a95ff5cef6d0989938fa32e2afe1bc842" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr ml::movar::option&lt; ValueType &gt;::option</definition>
+        <argsstring>(nothing) noexcept</argsstring>
+        <name>option</name>
+        <qualifiedname>ml::movar::option::option</qualifiedname>
+        <param>
+          <type><ref refid="structml_1_1movar_1_1nothing" kindref="compound">nothing</ref></type>
+        </param>
+        <briefdescription>
+<para>Leaves the option empty. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="40" column="15" bodyfile="ml/movar/internal/type/option.hpp" bodystart="40" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1option_1a7f6a7f6bdc883fb81d5ad2c4863789a9" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr ml::movar::option&lt; ValueType &gt;::option</definition>
+        <argsstring>(std::nullopt_t) noexcept</argsstring>
+        <name>option</name>
+        <qualifiedname>ml::movar::option::option</qualifiedname>
+        <param>
+          <type>std::nullopt_t</type>
+        </param>
+        <briefdescription>
+<para>Leaves the option empty. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="47" column="15" bodyfile="ml/movar/internal/type/option.hpp" bodystart="47" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1option_1a962f2378214acdaf76cea8d80aa2ee46" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>internal::movar::DiffUnqual&lt; <ref refid="structml_1_1movar_1_1option" kindref="compound">option</ref> &gt;</type>
+            <declname>Other</declname>
+            <defname>Other</defname>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ml::movar::option&lt; ValueType &gt;::explicit</definition>
+        <argsstring>(!internal::movar::can_implicit_cast&lt; Other, option &gt;) const expr option(Other other) noexcept(noexcept(option(internal::movar::impl::cast&lt; option &gt;(std::move(other)))))</argsstring>
+        <name>explicit</name>
+        <qualifiedname>ml::movar::option::explicit</qualifiedname>
+        <param>
+          <type>!internal::movar::can_implicit_cast&lt; Other, <ref refid="structml_1_1movar_1_1option" kindref="compound">option</ref> &gt;</type>
+        </param>
+    <requiresclause>(internal::movar::can_explicit_cast&lt;Other, option&gt;)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="53" column="5" bodyfile="ml/movar/internal/type/option.hpp" bodystart="53" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1option_1a10a82245d737ad02bb4af6f8534e8fe7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ml::movar::option&lt; ValueType &gt;::operator==</definition>
+        <argsstring>(option const &amp;) const =default</argsstring>
+        <name>operator==</name>
+        <qualifiedname>ml::movar::option::operator==</qualifiedname>
+        <param>
+          <type><ref refid="structml_1_1movar_1_1option" kindref="compound">option</ref> const &amp;</type>
+        </param>
+        <briefdescription>
+<para>defautl equality </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="346" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1option_1aaa7626d16e624b218913d52eb1a5d272" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto ml::movar::option&lt; ValueType &gt;::operator&lt;=&gt;</definition>
+        <argsstring>(option const &amp;) const =default</argsstring>
+        <name>operator&lt;=&gt;</name>
+        <qualifiedname>ml::movar::option::operator&lt;=&gt;</qualifiedname>
+        <param>
+          <type><ref refid="structml_1_1movar_1_1option" kindref="compound">option</ref> const &amp;</type>
+        </param>
+        <briefdescription>
+<para>default compare </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/option.hpp" line="351" column="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A variant with one alternative that can also be empty. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ml/movar/internal/type/option.hpp" line="12" column="3" bodyfile="ml/movar/internal/type/option.hpp" bodystart="13" bodyend="352"/>
+    <listofallmembers>
+      <member refid="structml_1_1movar_1_1option_1a9add3082ef6096e4775586b394d751d3" prot="public" virt="non-virtual"><scope>ml::movar::option</scope><name>_value</name></member>
+      <member refid="structml_1_1movar_1_1option_1a90fadb3e534193939db82eaddf211f5e" prot="public" virt="non-virtual"><scope>ml::movar::option</scope><name>const_reference</name></member>
+      <member refid="structml_1_1movar_1_1option_1a962f2378214acdaf76cea8d80aa2ee46" prot="public" virt="non-virtual"><scope>ml::movar::option</scope><name>explicit</name></member>
+      <member refid="structml_1_1movar_1_1option_1a0ac4caef6ac3fe4437639806b275aedb" prot="public" virt="non-virtual"><scope>ml::movar::option</scope><name>get</name></member>
+      <member refid="structml_1_1movar_1_1option_1a326194f000d752d6f6323b903d7022f2" prot="public" virt="non-virtual"><scope>ml::movar::option</scope><name>get</name></member>
+      <member refid="structml_1_1movar_1_1option_1a36920e2c72074fad726d1fa4bc9a0c95" prot="public" virt="non-virtual"><scope>ml::movar::option</scope><name>get</name></member>
+      <member refid="structml_1_1movar_1_1option_1a5b488c06bf3f4f41d88b9064c9ca9525" prot="public" virt="non-virtual"><scope>ml::movar::option</scope><name>get</name></member>
+      <member refid="structml_1_1movar_1_1option_1a964efab7de28a7d49b614457498d1f90" prot="public" virt="non-virtual"><scope>ml::movar::option</scope><name>get</name></member>
+      <member refid="structml_1_1movar_1_1option_1a768753ddc57d68aadadfbf7eece5068f" prot="public" virt="non-virtual"><scope>ml::movar::option</scope><name>get</name></member>
+      <member refid="structml_1_1movar_1_1option_1a33630de5a69e1c5babccb0d087feeb5c" prot="public" virt="non-virtual"><scope>ml::movar::option</scope><name>get</name></member>
+      <member refid="structml_1_1movar_1_1option_1a62fd2dc862ebfb1c2c81e7989f16ba1e" prot="public" virt="non-virtual"><scope>ml::movar::option</scope><name>get</name></member>
+      <member refid="structml_1_1movar_1_1option_1a9bd0dc4dc71f5bc2c5aa0503462b1427" prot="public" virt="non-virtual"><scope>ml::movar::option</scope><name>index</name></member>
+      <member refid="structml_1_1movar_1_1option_1a49e1a14f62ad4a6af5c27bf2bfa8911e" prot="public" virt="non-virtual"><scope>ml::movar::option</scope><name>is</name></member>
+      <member refid="structml_1_1movar_1_1option_1aed962cc3b5fb9e1a41ae03b95a426d7c" prot="public" virt="non-virtual"><scope>ml::movar::option</scope><name>is</name></member>
+      <member refid="structml_1_1movar_1_1option_1a363ed3200b9e7768d9ba5bbc03105887" prot="public" virt="non-virtual"><scope>ml::movar::option</scope><name>is</name></member>
+      <member refid="structml_1_1movar_1_1option_1a08a15a6f16503b165ebfd427cdb28850" prot="public" virt="non-virtual"><scope>ml::movar::option</scope><name>is</name></member>
+      <member refid="structml_1_1movar_1_1option_1a77fbd7249200ecad960be5aa7b3df119" prot="public" virt="non-virtual"><scope>ml::movar::option</scope><name>is_nothing</name></member>
+      <member refid="structml_1_1movar_1_1option_1a9e8cc983d8cc3ae3833dea92b1e9d004" prot="public" virt="non-virtual"><scope>ml::movar::option</scope><name>is_something</name></member>
+      <member refid="structml_1_1movar_1_1option_1a2269475cff5e40046b2a77837446bc54" prot="public" virt="non-virtual"><scope>ml::movar::option</scope><name>map</name></member>
+      <member refid="structml_1_1movar_1_1option_1ac4c977c1c130e5c5d05fb78c24cdec66" prot="public" virt="non-virtual"><scope>ml::movar::option</scope><name>map</name></member>
+      <member refid="structml_1_1movar_1_1option_1a3db3e17244951c35c47eebf45354e8dd" prot="public" virt="non-virtual"><scope>ml::movar::option</scope><name>map_or</name></member>
+      <member refid="structml_1_1movar_1_1option_1ac895f2643943b09883dba97d545691ee" prot="public" virt="non-virtual"><scope>ml::movar::option</scope><name>map_or</name></member>
+      <member refid="structml_1_1movar_1_1option_1a572e8dc152162672f8103c4a9346cde7" prot="public" virt="non-virtual"><scope>ml::movar::option</scope><name>map_or_else</name></member>
+      <member refid="structml_1_1movar_1_1option_1ad2c06aeed1114c9cefaaecc111c0a204" prot="public" virt="non-virtual"><scope>ml::movar::option</scope><name>map_or_else</name></member>
+      <member refid="structml_1_1movar_1_1option_1a36b1184f4ca5ffdd1eda3dfc1e83c8ee" prot="public" virt="non-virtual"><scope>ml::movar::option</scope><name>match</name></member>
+      <member refid="structml_1_1movar_1_1option_1a09c82ff5c5d3980df6e582a7ea43e4ac" prot="public" virt="non-virtual"><scope>ml::movar::option</scope><name>match</name></member>
+      <member refid="structml_1_1movar_1_1option_1aaa7626d16e624b218913d52eb1a5d272" prot="public" virt="non-virtual"><scope>ml::movar::option</scope><name>operator&lt;=&gt;</name></member>
+      <member refid="structml_1_1movar_1_1option_1a10a82245d737ad02bb4af6f8534e8fe7" prot="public" virt="non-virtual"><scope>ml::movar::option</scope><name>operator==</name></member>
+      <member refid="structml_1_1movar_1_1option_1a63ad23d089c8ed331fae4b6c8b92760f" prot="public" virt="non-virtual"><scope>ml::movar::option</scope><name>option</name></member>
+      <member refid="structml_1_1movar_1_1option_1af4595de37f17c9faa0aa0a914fbde8c3" prot="public" virt="non-virtual"><scope>ml::movar::option</scope><name>option</name></member>
+      <member refid="structml_1_1movar_1_1option_1a95ff5cef6d0989938fa32e2afe1bc842" prot="public" virt="non-virtual"><scope>ml::movar::option</scope><name>option</name></member>
+      <member refid="structml_1_1movar_1_1option_1a7f6a7f6bdc883fb81d5ad2c4863789a9" prot="public" virt="non-virtual"><scope>ml::movar::option</scope><name>option</name></member>
+      <member refid="structml_1_1movar_1_1option_1aa329de883a202b7efe14142b360c6136" prot="public" virt="non-virtual"><scope>ml::movar::option</scope><name>or_else</name></member>
+      <member refid="structml_1_1movar_1_1option_1a55f44ff34556efe406751c269582e741" prot="public" virt="non-virtual"><scope>ml::movar::option</scope><name>or_else</name></member>
+      <member refid="structml_1_1movar_1_1option_1a067bcc1688c116b51fc022c512b4be58" prot="public" virt="non-virtual"><scope>ml::movar::option</scope><name>reference</name></member>
+      <member refid="structml_1_1movar_1_1option_1af2994fb9d144bec96fd40ac4c8cc2ccf" prot="public" virt="non-virtual"><scope>ml::movar::option</scope><name>take</name></member>
+      <member refid="structml_1_1movar_1_1option_1acc3ae4488e0e95d89f17ff6b097f6a50" prot="public" virt="non-virtual"><scope>ml::movar::option</scope><name>value_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

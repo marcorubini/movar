@@ -1,0 +1,564 @@
+\hypertarget{structml_1_1movar_1_1maybe}{}\doxysection{ml\+::movar\+::maybe\texorpdfstring{$<$}{<} Ts \texorpdfstring{$>$}{>} Class Template Reference}
+\label{structml_1_1movar_1_1maybe}\index{ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}}
+
+
+A variant with many alternatives that can be empty.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structml_1_1movar_1_1maybe_a9bb04e5235efb76cc4d7934a548de8ce}{maybe}} ()=default
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Init $>$ \newline
+requires (std\+::same\+\_\+as$<$Init, Ts$>$ $\vert$$\vert$ ...)}\\constexpr \mbox{\hyperlink{structml_1_1movar_1_1maybe_a79db99c1455b7f588083a51543fa2845}{maybe}} (Init value) noexcept(std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ Init $>$)
+\begin{DoxyCompactList}\small\item\em Move-\/construct the alternative. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{structml_1_1movar_1_1maybe_a651746f7feb9bf9ec8b1605f48c560e2}{maybe}} (\mbox{\hyperlink{structml_1_1movar_1_1nothing}{nothing}}) noexcept
+\begin{DoxyCompactList}\small\item\em leaves the variant empty \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{structml_1_1movar_1_1maybe_a16ce02fa5106993d62ab4e6d66172079}{maybe}} (std\+::nullopt\+\_\+t) noexcept
+\begin{DoxyCompactList}\small\item\em leaves the variant empty \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Observers}\par
+\begin{DoxyCompactItemize}
+\item 
+constexpr long \mbox{\hyperlink{structml_1_1movar_1_1maybe_a8f226e152973f04c860998168158e802}{index}} () const noexcept
+\item 
+constexpr bool \mbox{\hyperlink{structml_1_1movar_1_1maybe_a71873495626dd08ee203ba98ed53fe31}{is\+\_\+nothing}} () const noexcept
+\item 
+constexpr bool \mbox{\hyperlink{structml_1_1movar_1_1maybe_abe49098acd7ec7109c2e71ba6c21e882}{is\+\_\+something}} () const noexcept
+\item 
+{\footnotesize template$<$long Index$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Index$<$\mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}}, Index$>$ $\vert$$\vert$ Index == -\/1)}\\constexpr bool \mbox{\hyperlink{structml_1_1movar_1_1maybe_aacd71223188fa012fc31c1254909a1b4}{is}} () const noexcept
+\item 
+{\footnotesize template$<$class T $>$ \newline
+requires (internal\+::movar\+::\+Contains\+Alternative$<$\mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}}, T$>$ $\vert$$\vert$ std\+::same\+\_\+as$<$T, \mbox{\hyperlink{structml_1_1movar_1_1nothing}{nothing}}$>$)}\\constexpr bool \mbox{\hyperlink{structml_1_1movar_1_1maybe_a47bf345478ebe6c0837b0a912ccc5b4d}{is}} () const noexcept
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Getters}\par
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$long Index$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Index$<$\mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}}, Index$>$)}\\constexpr auto const \& \mbox{\hyperlink{structml_1_1movar_1_1maybe_a0ebcaef70d1b2efeec6b29e025a6f26f}{get}} () const \&noexcept
+\begin{DoxyCompactList}\small\item\em getter given index (overload 1) \end{DoxyCompactList}\item 
+{\footnotesize template$<$long Index$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Index$<$\mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}}, Index$>$)}\\constexpr auto \& \mbox{\hyperlink{structml_1_1movar_1_1maybe_aa4485b86c3c161e7f2de901440d9d598}{get}} () \&noexcept
+\begin{DoxyCompactList}\small\item\em getter given index (overload 2) \end{DoxyCompactList}\item 
+{\footnotesize template$<$long Index$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Index$<$\mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}}, Index$>$)}\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1maybe_a2feb4580d5cfeb36bb97ba39b8b117c8}{get}} () \&\&
+\begin{DoxyCompactList}\small\item\em getter given index (overload 3) \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ \newline
+requires (internal\+::movar\+::\+Contains\+Alternative$<$\mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}}, T$>$)}\\constexpr T const \& \mbox{\hyperlink{structml_1_1movar_1_1maybe_a9bd5b0e38f4eed940a48ae37947857f8}{get}} () const \&noexcept
+\begin{DoxyCompactList}\small\item\em getter given type (overload 1) \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ \newline
+requires (internal\+::movar\+::\+Contains\+Alternative$<$\mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}}, T$>$)}\\constexpr T \& \mbox{\hyperlink{structml_1_1movar_1_1maybe_a189c99c3af59bbba0972c97bc743a172}{get}} () \&noexcept
+\begin{DoxyCompactList}\small\item\em getter given type (overload 2) \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ \newline
+requires (internal\+::movar\+::\+Contains\+Alternative$<$\mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}}, T$>$)}\\constexpr T \mbox{\hyperlink{structml_1_1movar_1_1maybe_a4f8cdfbe137d273034cf2494ef8b82b5}{get}} () \&\&
+\begin{DoxyCompactList}\small\item\em getter given type (overload 3) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Pipeline}\par
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$internal\+::movar\+::\+Weak\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}} const \& $>$ Vis$>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1maybe_a45dd20b72e18e1ba8da00285edb95666}{map}} (Vis vis) const \&
+\begin{DoxyCompactList}\small\item\em see \mbox{\hyperlink{pipelines_pipelines-map}{pipelines documentation}} \end{DoxyCompactList}\item 
+{\footnotesize template$<$internal\+::movar\+::\+Weak\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}} \&\& $>$ Vis$>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1maybe_a1dab136e002534ba032cc7f190c55b22}{map}} (Vis vis) \&\&
+\begin{DoxyCompactList}\small\item\em see \mbox{\hyperlink{pipelines_pipelines-map}{pipelines documentation}} \end{DoxyCompactList}\item 
+{\footnotesize template$<$internal\+::movar\+::\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}} const \& $>$ Vis$>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1maybe_aba3f42face456a8c527f14480d388469}{match}} (Vis vis) const \&
+\begin{DoxyCompactList}\small\item\em see \mbox{\hyperlink{pipelines_pipelines-match}{pipelines documentation}} \end{DoxyCompactList}\item 
+{\footnotesize template$<$internal\+::movar\+::\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}} \&\& $>$ Vis$>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1maybe_a52c09dfb3c8147d3817c85c041e7aed1}{match}} (Vis vis) \&\&
+\begin{DoxyCompactList}\small\item\em see \mbox{\hyperlink{pipelines_pipelines-match}{pipelines documentation}} \end{DoxyCompactList}\item 
+{\footnotesize template$<$internal\+::movar\+::\+Weak\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}} const \& $>$ Vis, std\+::move\+\_\+constructible Default$>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1maybe_a4feb4ab68d4f036aadfe1df08033df6b}{map\+\_\+or}} (Vis vis, Default def) const \&
+\begin{DoxyCompactList}\small\item\em see \mbox{\hyperlink{pipelines_pipelines-map_or}{pipelines documentation}} \end{DoxyCompactList}\item 
+{\footnotesize template$<$internal\+::movar\+::\+Weak\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}} \&\& $>$ Vis, std\+::move\+\_\+constructible Default$>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1maybe_a18169326e6befc4b50b5e89d0388dc3e}{map\+\_\+or}} (Vis vis, Default def) \&\&
+\begin{DoxyCompactList}\small\item\em see \mbox{\hyperlink{pipelines_pipelines-map_or}{pipelines documentation}} \end{DoxyCompactList}\item 
+{\footnotesize template$<$internal\+::movar\+::\+Weak\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}} const \& $>$ Vis, internal\+::movar\+::\+Lazy Default$>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1maybe_a6c6e14457dd238f59b001bdb4b54892d}{map\+\_\+or\+\_\+else}} (Vis vis, Default def) const \&
+\begin{DoxyCompactList}\small\item\em see \mbox{\hyperlink{pipelines_pipelines-map_or_else}{pipelines documentation}} \end{DoxyCompactList}\item 
+{\footnotesize template$<$internal\+::movar\+::\+Weak\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}} \&\& $>$ Vis, internal\+::movar\+::\+Lazy Default$>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1maybe_a8d8eb3742508fe2cd6a1111d1508613c}{map\+\_\+or\+\_\+else}} (Vis vis, Default def) \&\&
+\begin{DoxyCompactList}\small\item\em see \mbox{\hyperlink{pipelines_pipelines-map_or_else}{pipelines documentation}} \end{DoxyCompactList}\item 
+{\footnotesize template$<$internal\+::movar\+::\+Lazy Default$>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1maybe_a1e67fbcd1bd67fdcc367130688820f53}{or\+\_\+else}} (Default def) const \&
+\begin{DoxyCompactList}\small\item\em see \mbox{\hyperlink{pipelines_pipelines-or_else}{pipelines documentation}} \end{DoxyCompactList}\item 
+{\footnotesize template$<$internal\+::movar\+::\+Lazy Default$>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1maybe_a7a5451efb444b2d75deca0295d72f5b1}{or\+\_\+else}} (Default def) \&\&
+\begin{DoxyCompactList}\small\item\em see \mbox{\hyperlink{pipelines_pipelines-or_else}{pipelines documentation}} \end{DoxyCompactList}\item 
+constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1maybe_a1ee43246c8fd38996b40433ceb73dc90}{take}} ()
+\begin{DoxyCompactList}\small\item\em see \mbox{\hyperlink{pipelines_pipelines-take}{pipelines documentation}} \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structml_1_1movar_1_1maybe_a6a4eb436f3b6af3a230a0a65e2e1630c}{operator==}} (\mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}} const \&) const =default
+\begin{DoxyCompactList}\small\item\em default equality \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{structml_1_1movar_1_1maybe_ad08e67443221b14e97661cadcc6361d5}{operator$<$=$>$}} (\mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}} const \&) const =default
+\begin{DoxyCompactList}\small\item\em default compare \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsection*{Friends}
+\begin{Indent}\textbf{ Friends}\par
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$long Index$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Index$<$\mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}}, Index$>$ $\vert$$\vert$ Index == -\/1)}\\constexpr bool \mbox{\hyperlink{structml_1_1movar_1_1maybe_af12a48c09af9f33c65d0c41b8739e8b5}{is}} (\mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}} const \&self) noexcept
+\item 
+{\footnotesize template$<$class T $>$ \newline
+requires (internal\+::movar\+::\+Contains\+Alternative$<$\mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}}, T$>$ $\vert$$\vert$ std\+::same\+\_\+as$<$T, \mbox{\hyperlink{structml_1_1movar_1_1nothing}{nothing}}$>$)}\\constexpr bool \mbox{\hyperlink{structml_1_1movar_1_1maybe_a7bc802c4ff1355b493748f10e339b469}{is}} (\mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}} const \&self) noexcept
+\item 
+{\footnotesize template$<$long Index, internal\+::movar\+::\+Same\+Unqual$<$ \mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}} $>$ Self$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Index$<$\mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}}, Index$>$)}\\constexpr decltype(auto) \mbox{\hyperlink{structml_1_1movar_1_1maybe_af53db8e45c9636fc8a1a071828dbe350}{get}} (Self \&\&self) noexcept(noexcept(std\+::forward$<$ Self $>$(self).template get$<$ Index $>$()))
+\begin{DoxyCompactList}\small\item\em getter given index \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T , internal\+::movar\+::\+Same\+Unqual$<$ \mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}} $>$ Self$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Alternative$<$\mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}}, T$>$)}\\constexpr decltype(auto) \mbox{\hyperlink{structml_1_1movar_1_1maybe_aa9856743c59690659f01f6027932e329}{get}} (Self \&\&self) noexcept(noexcept(std\+::forward$<$ Self $>$(self).template get$<$ T $>$()))
+\begin{DoxyCompactList}\small\item\em getter given type \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class... Ts$>$\newline
+requires (sizeof...(Ts) $>$ 0)\newline
+class ml\+::movar\+::maybe$<$ Ts $>$}
+A variant with many alternatives that can be empty. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structml_1_1movar_1_1maybe_a9bb04e5235efb76cc4d7934a548de8ce}\label{structml_1_1movar_1_1maybe_a9bb04e5235efb76cc4d7934a548de8ce}} 
+\index{ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}!maybe@{maybe}}
+\index{maybe@{maybe}!ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}}
+\doxysubsubsection{\texorpdfstring{maybe()}{maybe()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$class... Ts$>$ \\
+\mbox{\hyperlink{structml_1_1movar_1_1maybe}{ml\+::movar\+::maybe}}$<$ Ts $>$\+::maybe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+default constructor 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1maybe_a79db99c1455b7f588083a51543fa2845}\label{structml_1_1movar_1_1maybe_a79db99c1455b7f588083a51543fa2845}} 
+\index{ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}!maybe@{maybe}}
+\index{maybe@{maybe}!ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}}
+\doxysubsubsection{\texorpdfstring{maybe()}{maybe()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$class... Ts$>$ \\
+template$<$class Init $>$ \newline
+requires (std\+::same\+\_\+as$<$Init, Ts$>$ $\vert$$\vert$ ...)\\
+constexpr \mbox{\hyperlink{structml_1_1movar_1_1maybe}{ml\+::movar\+::maybe}}$<$ Ts $>$\+::maybe (\begin{DoxyParamCaption}\item[{Init}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Move-\/construct the alternative. 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1maybe_a651746f7feb9bf9ec8b1605f48c560e2}\label{structml_1_1movar_1_1maybe_a651746f7feb9bf9ec8b1605f48c560e2}} 
+\index{ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}!maybe@{maybe}}
+\index{maybe@{maybe}!ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}}
+\doxysubsubsection{\texorpdfstring{maybe()}{maybe()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$class... Ts$>$ \\
+constexpr \mbox{\hyperlink{structml_1_1movar_1_1maybe}{ml\+::movar\+::maybe}}$<$ Ts $>$\+::maybe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structml_1_1movar_1_1nothing}{nothing}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+leaves the variant empty 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1maybe_a16ce02fa5106993d62ab4e6d66172079}\label{structml_1_1movar_1_1maybe_a16ce02fa5106993d62ab4e6d66172079}} 
+\index{ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}!maybe@{maybe}}
+\index{maybe@{maybe}!ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}}
+\doxysubsubsection{\texorpdfstring{maybe()}{maybe()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$class... Ts$>$ \\
+constexpr \mbox{\hyperlink{structml_1_1movar_1_1maybe}{ml\+::movar\+::maybe}}$<$ Ts $>$\+::maybe (\begin{DoxyParamCaption}\item[{std\+::nullopt\+\_\+t}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+leaves the variant empty 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structml_1_1movar_1_1maybe_a2feb4580d5cfeb36bb97ba39b8b117c8}\label{structml_1_1movar_1_1maybe_a2feb4580d5cfeb36bb97ba39b8b117c8}} 
+\index{ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}!get@{get}}
+\index{get@{get}!ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily template$<$class... Ts$>$ \\
+template$<$long Index$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Index$<$\mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}}, Index$>$)\\
+constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1maybe}{ml\+::movar\+::maybe}}$<$ Ts $>$\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+getter given index (overload 3) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Index} & must be in \mbox{[}0, size) \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{structml_1_1movar_1_1maybe_a4f8cdfbe137d273034cf2494ef8b82b5}\label{structml_1_1movar_1_1maybe_a4f8cdfbe137d273034cf2494ef8b82b5}} 
+\index{ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}!get@{get}}
+\index{get@{get}!ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily template$<$class... Ts$>$ \\
+template$<$class T $>$ \newline
+requires (internal\+::movar\+::\+Contains\+Alternative$<$\mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}}, T$>$)\\
+constexpr T \mbox{\hyperlink{structml_1_1movar_1_1maybe}{ml\+::movar\+::maybe}}$<$ Ts $>$\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+getter given type (overload 3) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & must be an alternative \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{structml_1_1movar_1_1maybe_aa4485b86c3c161e7f2de901440d9d598}\label{structml_1_1movar_1_1maybe_aa4485b86c3c161e7f2de901440d9d598}} 
+\index{ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}!get@{get}}
+\index{get@{get}!ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily template$<$class... Ts$>$ \\
+template$<$long Index$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Index$<$\mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}}, Index$>$)\\
+constexpr auto \& \mbox{\hyperlink{structml_1_1movar_1_1maybe}{ml\+::movar\+::maybe}}$<$ Ts $>$\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+getter given index (overload 2) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Index} & must be in \mbox{[}0, size) \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{structml_1_1movar_1_1maybe_a189c99c3af59bbba0972c97bc743a172}\label{structml_1_1movar_1_1maybe_a189c99c3af59bbba0972c97bc743a172}} 
+\index{ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}!get@{get}}
+\index{get@{get}!ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily template$<$class... Ts$>$ \\
+template$<$class T $>$ \newline
+requires (internal\+::movar\+::\+Contains\+Alternative$<$\mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}}, T$>$)\\
+constexpr T \& \mbox{\hyperlink{structml_1_1movar_1_1maybe}{ml\+::movar\+::maybe}}$<$ Ts $>$\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+getter given type (overload 2) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & must be an alternative \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{structml_1_1movar_1_1maybe_a0ebcaef70d1b2efeec6b29e025a6f26f}\label{structml_1_1movar_1_1maybe_a0ebcaef70d1b2efeec6b29e025a6f26f}} 
+\index{ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}!get@{get}}
+\index{get@{get}!ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily template$<$class... Ts$>$ \\
+template$<$long Index$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Index$<$\mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}}, Index$>$)\\
+constexpr auto const  \& \mbox{\hyperlink{structml_1_1movar_1_1maybe}{ml\+::movar\+::maybe}}$<$ Ts $>$\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+getter given index (overload 1) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Index} & must be in \mbox{[}0, size) \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{structml_1_1movar_1_1maybe_a9bd5b0e38f4eed940a48ae37947857f8}\label{structml_1_1movar_1_1maybe_a9bd5b0e38f4eed940a48ae37947857f8}} 
+\index{ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}!get@{get}}
+\index{get@{get}!ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily template$<$class... Ts$>$ \\
+template$<$class T $>$ \newline
+requires (internal\+::movar\+::\+Contains\+Alternative$<$\mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}}, T$>$)\\
+constexpr T const  \& \mbox{\hyperlink{structml_1_1movar_1_1maybe}{ml\+::movar\+::maybe}}$<$ Ts $>$\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+getter given type (overload 1) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & must be an alternative \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{structml_1_1movar_1_1maybe_a8f226e152973f04c860998168158e802}\label{structml_1_1movar_1_1maybe_a8f226e152973f04c860998168158e802}} 
+\index{ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}!index@{index}}
+\index{index@{index}!ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily template$<$class... Ts$>$ \\
+constexpr long \mbox{\hyperlink{structml_1_1movar_1_1maybe}{ml\+::movar\+::maybe}}$<$ Ts $>$\+::index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+the active index 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structml_1_1movar_1_1maybe_aacd71223188fa012fc31c1254909a1b4}\label{structml_1_1movar_1_1maybe_aacd71223188fa012fc31c1254909a1b4}} 
+\index{ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}!is@{is}}
+\index{is@{is}!ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}}
+\doxysubsubsection{\texorpdfstring{is()}{is()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class... Ts$>$ \\
+template$<$long Index$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Index$<$\mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}}, Index$>$ $\vert$$\vert$ Index == -\/1)\\
+constexpr bool \mbox{\hyperlink{structml_1_1movar_1_1maybe}{ml\+::movar\+::maybe}}$<$ Ts $>$\+::is (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+true if {\itshape Index} equals the active index 
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Index} & must be in \mbox{[}-\/1, size) \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{structml_1_1movar_1_1maybe_a47bf345478ebe6c0837b0a912ccc5b4d}\label{structml_1_1movar_1_1maybe_a47bf345478ebe6c0837b0a912ccc5b4d}} 
+\index{ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}!is@{is}}
+\index{is@{is}!ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}}
+\doxysubsubsection{\texorpdfstring{is()}{is()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class... Ts$>$ \\
+template$<$class T $>$ \newline
+requires (internal\+::movar\+::\+Contains\+Alternative$<$\mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}}, T$>$ $\vert$$\vert$ std\+::same\+\_\+as$<$T, \mbox{\hyperlink{structml_1_1movar_1_1nothing}{nothing}}$>$)\\
+constexpr bool \mbox{\hyperlink{structml_1_1movar_1_1maybe}{ml\+::movar\+::maybe}}$<$ Ts $>$\+::is (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+true if {\itshape T} equals the active type 
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & must be an alternative or \mbox{\hyperlink{structml_1_1movar_1_1nothing}{ml\+::movar\+::nothing}} \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{structml_1_1movar_1_1maybe_a71873495626dd08ee203ba98ed53fe31}\label{structml_1_1movar_1_1maybe_a71873495626dd08ee203ba98ed53fe31}} 
+\index{ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}!is\_nothing@{is\_nothing}}
+\index{is\_nothing@{is\_nothing}!ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}}
+\doxysubsubsection{\texorpdfstring{is\_nothing()}{is\_nothing()}}
+{\footnotesize\ttfamily template$<$class... Ts$>$ \\
+constexpr bool \mbox{\hyperlink{structml_1_1movar_1_1maybe}{ml\+::movar\+::maybe}}$<$ Ts $>$\+::is\+\_\+nothing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+true if the option is empty 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structml_1_1movar_1_1maybe_abe49098acd7ec7109c2e71ba6c21e882}\label{structml_1_1movar_1_1maybe_abe49098acd7ec7109c2e71ba6c21e882}} 
+\index{ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}!is\_something@{is\_something}}
+\index{is\_something@{is\_something}!ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}}
+\doxysubsubsection{\texorpdfstring{is\_something()}{is\_something()}}
+{\footnotesize\ttfamily template$<$class... Ts$>$ \\
+constexpr bool \mbox{\hyperlink{structml_1_1movar_1_1maybe}{ml\+::movar\+::maybe}}$<$ Ts $>$\+::is\+\_\+something (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+false if the option is empty 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structml_1_1movar_1_1maybe_a1dab136e002534ba032cc7f190c55b22}\label{structml_1_1movar_1_1maybe_a1dab136e002534ba032cc7f190c55b22}} 
+\index{ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}!map@{map}}
+\index{map@{map}!ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}}
+\doxysubsubsection{\texorpdfstring{map()}{map()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class... Ts$>$ \\
+template$<$internal\+::movar\+::\+Weak\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}} \&\& $>$ Vis$>$ \\
+constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1maybe}{ml\+::movar\+::maybe}}$<$ Ts $>$\+::map (\begin{DoxyParamCaption}\item[{Vis}]{vis }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+see \mbox{\hyperlink{pipelines_pipelines-map}{pipelines documentation}} 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1maybe_a45dd20b72e18e1ba8da00285edb95666}\label{structml_1_1movar_1_1maybe_a45dd20b72e18e1ba8da00285edb95666}} 
+\index{ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}!map@{map}}
+\index{map@{map}!ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}}
+\doxysubsubsection{\texorpdfstring{map()}{map()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class... Ts$>$ \\
+template$<$internal\+::movar\+::\+Weak\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}} const \& $>$ Vis$>$ \\
+constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1maybe}{ml\+::movar\+::maybe}}$<$ Ts $>$\+::map (\begin{DoxyParamCaption}\item[{Vis}]{vis }\end{DoxyParamCaption}) const \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+see \mbox{\hyperlink{pipelines_pipelines-map}{pipelines documentation}} 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1maybe_a18169326e6befc4b50b5e89d0388dc3e}\label{structml_1_1movar_1_1maybe_a18169326e6befc4b50b5e89d0388dc3e}} 
+\index{ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}!map\_or@{map\_or}}
+\index{map\_or@{map\_or}!ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}}
+\doxysubsubsection{\texorpdfstring{map\_or()}{map\_or()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class... Ts$>$ \\
+template$<$internal\+::movar\+::\+Weak\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}} \&\& $>$ Vis, std\+::move\+\_\+constructible Default$>$ \\
+constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1maybe}{ml\+::movar\+::maybe}}$<$ Ts $>$\+::map\+\_\+or (\begin{DoxyParamCaption}\item[{Vis}]{vis,  }\item[{Default}]{def }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+see \mbox{\hyperlink{pipelines_pipelines-map_or}{pipelines documentation}} 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1maybe_a4feb4ab68d4f036aadfe1df08033df6b}\label{structml_1_1movar_1_1maybe_a4feb4ab68d4f036aadfe1df08033df6b}} 
+\index{ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}!map\_or@{map\_or}}
+\index{map\_or@{map\_or}!ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}}
+\doxysubsubsection{\texorpdfstring{map\_or()}{map\_or()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class... Ts$>$ \\
+template$<$internal\+::movar\+::\+Weak\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}} const \& $>$ Vis, std\+::move\+\_\+constructible Default$>$ \\
+constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1maybe}{ml\+::movar\+::maybe}}$<$ Ts $>$\+::map\+\_\+or (\begin{DoxyParamCaption}\item[{Vis}]{vis,  }\item[{Default}]{def }\end{DoxyParamCaption}) const \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+see \mbox{\hyperlink{pipelines_pipelines-map_or}{pipelines documentation}} 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1maybe_a8d8eb3742508fe2cd6a1111d1508613c}\label{structml_1_1movar_1_1maybe_a8d8eb3742508fe2cd6a1111d1508613c}} 
+\index{ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}!map\_or\_else@{map\_or\_else}}
+\index{map\_or\_else@{map\_or\_else}!ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}}
+\doxysubsubsection{\texorpdfstring{map\_or\_else()}{map\_or\_else()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class... Ts$>$ \\
+template$<$internal\+::movar\+::\+Weak\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}} \&\& $>$ Vis, internal\+::movar\+::\+Lazy Default$>$ \\
+constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1maybe}{ml\+::movar\+::maybe}}$<$ Ts $>$\+::map\+\_\+or\+\_\+else (\begin{DoxyParamCaption}\item[{Vis}]{vis,  }\item[{Default}]{def }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+see \mbox{\hyperlink{pipelines_pipelines-map_or_else}{pipelines documentation}} 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1maybe_a6c6e14457dd238f59b001bdb4b54892d}\label{structml_1_1movar_1_1maybe_a6c6e14457dd238f59b001bdb4b54892d}} 
+\index{ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}!map\_or\_else@{map\_or\_else}}
+\index{map\_or\_else@{map\_or\_else}!ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}}
+\doxysubsubsection{\texorpdfstring{map\_or\_else()}{map\_or\_else()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class... Ts$>$ \\
+template$<$internal\+::movar\+::\+Weak\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}} const \& $>$ Vis, internal\+::movar\+::\+Lazy Default$>$ \\
+constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1maybe}{ml\+::movar\+::maybe}}$<$ Ts $>$\+::map\+\_\+or\+\_\+else (\begin{DoxyParamCaption}\item[{Vis}]{vis,  }\item[{Default}]{def }\end{DoxyParamCaption}) const \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+see \mbox{\hyperlink{pipelines_pipelines-map_or_else}{pipelines documentation}} 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1maybe_a52c09dfb3c8147d3817c85c041e7aed1}\label{structml_1_1movar_1_1maybe_a52c09dfb3c8147d3817c85c041e7aed1}} 
+\index{ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}!match@{match}}
+\index{match@{match}!ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}}
+\doxysubsubsection{\texorpdfstring{match()}{match()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class... Ts$>$ \\
+template$<$internal\+::movar\+::\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}} \&\& $>$ Vis$>$ \\
+constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1maybe}{ml\+::movar\+::maybe}}$<$ Ts $>$\+::match (\begin{DoxyParamCaption}\item[{Vis}]{vis }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+see \mbox{\hyperlink{pipelines_pipelines-match}{pipelines documentation}} 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1maybe_aba3f42face456a8c527f14480d388469}\label{structml_1_1movar_1_1maybe_aba3f42face456a8c527f14480d388469}} 
+\index{ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}!match@{match}}
+\index{match@{match}!ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}}
+\doxysubsubsection{\texorpdfstring{match()}{match()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class... Ts$>$ \\
+template$<$internal\+::movar\+::\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}} const \& $>$ Vis$>$ \\
+constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1maybe}{ml\+::movar\+::maybe}}$<$ Ts $>$\+::match (\begin{DoxyParamCaption}\item[{Vis}]{vis }\end{DoxyParamCaption}) const \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+see \mbox{\hyperlink{pipelines_pipelines-match}{pipelines documentation}} 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1maybe_ad08e67443221b14e97661cadcc6361d5}\label{structml_1_1movar_1_1maybe_ad08e67443221b14e97661cadcc6361d5}} 
+\index{ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}!operator$<$=$>$@{operator$<$=$>$}}
+\index{operator$<$=$>$@{operator$<$=$>$}!ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}}
+\doxysubsubsection{\texorpdfstring{operator$<$=$>$()}{operator<=>()}}
+{\footnotesize\ttfamily template$<$class... Ts$>$ \\
+auto \mbox{\hyperlink{structml_1_1movar_1_1maybe}{ml\+::movar\+::maybe}}$<$ Ts $>$\+::operator$<$=$>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}}$<$ Ts $>$ const \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+default compare 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1maybe_a6a4eb436f3b6af3a230a0a65e2e1630c}\label{structml_1_1movar_1_1maybe_a6a4eb436f3b6af3a230a0a65e2e1630c}} 
+\index{ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$class... Ts$>$ \\
+bool \mbox{\hyperlink{structml_1_1movar_1_1maybe}{ml\+::movar\+::maybe}}$<$ Ts $>$\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}}$<$ Ts $>$ const \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+default equality 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1maybe_a7a5451efb444b2d75deca0295d72f5b1}\label{structml_1_1movar_1_1maybe_a7a5451efb444b2d75deca0295d72f5b1}} 
+\index{ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}!or\_else@{or\_else}}
+\index{or\_else@{or\_else}!ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}}
+\doxysubsubsection{\texorpdfstring{or\_else()}{or\_else()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class... Ts$>$ \\
+template$<$internal\+::movar\+::\+Lazy Default$>$ \\
+constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1maybe}{ml\+::movar\+::maybe}}$<$ Ts $>$\+::or\+\_\+else (\begin{DoxyParamCaption}\item[{Default}]{def }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+see \mbox{\hyperlink{pipelines_pipelines-or_else}{pipelines documentation}} 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1maybe_a1e67fbcd1bd67fdcc367130688820f53}\label{structml_1_1movar_1_1maybe_a1e67fbcd1bd67fdcc367130688820f53}} 
+\index{ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}!or\_else@{or\_else}}
+\index{or\_else@{or\_else}!ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}}
+\doxysubsubsection{\texorpdfstring{or\_else()}{or\_else()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class... Ts$>$ \\
+template$<$internal\+::movar\+::\+Lazy Default$>$ \\
+constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1maybe}{ml\+::movar\+::maybe}}$<$ Ts $>$\+::or\+\_\+else (\begin{DoxyParamCaption}\item[{Default}]{def }\end{DoxyParamCaption}) const \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+see \mbox{\hyperlink{pipelines_pipelines-or_else}{pipelines documentation}} 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1maybe_a1ee43246c8fd38996b40433ceb73dc90}\label{structml_1_1movar_1_1maybe_a1ee43246c8fd38996b40433ceb73dc90}} 
+\index{ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}!take@{take}}
+\index{take@{take}!ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}}
+\doxysubsubsection{\texorpdfstring{take()}{take()}}
+{\footnotesize\ttfamily template$<$class... Ts$>$ \\
+constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1maybe}{ml\+::movar\+::maybe}}$<$ Ts $>$\+::take (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+see \mbox{\hyperlink{pipelines_pipelines-take}{pipelines documentation}} 
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{structml_1_1movar_1_1maybe_af53db8e45c9636fc8a1a071828dbe350}\label{structml_1_1movar_1_1maybe_af53db8e45c9636fc8a1a071828dbe350}} 
+\index{ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}!get@{get}}
+\index{get@{get}!ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}}
+\doxysubsubsection{\texorpdfstring{get}{get}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class... Ts$>$ \\
+template$<$long Index, internal\+::movar\+::\+Same\+Unqual$<$ \mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}} $>$ Self$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Index$<$\mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}}, Index$>$)\\
+constexpr decltype(auto) get (\begin{DoxyParamCaption}\item[{Self \&\&}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+getter given index 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Index} & must be in \mbox{[}0, size) \\
+\hline
+{\em Self} & must be an instance of \mbox{\hyperlink{structml_1_1movar_1_1maybe}{ml\+::movar\+::maybe}} \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{structml_1_1movar_1_1maybe_aa9856743c59690659f01f6027932e329}\label{structml_1_1movar_1_1maybe_aa9856743c59690659f01f6027932e329}} 
+\index{ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}!get@{get}}
+\index{get@{get}!ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}}
+\doxysubsubsection{\texorpdfstring{get}{get}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class... Ts$>$ \\
+template$<$class T , internal\+::movar\+::\+Same\+Unqual$<$ \mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}} $>$ Self$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Alternative$<$\mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}}, T$>$)\\
+constexpr decltype(auto) get (\begin{DoxyParamCaption}\item[{Self \&\&}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+getter given type 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & must be an alternative \\
+\hline
+{\em Self} & must be an instance of \mbox{\hyperlink{structml_1_1movar_1_1maybe}{ml\+::movar\+::maybe}} \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{structml_1_1movar_1_1maybe_af12a48c09af9f33c65d0c41b8739e8b5}\label{structml_1_1movar_1_1maybe_af12a48c09af9f33c65d0c41b8739e8b5}} 
+\index{ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}!is@{is}}
+\index{is@{is}!ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}}
+\doxysubsubsection{\texorpdfstring{is}{is}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class... Ts$>$ \\
+template$<$long Index$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Index$<$\mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}}, Index$>$ $\vert$$\vert$ Index == -\/1)\\
+constexpr bool is (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}}$<$ Ts $>$ const \&}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\begin{DoxyReturn}{Returns}
+true if {\itshape Index} equals the active index 
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Index} & must in \mbox{[}-\/1, size) \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{structml_1_1movar_1_1maybe_a7bc802c4ff1355b493748f10e339b469}\label{structml_1_1movar_1_1maybe_a7bc802c4ff1355b493748f10e339b469}} 
+\index{ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}!is@{is}}
+\index{is@{is}!ml::movar::maybe$<$ Ts $>$@{ml::movar::maybe$<$ Ts $>$}}
+\doxysubsubsection{\texorpdfstring{is}{is}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class... Ts$>$ \\
+template$<$class T $>$ \newline
+requires (internal\+::movar\+::\+Contains\+Alternative$<$\mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}}, T$>$ $\vert$$\vert$ std\+::same\+\_\+as$<$T, \mbox{\hyperlink{structml_1_1movar_1_1nothing}{nothing}}$>$)\\
+constexpr bool is (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structml_1_1movar_1_1maybe}{maybe}}$<$ Ts $>$ const \&}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\begin{DoxyReturn}{Returns}
+true if {\itshape T} equals the active type 
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & must be an alternative or \mbox{\hyperlink{structml_1_1movar_1_1nothing}{ml\+::movar\+::nothing}} \\
+\hline
+\end{DoxyTemplParams}

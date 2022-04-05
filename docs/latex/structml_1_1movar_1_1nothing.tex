@@ -1,0 +1,294 @@
+\hypertarget{structml_1_1movar_1_1nothing}{}\doxysection{ml\+::movar\+::nothing Class Reference}
+\label{structml_1_1movar_1_1nothing}\index{ml::movar::nothing@{ml::movar::nothing}}
+
+
+A variant with zero alternatives.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structml_1_1movar_1_1nothing_aa2722a710ffd3919de5061553f36a21e}{operator==}} (\mbox{\hyperlink{structml_1_1movar_1_1nothing}{nothing}} const \&) const =default
+\begin{DoxyCompactList}\small\item\em default equality \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{structml_1_1movar_1_1nothing_ade67bec0ac848e41fc464913d77a23cf}{operator$<$=$>$}} (\mbox{\hyperlink{structml_1_1movar_1_1nothing}{nothing}} const \&) const =default
+\begin{DoxyCompactList}\small\item\em default compare \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Observers}\par
+\begin{DoxyCompactItemize}
+\item 
+constexpr long \mbox{\hyperlink{structml_1_1movar_1_1nothing_a45c63ab5b901daa8351c64d254fa9c27}{index}} () const noexcept
+\item 
+constexpr bool \mbox{\hyperlink{structml_1_1movar_1_1nothing_a66da1a2c3bf7388d9f6440bdd4f23a77}{is\+\_\+nothing}} () const noexcept
+\item 
+constexpr bool \mbox{\hyperlink{structml_1_1movar_1_1nothing_a9df3f9d7b642d7abc9e5c04006623462}{is\+\_\+something}} () const noexcept
+\item 
+{\footnotesize template$<$long I$>$ \newline
+requires (I == -\/1)}\\constexpr bool \mbox{\hyperlink{structml_1_1movar_1_1nothing_aea84a9bcced9ec334f1694b803312637}{is}} () const noexcept
+\item 
+{\footnotesize template$<$std\+::same\+\_\+as$<$ \mbox{\hyperlink{structml_1_1movar_1_1nothing}{nothing}} $>$ T$>$ }\\constexpr bool \mbox{\hyperlink{structml_1_1movar_1_1nothing_a5bd8cd6e7b1fd92c272f27646c8750cc}{is}} () const noexcept
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Getters}\par
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$long Index$>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1nothing_a5d7f994993e37faaa98b002b789a963f}{get}} () const noexcept=delete
+\begin{DoxyCompactList}\small\item\em deleted \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1nothing_a5d7f994993e37faaa98b002b789a963f}{get}} () const noexcept=delete
+\begin{DoxyCompactList}\small\item\em deleted \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Pipeline}\par
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$std\+::move\+\_\+constructible Vis$>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1nothing_a0862ed8cd0ca1cfcbc886b80af0fb12d}{map}} (Vis) const
+\begin{DoxyCompactList}\small\item\em see \mbox{\hyperlink{pipelines_pipelines-map}{pipelines documentation}} \end{DoxyCompactList}\item 
+{\footnotesize template$<$internal\+::movar\+::\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1nothing}{nothing}} $>$ Vis$>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1nothing_a3bbbde94ae8cce156ad26c1b1af5ffc2}{match}} (Vis vis) const
+\begin{DoxyCompactList}\small\item\em see \mbox{\hyperlink{pipelines_pipelines-match}{pipelines documentation}} \end{DoxyCompactList}\item 
+{\footnotesize template$<$std\+::move\+\_\+constructible Vis, std\+::move\+\_\+constructible Default$>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1nothing_a3e0c0f36b33502423b2c130781be4411}{map\+\_\+or}} (Vis vis, Default def) const
+\begin{DoxyCompactList}\small\item\em see \mbox{\hyperlink{pipelines_pipelines-map_or}{pipelines documentation}} \end{DoxyCompactList}\item 
+{\footnotesize template$<$std\+::move\+\_\+constructible Vis, internal\+::movar\+::\+Lazy Default$>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1nothing_aa561982835fceef0ec75942188d44ba8}{map\+\_\+or\+\_\+else}} (Vis vis, Default def) const
+\begin{DoxyCompactList}\small\item\em see \mbox{\hyperlink{pipelines_pipelines-map_or_else}{pipelines documentation}} \end{DoxyCompactList}\item 
+{\footnotesize template$<$internal\+::movar\+::\+Lazy Default$>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1nothing_a248677ef059dcc2bee733094e539821d}{or\+\_\+else}} (Default def) const
+\begin{DoxyCompactList}\small\item\em see \mbox{\hyperlink{pipelines_pipelines-or_else}{pipelines documentation}} \end{DoxyCompactList}\item 
+constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1nothing_a7c6d2ead1a8c8af5598489f47ecd40fb}{take}} () const noexcept
+\begin{DoxyCompactList}\small\item\em see \mbox{\hyperlink{pipelines_pipelines-take}{pipelines documentation}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsection*{Friends}
+\begin{Indent}\textbf{ Friends}\par
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$long I$>$ \newline
+requires (I == -\/1)}\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1nothing_a1e59e233836c4138797d91546927d17b}{is}} (\mbox{\hyperlink{structml_1_1movar_1_1nothing}{nothing}} const \&) noexcept
+\item 
+{\footnotesize template$<$std\+::same\+\_\+as$<$ \mbox{\hyperlink{structml_1_1movar_1_1nothing}{nothing}} $>$ T$>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1nothing_af039e3b39f6695c604d3331f042f06b2}{is}} (\mbox{\hyperlink{structml_1_1movar_1_1nothing}{nothing}} const \&) noexcept
+\item 
+{\footnotesize template$<$long Index$>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1nothing_a7bb3fc0329191b53bc884a235b3fff6d}{get}} (\mbox{\hyperlink{structml_1_1movar_1_1nothing}{nothing}} const \&) noexcept=delete
+\begin{DoxyCompactList}\small\item\em deleted \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1nothing_a7bb3fc0329191b53bc884a235b3fff6d}{get}} (\mbox{\hyperlink{structml_1_1movar_1_1nothing}{nothing}} const \&) noexcept=delete
+\begin{DoxyCompactList}\small\item\em deleted \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\doxysubsection{Detailed Description}
+A variant with zero alternatives. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structml_1_1movar_1_1nothing_a5d7f994993e37faaa98b002b789a963f}\label{structml_1_1movar_1_1nothing_a5d7f994993e37faaa98b002b789a963f}} 
+\index{ml::movar::nothing@{ml::movar::nothing}!get@{get}}
+\index{get@{get}!ml::movar::nothing@{ml::movar::nothing}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$long Index$>$ \\
+constexpr auto ml\+::movar\+::nothing\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}, {\ttfamily [delete]}, {\ttfamily [noexcept]}}
+
+
+
+deleted 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1nothing_a5d7f994993e37faaa98b002b789a963f}\label{structml_1_1movar_1_1nothing_a5d7f994993e37faaa98b002b789a963f}} 
+\index{ml::movar::nothing@{ml::movar::nothing}!get@{get}}
+\index{get@{get}!ml::movar::nothing@{ml::movar::nothing}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+constexpr auto ml\+::movar\+::nothing\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}, {\ttfamily [delete]}, {\ttfamily [noexcept]}}
+
+
+
+deleted 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1nothing_a45c63ab5b901daa8351c64d254fa9c27}\label{structml_1_1movar_1_1nothing_a45c63ab5b901daa8351c64d254fa9c27}} 
+\index{ml::movar::nothing@{ml::movar::nothing}!index@{index}}
+\index{index@{index}!ml::movar::nothing@{ml::movar::nothing}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily constexpr long ml\+::movar\+::nothing\+::index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+-\/1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structml_1_1movar_1_1nothing_aea84a9bcced9ec334f1694b803312637}\label{structml_1_1movar_1_1nothing_aea84a9bcced9ec334f1694b803312637}} 
+\index{ml::movar::nothing@{ml::movar::nothing}!is@{is}}
+\index{is@{is}!ml::movar::nothing@{ml::movar::nothing}}
+\doxysubsubsection{\texorpdfstring{is()}{is()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$long I$>$ \newline
+requires (I == -\/1)\\
+constexpr bool ml\+::movar\+::nothing\+::is (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+true 
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em I} & must be -\/1 \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{structml_1_1movar_1_1nothing_a5bd8cd6e7b1fd92c272f27646c8750cc}\label{structml_1_1movar_1_1nothing_a5bd8cd6e7b1fd92c272f27646c8750cc}} 
+\index{ml::movar::nothing@{ml::movar::nothing}!is@{is}}
+\index{is@{is}!ml::movar::nothing@{ml::movar::nothing}}
+\doxysubsubsection{\texorpdfstring{is()}{is()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$std\+::same\+\_\+as$<$ \mbox{\hyperlink{structml_1_1movar_1_1nothing}{nothing}} $>$ T$>$ \\
+constexpr bool ml\+::movar\+::nothing\+::is (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+true 
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & must be \mbox{\hyperlink{structml_1_1movar_1_1nothing}{ml\+::movar\+::nothing}} \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{structml_1_1movar_1_1nothing_a66da1a2c3bf7388d9f6440bdd4f23a77}\label{structml_1_1movar_1_1nothing_a66da1a2c3bf7388d9f6440bdd4f23a77}} 
+\index{ml::movar::nothing@{ml::movar::nothing}!is\_nothing@{is\_nothing}}
+\index{is\_nothing@{is\_nothing}!ml::movar::nothing@{ml::movar::nothing}}
+\doxysubsubsection{\texorpdfstring{is\_nothing()}{is\_nothing()}}
+{\footnotesize\ttfamily constexpr bool ml\+::movar\+::nothing\+::is\+\_\+nothing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+true 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structml_1_1movar_1_1nothing_a9df3f9d7b642d7abc9e5c04006623462}\label{structml_1_1movar_1_1nothing_a9df3f9d7b642d7abc9e5c04006623462}} 
+\index{ml::movar::nothing@{ml::movar::nothing}!is\_something@{is\_something}}
+\index{is\_something@{is\_something}!ml::movar::nothing@{ml::movar::nothing}}
+\doxysubsubsection{\texorpdfstring{is\_something()}{is\_something()}}
+{\footnotesize\ttfamily constexpr bool ml\+::movar\+::nothing\+::is\+\_\+something (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structml_1_1movar_1_1nothing_a0862ed8cd0ca1cfcbc886b80af0fb12d}\label{structml_1_1movar_1_1nothing_a0862ed8cd0ca1cfcbc886b80af0fb12d}} 
+\index{ml::movar::nothing@{ml::movar::nothing}!map@{map}}
+\index{map@{map}!ml::movar::nothing@{ml::movar::nothing}}
+\doxysubsubsection{\texorpdfstring{map()}{map()}}
+{\footnotesize\ttfamily template$<$std\+::move\+\_\+constructible Vis$>$ \\
+constexpr auto ml\+::movar\+::nothing\+::map (\begin{DoxyParamCaption}\item[{Vis}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+see \mbox{\hyperlink{pipelines_pipelines-map}{pipelines documentation}} 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1nothing_a3e0c0f36b33502423b2c130781be4411}\label{structml_1_1movar_1_1nothing_a3e0c0f36b33502423b2c130781be4411}} 
+\index{ml::movar::nothing@{ml::movar::nothing}!map\_or@{map\_or}}
+\index{map\_or@{map\_or}!ml::movar::nothing@{ml::movar::nothing}}
+\doxysubsubsection{\texorpdfstring{map\_or()}{map\_or()}}
+{\footnotesize\ttfamily template$<$std\+::move\+\_\+constructible Vis, std\+::move\+\_\+constructible Default$>$ \\
+constexpr auto ml\+::movar\+::nothing\+::map\+\_\+or (\begin{DoxyParamCaption}\item[{Vis}]{vis,  }\item[{Default}]{def }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+see \mbox{\hyperlink{pipelines_pipelines-map_or}{pipelines documentation}} 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1nothing_aa561982835fceef0ec75942188d44ba8}\label{structml_1_1movar_1_1nothing_aa561982835fceef0ec75942188d44ba8}} 
+\index{ml::movar::nothing@{ml::movar::nothing}!map\_or\_else@{map\_or\_else}}
+\index{map\_or\_else@{map\_or\_else}!ml::movar::nothing@{ml::movar::nothing}}
+\doxysubsubsection{\texorpdfstring{map\_or\_else()}{map\_or\_else()}}
+{\footnotesize\ttfamily template$<$std\+::move\+\_\+constructible Vis, internal\+::movar\+::\+Lazy Default$>$ \\
+constexpr auto ml\+::movar\+::nothing\+::map\+\_\+or\+\_\+else (\begin{DoxyParamCaption}\item[{Vis}]{vis,  }\item[{Default}]{def }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+see \mbox{\hyperlink{pipelines_pipelines-map_or_else}{pipelines documentation}} 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1nothing_a3bbbde94ae8cce156ad26c1b1af5ffc2}\label{structml_1_1movar_1_1nothing_a3bbbde94ae8cce156ad26c1b1af5ffc2}} 
+\index{ml::movar::nothing@{ml::movar::nothing}!match@{match}}
+\index{match@{match}!ml::movar::nothing@{ml::movar::nothing}}
+\doxysubsubsection{\texorpdfstring{match()}{match()}}
+{\footnotesize\ttfamily template$<$internal\+::movar\+::\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1nothing}{nothing}} $>$ Vis$>$ \\
+constexpr auto ml\+::movar\+::nothing\+::match (\begin{DoxyParamCaption}\item[{Vis}]{vis }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+see \mbox{\hyperlink{pipelines_pipelines-match}{pipelines documentation}} 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1nothing_ade67bec0ac848e41fc464913d77a23cf}\label{structml_1_1movar_1_1nothing_ade67bec0ac848e41fc464913d77a23cf}} 
+\index{ml::movar::nothing@{ml::movar::nothing}!operator$<$=$>$@{operator$<$=$>$}}
+\index{operator$<$=$>$@{operator$<$=$>$}!ml::movar::nothing@{ml::movar::nothing}}
+\doxysubsubsection{\texorpdfstring{operator$<$=$>$()}{operator<=>()}}
+{\footnotesize\ttfamily auto ml\+::movar\+::nothing\+::operator$<$=$>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structml_1_1movar_1_1nothing}{nothing}} const \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+default compare 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1nothing_aa2722a710ffd3919de5061553f36a21e}\label{structml_1_1movar_1_1nothing_aa2722a710ffd3919de5061553f36a21e}} 
+\index{ml::movar::nothing@{ml::movar::nothing}!operator==@{operator==}}
+\index{operator==@{operator==}!ml::movar::nothing@{ml::movar::nothing}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool ml\+::movar\+::nothing\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structml_1_1movar_1_1nothing}{nothing}} const \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+default equality 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1nothing_a248677ef059dcc2bee733094e539821d}\label{structml_1_1movar_1_1nothing_a248677ef059dcc2bee733094e539821d}} 
+\index{ml::movar::nothing@{ml::movar::nothing}!or\_else@{or\_else}}
+\index{or\_else@{or\_else}!ml::movar::nothing@{ml::movar::nothing}}
+\doxysubsubsection{\texorpdfstring{or\_else()}{or\_else()}}
+{\footnotesize\ttfamily template$<$internal\+::movar\+::\+Lazy Default$>$ \\
+constexpr auto ml\+::movar\+::nothing\+::or\+\_\+else (\begin{DoxyParamCaption}\item[{Default}]{def }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+see \mbox{\hyperlink{pipelines_pipelines-or_else}{pipelines documentation}} 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1nothing_a7c6d2ead1a8c8af5598489f47ecd40fb}\label{structml_1_1movar_1_1nothing_a7c6d2ead1a8c8af5598489f47ecd40fb}} 
+\index{ml::movar::nothing@{ml::movar::nothing}!take@{take}}
+\index{take@{take}!ml::movar::nothing@{ml::movar::nothing}}
+\doxysubsubsection{\texorpdfstring{take()}{take()}}
+{\footnotesize\ttfamily constexpr auto ml\+::movar\+::nothing\+::take (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+see \mbox{\hyperlink{pipelines_pipelines-take}{pipelines documentation}} 
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{structml_1_1movar_1_1nothing_a7bb3fc0329191b53bc884a235b3fff6d}\label{structml_1_1movar_1_1nothing_a7bb3fc0329191b53bc884a235b3fff6d}} 
+\index{ml::movar::nothing@{ml::movar::nothing}!get@{get}}
+\index{get@{get}!ml::movar::nothing@{ml::movar::nothing}}
+\doxysubsubsection{\texorpdfstring{get}{get}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$long Index$>$ \\
+constexpr auto get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structml_1_1movar_1_1nothing}{nothing}} const \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+deleted 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1nothing_a7bb3fc0329191b53bc884a235b3fff6d}\label{structml_1_1movar_1_1nothing_a7bb3fc0329191b53bc884a235b3fff6d}} 
+\index{ml::movar::nothing@{ml::movar::nothing}!get@{get}}
+\index{get@{get}!ml::movar::nothing@{ml::movar::nothing}}
+\doxysubsubsection{\texorpdfstring{get}{get}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+constexpr auto get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structml_1_1movar_1_1nothing}{nothing}} const \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+deleted 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1nothing_a1e59e233836c4138797d91546927d17b}\label{structml_1_1movar_1_1nothing_a1e59e233836c4138797d91546927d17b}} 
+\index{ml::movar::nothing@{ml::movar::nothing}!is@{is}}
+\index{is@{is}!ml::movar::nothing@{ml::movar::nothing}}
+\doxysubsubsection{\texorpdfstring{is}{is}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$long I$>$ \newline
+requires (I == -\/1)\\
+constexpr auto is (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structml_1_1movar_1_1nothing}{nothing}} const \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\begin{DoxyReturn}{Returns}
+true 
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em I} & must be -\/1 \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{structml_1_1movar_1_1nothing_af039e3b39f6695c604d3331f042f06b2}\label{structml_1_1movar_1_1nothing_af039e3b39f6695c604d3331f042f06b2}} 
+\index{ml::movar::nothing@{ml::movar::nothing}!is@{is}}
+\index{is@{is}!ml::movar::nothing@{ml::movar::nothing}}
+\doxysubsubsection{\texorpdfstring{is}{is}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$std\+::same\+\_\+as$<$ \mbox{\hyperlink{structml_1_1movar_1_1nothing}{nothing}} $>$ T$>$ \\
+constexpr auto is (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structml_1_1movar_1_1nothing}{nothing}} const \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\begin{DoxyReturn}{Returns}
+true 
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & must be \mbox{\hyperlink{structml_1_1movar_1_1nothing}{ml\+::movar\+::nothing}} \\
+\hline
+\end{DoxyTemplParams}

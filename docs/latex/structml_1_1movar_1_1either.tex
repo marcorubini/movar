@@ -1,0 +1,551 @@
+\hypertarget{structml_1_1movar_1_1either}{}\doxysection{ml\+::movar\+::either\texorpdfstring{$<$}{<} T1, T2 \texorpdfstring{$>$}{>} Class Template Reference}
+\label{structml_1_1movar_1_1either}\index{ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}}
+
+
+A variant type with two alternatives.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr \mbox{\hyperlink{structml_1_1movar_1_1either_a6e74df0931ffa32e13756a543713dde6}{either}} ()=default
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{structml_1_1movar_1_1either_a423f2e56f77a10554dbf1172e85afb64}{either}} (T1 value) noexcept(std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ T1 $>$)
+\begin{DoxyCompactList}\small\item\em Move-\/constructs an instance of {\itshape T1}. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{structml_1_1movar_1_1either_a0dbf4efea6c175c894d731fad18fc2fd}{either}} (T2 value) noexcept(std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ T2 $>$)
+\begin{DoxyCompactList}\small\item\em Move-\/constructs an instance of {\itshape T2}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structml_1_1movar_1_1either_a5b4c2175cf148968d706ab56a1edbb58}{operator==}} (\mbox{\hyperlink{structml_1_1movar_1_1either}{either}} const \&) const =default
+\begin{DoxyCompactList}\small\item\em defaulf equality \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{structml_1_1movar_1_1either_a8b9ecbe54869bec0aa25b8f0db8a2d55}{operator$<$=$>$}} (\mbox{\hyperlink{structml_1_1movar_1_1either}{either}} const \&) const =default
+\begin{DoxyCompactList}\small\item\em default comparison \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Observers}
+\begin{DoxyCompactItemize}
+\item 
+constexpr long \mbox{\hyperlink{structml_1_1movar_1_1either_afc90161c5008fe756b4d3eb0d58af881}{index}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Returns the active index. \end{DoxyCompactList}\item 
+constexpr bool \mbox{\hyperlink{structml_1_1movar_1_1either_ad599c6230af91595fab18e1adbff1316}{is\+\_\+nothing}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Returns false. \end{DoxyCompactList}\item 
+constexpr bool \mbox{\hyperlink{structml_1_1movar_1_1either_ac576547644cf58fc96def76bc99922d0}{is\+\_\+something}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Returns true. \end{DoxyCompactList}\item 
+{\footnotesize template$<$long Index$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Index$<$\mbox{\hyperlink{structml_1_1movar_1_1either}{either}}, Index$>$ $\vert$$\vert$ Index == -\/1)}\\constexpr bool \mbox{\hyperlink{structml_1_1movar_1_1either_a7ecc412256c70b2132d4053d109f171c}{is}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Returns true if {\itshape Index} equals the active index. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ \newline
+requires (internal\+::movar\+::\+Contains\+Alternative$<$\mbox{\hyperlink{structml_1_1movar_1_1either}{either}}, T$>$ $\vert$$\vert$ std\+::same\+\_\+as$<$T, \mbox{\hyperlink{structml_1_1movar_1_1nothing}{nothing}}$>$)}\\constexpr bool \mbox{\hyperlink{structml_1_1movar_1_1either_ab0f88c3e2a3464f54db1e0e527f80104}{is}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Returns true if {\itshape T} equals the active type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Getters}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$long Index$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Index$<$\mbox{\hyperlink{structml_1_1movar_1_1either}{either}}, Index$>$)}\\constexpr auto const \& \mbox{\hyperlink{structml_1_1movar_1_1either_a9ad46e06d12e34ac068b3d7c43a3d221}{get}} () const \&noexcept
+\begin{DoxyCompactList}\small\item\em get with index (overload 1) \end{DoxyCompactList}\item 
+{\footnotesize template$<$long Index$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Index$<$\mbox{\hyperlink{structml_1_1movar_1_1either}{either}}, Index$>$)}\\constexpr auto \& \mbox{\hyperlink{structml_1_1movar_1_1either_a525ee481ea495a3ad1481757d62d21bf}{get}} () \&noexcept
+\begin{DoxyCompactList}\small\item\em get with index (overload 2) \end{DoxyCompactList}\item 
+{\footnotesize template$<$long Index$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Index$<$\mbox{\hyperlink{structml_1_1movar_1_1either}{either}}, Index$>$)}\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1either_a11b9e5cd56b3378977924eefc7b85e18}{get}} () \&\&noexcept(std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ T1 $>$ \&\&std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ T2 $>$)
+\begin{DoxyCompactList}\small\item\em get with index (overload 3) \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ \newline
+requires (internal\+::movar\+::\+Contains\+Alternative$<$\mbox{\hyperlink{structml_1_1movar_1_1either}{either}}, T$>$)}\\constexpr T const \& \mbox{\hyperlink{structml_1_1movar_1_1either_a84efa6eb0e478381da5ae8bba91a2b67}{get}} () const \&noexcept
+\begin{DoxyCompactList}\small\item\em get with type (overload 1) \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ \newline
+requires (internal\+::movar\+::\+Contains\+Alternative$<$\mbox{\hyperlink{structml_1_1movar_1_1either}{either}}, T$>$)}\\constexpr T \& \mbox{\hyperlink{structml_1_1movar_1_1either_a044a812dee94baaedfb66c4c1475eab8}{get}} () \&noexcept
+\begin{DoxyCompactList}\small\item\em get with type (overload 2) \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ \newline
+requires (internal\+::movar\+::\+Contains\+Alternative$<$\mbox{\hyperlink{structml_1_1movar_1_1either}{either}}, T$>$)}\\constexpr T \mbox{\hyperlink{structml_1_1movar_1_1either_af0df64f1679021e4a43003666bb4785b}{get}} () \&\&noexcept(std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ T1 $>$ \&\&std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ T2 $>$)
+\begin{DoxyCompactList}\small\item\em get with type (overload 3) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Pipeline}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$internal\+::movar\+::\+Weak\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1either}{either}} const \& $>$ Vis$>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1either_adbc8a974e9f2a0056124871978e04ccf}{map}} (Vis vis) const \&
+\begin{DoxyCompactList}\small\item\em see \mbox{\hyperlink{pipelines_pipelines-map}{pipelines documentation}} \end{DoxyCompactList}\item 
+{\footnotesize template$<$internal\+::movar\+::\+Weak\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1either}{either}} \&\& $>$ Vis$>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1either_ac75b5be2de337b52f827c536ecd388be}{map}} (Vis vis) \&\&
+\begin{DoxyCompactList}\small\item\em see \mbox{\hyperlink{pipelines_pipelines-map}{pipelines documentation}} \end{DoxyCompactList}\item 
+{\footnotesize template$<$internal\+::movar\+::\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1either}{either}} const \& $>$ Vis$>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1either_ab15d03d3b3afe208fdc0c64c07a6ede0}{match}} (Vis vis) const \&
+\begin{DoxyCompactList}\small\item\em see \mbox{\hyperlink{pipelines_pipelines-match}{pipelines documentation}} \end{DoxyCompactList}\item 
+{\footnotesize template$<$internal\+::movar\+::\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1either}{either}} \&\& $>$ Vis$>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1either_aa046fc5dae6434e08e80985151f792df}{match}} (Vis vis) \&\&
+\begin{DoxyCompactList}\small\item\em see \mbox{\hyperlink{pipelines_pipelines-match}{pipelines documentation}} \end{DoxyCompactList}\item 
+{\footnotesize template$<$internal\+::movar\+::\+Weak\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1either}{either}} const \& $>$ Vis, std\+::move\+\_\+constructible Default$>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1either_a67575998e49fe669adbd6cc19eaefaf3}{map\+\_\+or}} (Vis vis, Default def) const \&
+\begin{DoxyCompactList}\small\item\em see \mbox{\hyperlink{pipelines_pipelines-map_or}{pipelines documentation}} \end{DoxyCompactList}\item 
+{\footnotesize template$<$internal\+::movar\+::\+Weak\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1either}{either}} \&\& $>$ Vis, std\+::move\+\_\+constructible Default$>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1either_a7ef75c4e9ee0b0eca6a29cffea7304f8}{map\+\_\+or}} (Vis vis, Default def) \&\&
+\begin{DoxyCompactList}\small\item\em see \mbox{\hyperlink{pipelines_pipelines-map_or}{pipelines documentation}} \end{DoxyCompactList}\item 
+{\footnotesize template$<$internal\+::movar\+::\+Weak\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1either}{either}} const \& $>$ Vis, internal\+::movar\+::\+Lazy Default$>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1either_abcb072de128461d360f7b91553fbfe40}{map\+\_\+or\+\_\+else}} (Vis vis, Default def) const \&
+\begin{DoxyCompactList}\small\item\em see \mbox{\hyperlink{pipelines_pipelines-map_or_else}{pipelines documentation}} \end{DoxyCompactList}\item 
+{\footnotesize template$<$internal\+::movar\+::\+Weak\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1either}{either}} \&\& $>$ Vis, internal\+::movar\+::\+Lazy Default$>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1either_a756f01934fcf37fe08924741f89fb72c}{map\+\_\+or\+\_\+else}} (Vis vis, Default def) \&\&
+\begin{DoxyCompactList}\small\item\em see \mbox{\hyperlink{pipelines_pipelines-map_or_else}{pipelines documentation}} \end{DoxyCompactList}\item 
+{\footnotesize template$<$internal\+::movar\+::\+Lazy Default$>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1either_a1a943c5bd4552fe963c80703b6d9734a}{or\+\_\+else}} (Default def) const \&
+\begin{DoxyCompactList}\small\item\em see \mbox{\hyperlink{pipelines_pipelines-or_else}{pipelines documentation}} \end{DoxyCompactList}\item 
+{\footnotesize template$<$internal\+::movar\+::\+Lazy Default$>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1either_ab998e790ff529301062be23c6145fd84}{or\+\_\+else}} (Default def) \&\&
+\begin{DoxyCompactList}\small\item\em see \mbox{\hyperlink{pipelines_pipelines-or_else}{pipelines documentation}} \end{DoxyCompactList}\item 
+constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1either_a6dab623fafb77477b5560b66a1f08b6b}{take}} ()
+\begin{DoxyCompactList}\small\item\em see \mbox{\hyperlink{pipelines_pipelines-take}{pipelines documentation}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$long Index$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Index$<$\mbox{\hyperlink{structml_1_1movar_1_1either}{either}}, Index$>$ $\vert$$\vert$ Index == -\/1)}\\constexpr bool \mbox{\hyperlink{structml_1_1movar_1_1either_a67536cc0e8a041806741b95220dd5442}{is}} (\mbox{\hyperlink{structml_1_1movar_1_1either}{either}} const \&self) noexcept
+\begin{DoxyCompactList}\small\item\em Returns true if {\itshape Index} equals the active index. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ \newline
+requires (internal\+::movar\+::\+Contains\+Alternative$<$\mbox{\hyperlink{structml_1_1movar_1_1either}{either}}, T$>$ $\vert$$\vert$ std\+::same\+\_\+as$<$T, \mbox{\hyperlink{structml_1_1movar_1_1nothing}{nothing}}$>$)}\\constexpr bool \mbox{\hyperlink{structml_1_1movar_1_1either_a021343ca4c54d37c8e102cb5af94fa9f}{is}} (\mbox{\hyperlink{structml_1_1movar_1_1either}{either}} const \&self) noexcept
+\begin{DoxyCompactList}\small\item\em Returns true if {\itshape T} equals the active type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$long Index, internal\+::movar\+::\+Same\+Unqual$<$ \mbox{\hyperlink{structml_1_1movar_1_1either}{either}} $>$ Self$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Index$<$\mbox{\hyperlink{structml_1_1movar_1_1either}{either}}, Index$>$)}\\constexpr decltype(auto) \mbox{\hyperlink{structml_1_1movar_1_1either_acd91369713d227368381ce72c6292389}{get}} (Self \&\&self) noexcept(noexcept(std\+::forward$<$ Self $>$(self).template get$<$ Index $>$()))
+\begin{DoxyCompactList}\small\item\em get with Index \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T , internal\+::movar\+::\+Same\+Unqual$<$ \mbox{\hyperlink{structml_1_1movar_1_1either}{either}} $>$ Self$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Alternative$<$\mbox{\hyperlink{structml_1_1movar_1_1either}{either}}, T$>$)}\\constexpr decltype(auto) \mbox{\hyperlink{structml_1_1movar_1_1either_af180e8de0d9aeb6815765ba41b039e2b}{get}} (Self \&\&self) noexcept(noexcept(std\+::forward$<$ Self $>$(self).template get$<$ T $>$()))
+\begin{DoxyCompactList}\small\item\em get with type \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T1, class T2$>$\newline
+class ml\+::movar\+::either$<$ T1, T2 $>$}
+A variant type with two alternatives. 
+
+\mbox{\hyperlink{structml_1_1movar_1_1either}{ml\+::movar\+::either}} is a Variant of size 2 that always has a value. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structml_1_1movar_1_1either_a6e74df0931ffa32e13756a543713dde6}\label{structml_1_1movar_1_1either_a6e74df0931ffa32e13756a543713dde6}} 
+\index{ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}!either@{either}}
+\index{either@{either}!ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}}
+\doxysubsubsection{\texorpdfstring{either()}{either()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class T1 , class T2 $>$ \\
+constexpr \mbox{\hyperlink{structml_1_1movar_1_1either}{ml\+::movar\+::either}}$<$ T1, T2 $>$\+::either (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}, {\ttfamily [default]}}
+
+
+
+default constructor 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1either_a423f2e56f77a10554dbf1172e85afb64}\label{structml_1_1movar_1_1either_a423f2e56f77a10554dbf1172e85afb64}} 
+\index{ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}!either@{either}}
+\index{either@{either}!ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}}
+\doxysubsubsection{\texorpdfstring{either()}{either()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class T1 , class T2 $>$ \\
+constexpr \mbox{\hyperlink{structml_1_1movar_1_1either}{ml\+::movar\+::either}}$<$ T1, T2 $>$\+::either (\begin{DoxyParamCaption}\item[{T1}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Move-\/constructs an instance of {\itshape T1}. 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1either_a0dbf4efea6c175c894d731fad18fc2fd}\label{structml_1_1movar_1_1either_a0dbf4efea6c175c894d731fad18fc2fd}} 
+\index{ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}!either@{either}}
+\index{either@{either}!ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}}
+\doxysubsubsection{\texorpdfstring{either()}{either()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class T1 , class T2 $>$ \\
+constexpr \mbox{\hyperlink{structml_1_1movar_1_1either}{ml\+::movar\+::either}}$<$ T1, T2 $>$\+::either (\begin{DoxyParamCaption}\item[{T2}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Move-\/constructs an instance of {\itshape T2}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structml_1_1movar_1_1either_a11b9e5cd56b3378977924eefc7b85e18}\label{structml_1_1movar_1_1either_a11b9e5cd56b3378977924eefc7b85e18}} 
+\index{ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}!get@{get}}
+\index{get@{get}!ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily template$<$class T1 , class T2 $>$ \\
+template$<$long Index$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Index$<$\mbox{\hyperlink{structml_1_1movar_1_1either}{either}}, Index$>$)\\
+constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1either}{ml\+::movar\+::either}}$<$ T1, T2 $>$\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+get with index (overload 3) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Index} & can be 0 or 1 \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{structml_1_1movar_1_1either_af0df64f1679021e4a43003666bb4785b}\label{structml_1_1movar_1_1either_af0df64f1679021e4a43003666bb4785b}} 
+\index{ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}!get@{get}}
+\index{get@{get}!ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily template$<$class T1 , class T2 $>$ \\
+template$<$class T $>$ \newline
+requires (internal\+::movar\+::\+Contains\+Alternative$<$\mbox{\hyperlink{structml_1_1movar_1_1either}{either}}, T$>$)\\
+constexpr T \mbox{\hyperlink{structml_1_1movar_1_1either}{ml\+::movar\+::either}}$<$ T1, T2 $>$\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+get with type (overload 3) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & can be {\itshape T1} or {\itshape T2} \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{structml_1_1movar_1_1either_a525ee481ea495a3ad1481757d62d21bf}\label{structml_1_1movar_1_1either_a525ee481ea495a3ad1481757d62d21bf}} 
+\index{ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}!get@{get}}
+\index{get@{get}!ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily template$<$class T1 , class T2 $>$ \\
+template$<$long Index$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Index$<$\mbox{\hyperlink{structml_1_1movar_1_1either}{either}}, Index$>$)\\
+constexpr auto \& \mbox{\hyperlink{structml_1_1movar_1_1either}{ml\+::movar\+::either}}$<$ T1, T2 $>$\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+get with index (overload 2) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Index} & can be 0 or 1 \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{structml_1_1movar_1_1either_a044a812dee94baaedfb66c4c1475eab8}\label{structml_1_1movar_1_1either_a044a812dee94baaedfb66c4c1475eab8}} 
+\index{ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}!get@{get}}
+\index{get@{get}!ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily template$<$class T1 , class T2 $>$ \\
+template$<$class T $>$ \newline
+requires (internal\+::movar\+::\+Contains\+Alternative$<$\mbox{\hyperlink{structml_1_1movar_1_1either}{either}}, T$>$)\\
+constexpr T \& \mbox{\hyperlink{structml_1_1movar_1_1either}{ml\+::movar\+::either}}$<$ T1, T2 $>$\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+get with type (overload 2) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & can be {\itshape T1} or {\itshape T2} \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{structml_1_1movar_1_1either_a9ad46e06d12e34ac068b3d7c43a3d221}\label{structml_1_1movar_1_1either_a9ad46e06d12e34ac068b3d7c43a3d221}} 
+\index{ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}!get@{get}}
+\index{get@{get}!ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily template$<$class T1 , class T2 $>$ \\
+template$<$long Index$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Index$<$\mbox{\hyperlink{structml_1_1movar_1_1either}{either}}, Index$>$)\\
+constexpr auto const  \& \mbox{\hyperlink{structml_1_1movar_1_1either}{ml\+::movar\+::either}}$<$ T1, T2 $>$\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+get with index (overload 1) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Index} & can be 0 or 1 \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{structml_1_1movar_1_1either_a84efa6eb0e478381da5ae8bba91a2b67}\label{structml_1_1movar_1_1either_a84efa6eb0e478381da5ae8bba91a2b67}} 
+\index{ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}!get@{get}}
+\index{get@{get}!ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily template$<$class T1 , class T2 $>$ \\
+template$<$class T $>$ \newline
+requires (internal\+::movar\+::\+Contains\+Alternative$<$\mbox{\hyperlink{structml_1_1movar_1_1either}{either}}, T$>$)\\
+constexpr T const  \& \mbox{\hyperlink{structml_1_1movar_1_1either}{ml\+::movar\+::either}}$<$ T1, T2 $>$\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+get with type (overload 1) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & can be {\itshape T1} or {\itshape T2} \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{structml_1_1movar_1_1either_afc90161c5008fe756b4d3eb0d58af881}\label{structml_1_1movar_1_1either_afc90161c5008fe756b4d3eb0d58af881}} 
+\index{ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}!index@{index}}
+\index{index@{index}!ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily template$<$class T1 , class T2 $>$ \\
+constexpr long \mbox{\hyperlink{structml_1_1movar_1_1either}{ml\+::movar\+::either}}$<$ T1, T2 $>$\+::index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Returns the active index. 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1either_a7ecc412256c70b2132d4053d109f171c}\label{structml_1_1movar_1_1either_a7ecc412256c70b2132d4053d109f171c}} 
+\index{ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}!is@{is}}
+\index{is@{is}!ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}}
+\doxysubsubsection{\texorpdfstring{is()}{is()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T1 , class T2 $>$ \\
+template$<$long Index$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Index$<$\mbox{\hyperlink{structml_1_1movar_1_1either}{either}}, Index$>$ $\vert$$\vert$ Index == -\/1)\\
+constexpr bool \mbox{\hyperlink{structml_1_1movar_1_1either}{ml\+::movar\+::either}}$<$ T1, T2 $>$\+::is (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Returns true if {\itshape Index} equals the active index. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Index} & can be 0, 1 or -\/1 \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{structml_1_1movar_1_1either_ab0f88c3e2a3464f54db1e0e527f80104}\label{structml_1_1movar_1_1either_ab0f88c3e2a3464f54db1e0e527f80104}} 
+\index{ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}!is@{is}}
+\index{is@{is}!ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}}
+\doxysubsubsection{\texorpdfstring{is()}{is()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T1 , class T2 $>$ \\
+template$<$class T $>$ \newline
+requires (internal\+::movar\+::\+Contains\+Alternative$<$\mbox{\hyperlink{structml_1_1movar_1_1either}{either}}, T$>$ $\vert$$\vert$ std\+::same\+\_\+as$<$T, \mbox{\hyperlink{structml_1_1movar_1_1nothing}{nothing}}$>$)\\
+constexpr bool \mbox{\hyperlink{structml_1_1movar_1_1either}{ml\+::movar\+::either}}$<$ T1, T2 $>$\+::is (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Returns true if {\itshape T} equals the active type. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & can be T1, T2 or \mbox{\hyperlink{structml_1_1movar_1_1nothing}{ml\+::movar\+::nothing}} \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{structml_1_1movar_1_1either_ad599c6230af91595fab18e1adbff1316}\label{structml_1_1movar_1_1either_ad599c6230af91595fab18e1adbff1316}} 
+\index{ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}!is\_nothing@{is\_nothing}}
+\index{is\_nothing@{is\_nothing}!ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}}
+\doxysubsubsection{\texorpdfstring{is\_nothing()}{is\_nothing()}}
+{\footnotesize\ttfamily template$<$class T1 , class T2 $>$ \\
+constexpr bool \mbox{\hyperlink{structml_1_1movar_1_1either}{ml\+::movar\+::either}}$<$ T1, T2 $>$\+::is\+\_\+nothing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Returns false. 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1either_ac576547644cf58fc96def76bc99922d0}\label{structml_1_1movar_1_1either_ac576547644cf58fc96def76bc99922d0}} 
+\index{ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}!is\_something@{is\_something}}
+\index{is\_something@{is\_something}!ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}}
+\doxysubsubsection{\texorpdfstring{is\_something()}{is\_something()}}
+{\footnotesize\ttfamily template$<$class T1 , class T2 $>$ \\
+constexpr bool \mbox{\hyperlink{structml_1_1movar_1_1either}{ml\+::movar\+::either}}$<$ T1, T2 $>$\+::is\+\_\+something (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Returns true. 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1either_ac75b5be2de337b52f827c536ecd388be}\label{structml_1_1movar_1_1either_ac75b5be2de337b52f827c536ecd388be}} 
+\index{ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}!map@{map}}
+\index{map@{map}!ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}}
+\doxysubsubsection{\texorpdfstring{map()}{map()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T1 , class T2 $>$ \\
+template$<$internal\+::movar\+::\+Weak\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1either}{either}} \&\& $>$ Vis$>$ \\
+constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1either}{ml\+::movar\+::either}}$<$ T1, T2 $>$\+::map (\begin{DoxyParamCaption}\item[{Vis}]{vis }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+see \mbox{\hyperlink{pipelines_pipelines-map}{pipelines documentation}} 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1either_adbc8a974e9f2a0056124871978e04ccf}\label{structml_1_1movar_1_1either_adbc8a974e9f2a0056124871978e04ccf}} 
+\index{ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}!map@{map}}
+\index{map@{map}!ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}}
+\doxysubsubsection{\texorpdfstring{map()}{map()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T1 , class T2 $>$ \\
+template$<$internal\+::movar\+::\+Weak\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1either}{either}} const \& $>$ Vis$>$ \\
+constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1either}{ml\+::movar\+::either}}$<$ T1, T2 $>$\+::map (\begin{DoxyParamCaption}\item[{Vis}]{vis }\end{DoxyParamCaption}) const \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+see \mbox{\hyperlink{pipelines_pipelines-map}{pipelines documentation}} 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1either_a7ef75c4e9ee0b0eca6a29cffea7304f8}\label{structml_1_1movar_1_1either_a7ef75c4e9ee0b0eca6a29cffea7304f8}} 
+\index{ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}!map\_or@{map\_or}}
+\index{map\_or@{map\_or}!ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}}
+\doxysubsubsection{\texorpdfstring{map\_or()}{map\_or()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T1 , class T2 $>$ \\
+template$<$internal\+::movar\+::\+Weak\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1either}{either}} \&\& $>$ Vis, std\+::move\+\_\+constructible Default$>$ \\
+constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1either}{ml\+::movar\+::either}}$<$ T1, T2 $>$\+::map\+\_\+or (\begin{DoxyParamCaption}\item[{Vis}]{vis,  }\item[{Default}]{def }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+see \mbox{\hyperlink{pipelines_pipelines-map_or}{pipelines documentation}} 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1either_a67575998e49fe669adbd6cc19eaefaf3}\label{structml_1_1movar_1_1either_a67575998e49fe669adbd6cc19eaefaf3}} 
+\index{ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}!map\_or@{map\_or}}
+\index{map\_or@{map\_or}!ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}}
+\doxysubsubsection{\texorpdfstring{map\_or()}{map\_or()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T1 , class T2 $>$ \\
+template$<$internal\+::movar\+::\+Weak\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1either}{either}} const \& $>$ Vis, std\+::move\+\_\+constructible Default$>$ \\
+constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1either}{ml\+::movar\+::either}}$<$ T1, T2 $>$\+::map\+\_\+or (\begin{DoxyParamCaption}\item[{Vis}]{vis,  }\item[{Default}]{def }\end{DoxyParamCaption}) const \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+see \mbox{\hyperlink{pipelines_pipelines-map_or}{pipelines documentation}} 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1either_a756f01934fcf37fe08924741f89fb72c}\label{structml_1_1movar_1_1either_a756f01934fcf37fe08924741f89fb72c}} 
+\index{ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}!map\_or\_else@{map\_or\_else}}
+\index{map\_or\_else@{map\_or\_else}!ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}}
+\doxysubsubsection{\texorpdfstring{map\_or\_else()}{map\_or\_else()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T1 , class T2 $>$ \\
+template$<$internal\+::movar\+::\+Weak\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1either}{either}} \&\& $>$ Vis, internal\+::movar\+::\+Lazy Default$>$ \\
+constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1either}{ml\+::movar\+::either}}$<$ T1, T2 $>$\+::map\+\_\+or\+\_\+else (\begin{DoxyParamCaption}\item[{Vis}]{vis,  }\item[{Default}]{def }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+see \mbox{\hyperlink{pipelines_pipelines-map_or_else}{pipelines documentation}} 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1either_abcb072de128461d360f7b91553fbfe40}\label{structml_1_1movar_1_1either_abcb072de128461d360f7b91553fbfe40}} 
+\index{ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}!map\_or\_else@{map\_or\_else}}
+\index{map\_or\_else@{map\_or\_else}!ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}}
+\doxysubsubsection{\texorpdfstring{map\_or\_else()}{map\_or\_else()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T1 , class T2 $>$ \\
+template$<$internal\+::movar\+::\+Weak\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1either}{either}} const \& $>$ Vis, internal\+::movar\+::\+Lazy Default$>$ \\
+constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1either}{ml\+::movar\+::either}}$<$ T1, T2 $>$\+::map\+\_\+or\+\_\+else (\begin{DoxyParamCaption}\item[{Vis}]{vis,  }\item[{Default}]{def }\end{DoxyParamCaption}) const \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+see \mbox{\hyperlink{pipelines_pipelines-map_or_else}{pipelines documentation}} 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1either_aa046fc5dae6434e08e80985151f792df}\label{structml_1_1movar_1_1either_aa046fc5dae6434e08e80985151f792df}} 
+\index{ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}!match@{match}}
+\index{match@{match}!ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}}
+\doxysubsubsection{\texorpdfstring{match()}{match()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T1 , class T2 $>$ \\
+template$<$internal\+::movar\+::\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1either}{either}} \&\& $>$ Vis$>$ \\
+constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1either}{ml\+::movar\+::either}}$<$ T1, T2 $>$\+::match (\begin{DoxyParamCaption}\item[{Vis}]{vis }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+see \mbox{\hyperlink{pipelines_pipelines-match}{pipelines documentation}} 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1either_ab15d03d3b3afe208fdc0c64c07a6ede0}\label{structml_1_1movar_1_1either_ab15d03d3b3afe208fdc0c64c07a6ede0}} 
+\index{ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}!match@{match}}
+\index{match@{match}!ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}}
+\doxysubsubsection{\texorpdfstring{match()}{match()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T1 , class T2 $>$ \\
+template$<$internal\+::movar\+::\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1either}{either}} const \& $>$ Vis$>$ \\
+constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1either}{ml\+::movar\+::either}}$<$ T1, T2 $>$\+::match (\begin{DoxyParamCaption}\item[{Vis}]{vis }\end{DoxyParamCaption}) const \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+see \mbox{\hyperlink{pipelines_pipelines-match}{pipelines documentation}} 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1either_a8b9ecbe54869bec0aa25b8f0db8a2d55}\label{structml_1_1movar_1_1either_a8b9ecbe54869bec0aa25b8f0db8a2d55}} 
+\index{ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}!operator$<$=$>$@{operator$<$=$>$}}
+\index{operator$<$=$>$@{operator$<$=$>$}!ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}}
+\doxysubsubsection{\texorpdfstring{operator$<$=$>$()}{operator<=>()}}
+{\footnotesize\ttfamily template$<$class T1 , class T2 $>$ \\
+auto \mbox{\hyperlink{structml_1_1movar_1_1either}{ml\+::movar\+::either}}$<$ T1, T2 $>$\+::operator$<$=$>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structml_1_1movar_1_1either}{either}}$<$ T1, T2 $>$ const \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+default comparison 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1either_a5b4c2175cf148968d706ab56a1edbb58}\label{structml_1_1movar_1_1either_a5b4c2175cf148968d706ab56a1edbb58}} 
+\index{ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$class T1 , class T2 $>$ \\
+bool \mbox{\hyperlink{structml_1_1movar_1_1either}{ml\+::movar\+::either}}$<$ T1, T2 $>$\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structml_1_1movar_1_1either}{either}}$<$ T1, T2 $>$ const \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+defaulf equality 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1either_ab998e790ff529301062be23c6145fd84}\label{structml_1_1movar_1_1either_ab998e790ff529301062be23c6145fd84}} 
+\index{ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}!or\_else@{or\_else}}
+\index{or\_else@{or\_else}!ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}}
+\doxysubsubsection{\texorpdfstring{or\_else()}{or\_else()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T1 , class T2 $>$ \\
+template$<$internal\+::movar\+::\+Lazy Default$>$ \\
+constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1either}{ml\+::movar\+::either}}$<$ T1, T2 $>$\+::or\+\_\+else (\begin{DoxyParamCaption}\item[{Default}]{def }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+see \mbox{\hyperlink{pipelines_pipelines-or_else}{pipelines documentation}} 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1either_a1a943c5bd4552fe963c80703b6d9734a}\label{structml_1_1movar_1_1either_a1a943c5bd4552fe963c80703b6d9734a}} 
+\index{ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}!or\_else@{or\_else}}
+\index{or\_else@{or\_else}!ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}}
+\doxysubsubsection{\texorpdfstring{or\_else()}{or\_else()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T1 , class T2 $>$ \\
+template$<$internal\+::movar\+::\+Lazy Default$>$ \\
+constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1either}{ml\+::movar\+::either}}$<$ T1, T2 $>$\+::or\+\_\+else (\begin{DoxyParamCaption}\item[{Default}]{def }\end{DoxyParamCaption}) const \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+see \mbox{\hyperlink{pipelines_pipelines-or_else}{pipelines documentation}} 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1either_a6dab623fafb77477b5560b66a1f08b6b}\label{structml_1_1movar_1_1either_a6dab623fafb77477b5560b66a1f08b6b}} 
+\index{ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}!take@{take}}
+\index{take@{take}!ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}}
+\doxysubsubsection{\texorpdfstring{take()}{take()}}
+{\footnotesize\ttfamily template$<$class T1 , class T2 $>$ \\
+constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1either}{ml\+::movar\+::either}}$<$ T1, T2 $>$\+::take (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+see \mbox{\hyperlink{pipelines_pipelines-take}{pipelines documentation}} 
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{structml_1_1movar_1_1either_acd91369713d227368381ce72c6292389}\label{structml_1_1movar_1_1either_acd91369713d227368381ce72c6292389}} 
+\index{ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}!get@{get}}
+\index{get@{get}!ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}}
+\doxysubsubsection{\texorpdfstring{get}{get}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T1 , class T2 $>$ \\
+template$<$long Index, internal\+::movar\+::\+Same\+Unqual$<$ \mbox{\hyperlink{structml_1_1movar_1_1either}{either}} $>$ Self$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Index$<$\mbox{\hyperlink{structml_1_1movar_1_1either}{either}}, Index$>$)\\
+constexpr decltype(auto) get (\begin{DoxyParamCaption}\item[{Self \&\&}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+get with Index 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Index} & can be 0, 1 \\
+\hline
+{\em Self} & \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{structml_1_1movar_1_1either_af180e8de0d9aeb6815765ba41b039e2b}\label{structml_1_1movar_1_1either_af180e8de0d9aeb6815765ba41b039e2b}} 
+\index{ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}!get@{get}}
+\index{get@{get}!ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}}
+\doxysubsubsection{\texorpdfstring{get}{get}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T1 , class T2 $>$ \\
+template$<$class T , internal\+::movar\+::\+Same\+Unqual$<$ \mbox{\hyperlink{structml_1_1movar_1_1either}{either}} $>$ Self$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Alternative$<$\mbox{\hyperlink{structml_1_1movar_1_1either}{either}}, T$>$)\\
+constexpr decltype(auto) get (\begin{DoxyParamCaption}\item[{Self \&\&}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+get with type 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & can be {\itshape T1} or {\itshape T2} \\
+\hline
+{\em Self} & \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{structml_1_1movar_1_1either_a67536cc0e8a041806741b95220dd5442}\label{structml_1_1movar_1_1either_a67536cc0e8a041806741b95220dd5442}} 
+\index{ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}!is@{is}}
+\index{is@{is}!ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}}
+\doxysubsubsection{\texorpdfstring{is}{is}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T1 , class T2 $>$ \\
+template$<$long Index$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Index$<$\mbox{\hyperlink{structml_1_1movar_1_1either}{either}}, Index$>$ $\vert$$\vert$ Index == -\/1)\\
+constexpr bool is (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structml_1_1movar_1_1either}{either}}$<$ T1, T2 $>$ const \&}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Returns true if {\itshape Index} equals the active index. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Index} & can be 0, 1 or -\/1 \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{structml_1_1movar_1_1either_a021343ca4c54d37c8e102cb5af94fa9f}\label{structml_1_1movar_1_1either_a021343ca4c54d37c8e102cb5af94fa9f}} 
+\index{ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}!is@{is}}
+\index{is@{is}!ml::movar::either$<$ T1, T2 $>$@{ml::movar::either$<$ T1, T2 $>$}}
+\doxysubsubsection{\texorpdfstring{is}{is}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T1 , class T2 $>$ \\
+template$<$class T $>$ \newline
+requires (internal\+::movar\+::\+Contains\+Alternative$<$\mbox{\hyperlink{structml_1_1movar_1_1either}{either}}, T$>$ $\vert$$\vert$ std\+::same\+\_\+as$<$T, \mbox{\hyperlink{structml_1_1movar_1_1nothing}{nothing}}$>$)\\
+constexpr bool is (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structml_1_1movar_1_1either}{either}}$<$ T1, T2 $>$ const \&}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Returns true if {\itshape T} equals the active type. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & can be {\itshape T1}, {\itshape T2} or \mbox{\hyperlink{structml_1_1movar_1_1nothing}{ml\+::movar\+::nothing}} \\
+\hline
+\end{DoxyTemplParams}

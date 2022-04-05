@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="structml_1_1movar_1_1filter__type" kind="class" language="C++" prot="public">
+    <compoundname>ml::movar::filter_type</compoundname>
+    <includes local="no">ml/movar/internal/pipe/filter.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>class Type</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structml_1_1movar_1_1filter__type_1a3703ad9af29edff09a5673a94cc5b2ec" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Arg</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::filter_type&lt; Type &gt;::operator()</definition>
+        <argsstring>(Arg &amp;&amp;) const noexcept</argsstring>
+        <name>operator()</name>
+        <qualifiedname>ml::movar::filter_type::operator()</qualifiedname>
+        <param>
+          <type>Arg &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/pipe/filter.hpp" line="90" column="21" bodyfile="ml/movar/internal/pipe/filter.hpp" bodystart="90" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1filter__type_1a1565cfadf215cf95e46795ade936806a" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>ml::internal::movar::SameUnqual&lt; Type &gt;</type>
+            <declname>Arg</declname>
+            <defname>Arg</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::filter_type&lt; Type &gt;::operator()</definition>
+        <argsstring>(Arg &amp;&amp;arg) const</argsstring>
+        <name>operator()</name>
+        <qualifiedname>ml::movar::filter_type::operator()</qualifiedname>
+        <param>
+          <type>Arg &amp;&amp;</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/pipe/filter.hpp" line="96" column="21" bodyfile="ml/movar/internal/pipe/filter.hpp" bodystart="96" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1filter__type_1ade953e9c0c57d727e653704d7b74e593" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Other</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::filter_type&lt; Type &gt;::operator&gt;&gt;</definition>
+        <argsstring>(Other &amp;&amp;other) const</argsstring>
+        <name>operator&gt;&gt;</name>
+        <qualifiedname>ml::movar::filter_type::operator&gt;&gt;</qualifiedname>
+        <param>
+          <type>Other &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/pipe/filter.hpp" line="103" column="21" bodyfile="ml/movar/internal/pipe/filter.hpp" bodystart="103" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1filter__type_1a7979644f0a5e440b11680ec52a1efe17" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Other</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::filter_type&lt; Type &gt;::operator|</definition>
+        <argsstring>(Other &amp;&amp;other) const</argsstring>
+        <name>operator|</name>
+        <qualifiedname>ml::movar::filter_type::operator|</qualifiedname>
+        <param>
+          <type>Other &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/pipe/filter.hpp" line="110" column="21" bodyfile="ml/movar/internal/pipe/filter.hpp" bodystart="110" bodyend="114"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Forwards the argument if it matches a given type, otherwise returns <ref refid="structml_1_1movar_1_1nothing" kindref="compound">ml::movar::nothing</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>See <ref refid="lazy-pipelines" kindref="compound">lazy-pipelines documentation</ref> for example usage. </para>
+    </detaileddescription>
+    <location file="ml/movar/internal/pipe/filter.hpp" line="87" column="3" bodyfile="ml/movar/internal/pipe/filter.hpp" bodystart="88" bodyend="115"/>
+    <listofallmembers>
+      <member refid="structml_1_1movar_1_1filter__type_1a3703ad9af29edff09a5673a94cc5b2ec" prot="public" virt="non-virtual"><scope>ml::movar::filter_type</scope><name>operator()</name></member>
+      <member refid="structml_1_1movar_1_1filter__type_1a1565cfadf215cf95e46795ade936806a" prot="public" virt="non-virtual"><scope>ml::movar::filter_type</scope><name>operator()</name></member>
+      <member refid="structml_1_1movar_1_1filter__type_1ade953e9c0c57d727e653704d7b74e593" prot="public" virt="non-virtual"><scope>ml::movar::filter_type</scope><name>operator&gt;&gt;</name></member>
+      <member refid="structml_1_1movar_1_1filter__type_1a7979644f0a5e440b11680ec52a1efe17" prot="public" virt="non-virtual"><scope>ml::movar::filter_type</scope><name>operator|</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

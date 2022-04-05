@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="maybe_8hpp" kind="file" language="C++">
+    <compoundname>maybe.hpp</compoundname>
+    <includes refid="nothing_8hpp" local="no">ml/movar/internal/type/nothing.hpp</includes>
+    <includes local="no">optional</includes>
+    <includes local="no">variant</includes>
+    <includedby refid="type_8hpp" local="no">ml/movar/internal/type/type.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>ml/movar/internal/type/maybe.hpp</label>
+        <link refid="maybe_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>optional</label>
+      </node>
+      <node id="3">
+        <label>variant</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structml_1_1movar_1_1maybe" prot="public">ml::movar::maybe</innerclass>
+    <innerclass refid="structml_1_1movar_1_1maybe_1_1empty__tag" prot="public">ml::movar::maybe::empty_tag</innerclass>
+    <innernamespace refid="namespaceml">ml</innernamespace>
+    <innernamespace refid="namespaceml_1_1movar">ml::movar</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ml/movar/internal/type/maybe.hpp"/>
+  </compounddef>
+</doxygen>

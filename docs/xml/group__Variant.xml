@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="group__Variant" kind="group">
+    <compoundname>Variant</compoundname>
+    <title>Variant</title>
+    <innerclass refid="structml_1_1movar_1_1either" prot="public">ml::movar::either</innerclass>
+    <innerclass refid="structml_1_1movar_1_1just" prot="public">ml::movar::just</innerclass>
+    <innerclass refid="structml_1_1movar_1_1maybe" prot="public">ml::movar::maybe</innerclass>
+    <innerclass refid="structml_1_1movar_1_1nothing" prot="public">ml::movar::nothing</innerclass>
+    <innerclass refid="structml_1_1movar_1_1option" prot="public">ml::movar::option</innerclass>
+    <innerclass refid="structml_1_1movar_1_1variant" prot="public">ml::movar::variant</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

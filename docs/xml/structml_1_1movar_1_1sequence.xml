@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="structml_1_1movar_1_1sequence" kind="class" language="C++" prot="public">
+    <compoundname>ml::movar::sequence</compoundname>
+    <includes local="no">ml/movar/internal/pipe/sequence.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>std::move_constructible...</type>
+        <declname>Ts</declname>
+        <defname>Ts</defname>
+      </param>
+    </templateparamlist>
+    <briefdescription>
+<para>Returns the result of a sequence of operation, or <ref refid="structml_1_1movar_1_1nothing" kindref="compound">ml::movar::nothing</ref> if one of them fails. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>See <ref refid="lazy-pipelines" kindref="compound">lazy-pipelines documentation</ref> for example usage. </para>
+    </detaileddescription>
+    <location file="ml/movar/internal/pipe/sequence.hpp" line="6" column="1" bodyfile="ml/movar/internal/pipe/sequence.hpp" bodystart="13" bodyend="-1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

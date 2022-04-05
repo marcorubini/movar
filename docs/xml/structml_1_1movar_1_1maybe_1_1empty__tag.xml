@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="structml_1_1movar_1_1maybe_1_1empty__tag" kind="struct" language="C++" prot="public">
+    <compoundname>ml::movar::maybe::empty_tag</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structml_1_1movar_1_1maybe_1_1empty__tag_1a2f838dcc2bb732320834652b9d96c4f0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ml::movar::maybe&lt; Ts &gt;::empty_tag::operator==</definition>
+        <argsstring>(empty_tag const &amp;) const =default</argsstring>
+        <name>operator==</name>
+        <qualifiedname>ml::movar::maybe::empty_tag::operator==</qualifiedname>
+        <param>
+          <type>empty_tag const &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="23" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1maybe_1_1empty__tag_1a1ad42a5ed42aa95ad1225bfe0a9a7618" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto ml::movar::maybe&lt; Ts &gt;::empty_tag::operator&lt;=&gt;</definition>
+        <argsstring>(empty_tag const &amp;) const =default</argsstring>
+        <name>operator&lt;=&gt;</name>
+        <qualifiedname>ml::movar::maybe::empty_tag::operator&lt;=&gt;</qualifiedname>
+        <param>
+          <type>empty_tag const &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="24" column="7"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ml/movar/internal/type/maybe.hpp" line="21" column="5" bodyfile="ml/movar/internal/type/maybe.hpp" bodystart="22" bodyend="25"/>
+    <listofallmembers>
+      <member refid="structml_1_1movar_1_1maybe_1_1empty__tag_1a1ad42a5ed42aa95ad1225bfe0a9a7618" prot="public" virt="non-virtual"><scope>ml::movar::maybe::empty_tag</scope><name>operator&lt;=&gt;</name></member>
+      <member refid="structml_1_1movar_1_1maybe_1_1empty__tag_1a2f838dcc2bb732320834652b9d96c4f0" prot="public" virt="non-virtual"><scope>ml::movar::maybe::empty_tag</scope><name>operator==</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

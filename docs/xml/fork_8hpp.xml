@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="fork_8hpp" kind="file" language="C++">
+    <compoundname>fork.hpp</compoundname>
+    <includes refid="nothing_8hpp" local="no">ml/movar/internal/type/nothing.hpp</includes>
+    <includedby refid="pipe_8hpp" local="no">ml/movar/internal/pipe/pipe.hpp</includedby>
+    <innerclass refid="structml_1_1movar_1_1fork_3_01T1_01_4" prot="public">ml::movar::fork&lt; T1 &gt;</innerclass>
+    <innerclass refid="structml_1_1movar_1_1fork_3_01T1_00_01T2_01_4" prot="public">ml::movar::fork&lt; T1, T2 &gt;</innerclass>
+    <innernamespace refid="namespaceml">ml</innernamespace>
+    <innernamespace refid="namespaceml_1_1movar">ml::movar</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ml/movar/internal/pipe/fork.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,527 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="structml_1_1movar_1_1nothing" kind="class" language="C++" prot="public">
+    <compoundname>ml::movar::nothing</compoundname>
+    <includes local="no">ml/movar/internal/type/nothing.hpp</includes>
+      <sectiondef kind="user-defined">
+      <header>Observers</header>
+      <memberdef kind="function" id="structml_1_1movar_1_1nothing_1a45c63ab5b901daa8351c64d254fa9c27" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr long</type>
+        <definition>constexpr long ml::movar::nothing::index</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>index</name>
+        <qualifiedname>ml::movar::nothing::index</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>-1 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/nothing.hpp" line="18" column="21" bodyfile="ml/movar/internal/type/nothing.hpp" bodystart="18" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1nothing_1a66da1a2c3bf7388d9f6440bdd4f23a77" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr bool</type>
+        <definition>constexpr bool ml::movar::nothing::is_nothing</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>is_nothing</name>
+        <qualifiedname>ml::movar::nothing::is_nothing</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/nothing.hpp" line="26" column="21" bodyfile="ml/movar/internal/type/nothing.hpp" bodystart="26" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1nothing_1a9df3f9d7b642d7abc9e5c04006623462" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr bool</type>
+        <definition>constexpr bool ml::movar::nothing::is_something</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>is_something</name>
+        <qualifiedname>ml::movar::nothing::is_something</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/nothing.hpp" line="34" column="21" bodyfile="ml/movar/internal/type/nothing.hpp" bodystart="34" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1nothing_1aea84a9bcced9ec334f1694b803312637" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>long</type>
+            <declname>I</declname>
+            <defname>I</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr bool</type>
+        <definition>constexpr bool ml::movar::nothing::is</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>is</name>
+        <qualifiedname>ml::movar::nothing::is</qualifiedname>
+    <requiresclause>(I == -1)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true </para>
+</simplesect>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>I</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be -1 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/nothing.hpp" line="45" column="21" bodyfile="ml/movar/internal/type/nothing.hpp" bodystart="45" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1nothing_1a5bd8cd6e7b1fd92c272f27646c8750cc" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::same_as&lt; <ref refid="structml_1_1movar_1_1nothing" kindref="compound">nothing</ref> &gt;</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr bool</type>
+        <definition>constexpr bool ml::movar::nothing::is</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>is</name>
+        <qualifiedname>ml::movar::nothing::is</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true </para>
+</simplesect>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be <ref refid="structml_1_1movar_1_1nothing" kindref="compound">ml::movar::nothing</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/nothing.hpp" line="55" column="21" bodyfile="ml/movar/internal/type/nothing.hpp" bodystart="55" bodyend="58"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Getters</header>
+      <memberdef kind="function" id="structml_1_1movar_1_1nothing_1a5d7f994993e37faaa98b002b789a963f" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>long</type>
+            <declname>Index</declname>
+            <defname>Index</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::nothing::get</definition>
+        <argsstring>() const noexcept=delete</argsstring>
+        <name>get</name>
+        <qualifiedname>ml::movar::nothing::get</qualifiedname>
+        <briefdescription>
+<para>deleted </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/nothing.hpp" line="68" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1nothing_1a5d7f994993e37faaa98b002b789a963f" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::nothing::get</definition>
+        <argsstring>() const noexcept=delete</argsstring>
+        <name>get</name>
+        <qualifiedname>ml::movar::nothing::get</qualifiedname>
+        <briefdescription>
+<para>deleted </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/nothing.hpp" line="74" column="21"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Pipeline</header>
+      <memberdef kind="function" id="structml_1_1movar_1_1nothing_1a0862ed8cd0ca1cfcbc886b80af0fb12d" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::move_constructible</type>
+            <declname>Vis</declname>
+            <defname>Vis</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::nothing::map</definition>
+        <argsstring>(Vis) const</argsstring>
+        <name>map</name>
+        <qualifiedname>ml::movar::nothing::map</qualifiedname>
+        <param>
+          <type>Vis</type>
+        </param>
+        <briefdescription>
+<para>see <ref refid="pipelines_1pipelines-map" kindref="member">pipelines documentation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/nothing.hpp" line="121" column="21" bodyfile="ml/movar/internal/type/nothing.hpp" bodystart="121" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1nothing_1a3bbbde94ae8cce156ad26c1b1af5ffc2" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>internal::movar::Visitor&lt; <ref refid="structml_1_1movar_1_1nothing" kindref="compound">nothing</ref> &gt;</type>
+            <declname>Vis</declname>
+            <defname>Vis</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::nothing::match</definition>
+        <argsstring>(Vis vis) const</argsstring>
+        <name>match</name>
+        <qualifiedname>ml::movar::nothing::match</qualifiedname>
+        <param>
+          <type>Vis</type>
+          <declname>vis</declname>
+        </param>
+        <briefdescription>
+<para>see <ref refid="pipelines_1pipelines-match" kindref="member">pipelines documentation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/nothing.hpp" line="130" column="20" bodyfile="ml/movar/internal/type/nothing.hpp" bodystart="130" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1nothing_1a3e0c0f36b33502423b2c130781be4411" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::move_constructible</type>
+            <declname>Vis</declname>
+            <defname>Vis</defname>
+          </param>
+          <param>
+            <type>std::move_constructible</type>
+            <declname>Default</declname>
+            <defname>Default</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::nothing::map_or</definition>
+        <argsstring>(Vis vis, Default def) const</argsstring>
+        <name>map_or</name>
+        <qualifiedname>ml::movar::nothing::map_or</qualifiedname>
+        <param>
+          <type>Vis</type>
+          <declname>vis</declname>
+        </param>
+        <param>
+          <type>Default</type>
+          <declname>def</declname>
+        </param>
+        <briefdescription>
+<para>see <ref refid="pipelines_1pipelines-map_or" kindref="member">pipelines documentation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/nothing.hpp" line="139" column="21" bodyfile="ml/movar/internal/type/nothing.hpp" bodystart="139" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1nothing_1aa561982835fceef0ec75942188d44ba8" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::move_constructible</type>
+            <declname>Vis</declname>
+            <defname>Vis</defname>
+          </param>
+          <param>
+            <type>internal::movar::Lazy</type>
+            <declname>Default</declname>
+            <defname>Default</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::nothing::map_or_else</definition>
+        <argsstring>(Vis vis, Default def) const</argsstring>
+        <name>map_or_else</name>
+        <qualifiedname>ml::movar::nothing::map_or_else</qualifiedname>
+        <param>
+          <type>Vis</type>
+          <declname>vis</declname>
+        </param>
+        <param>
+          <type>Default</type>
+          <declname>def</declname>
+        </param>
+        <briefdescription>
+<para>see <ref refid="pipelines_1pipelines-map_or_else" kindref="member">pipelines documentation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/nothing.hpp" line="148" column="21" bodyfile="ml/movar/internal/type/nothing.hpp" bodystart="148" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1nothing_1a248677ef059dcc2bee733094e539821d" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>internal::movar::Lazy</type>
+            <declname>Default</declname>
+            <defname>Default</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::nothing::or_else</definition>
+        <argsstring>(Default def) const</argsstring>
+        <name>or_else</name>
+        <qualifiedname>ml::movar::nothing::or_else</qualifiedname>
+        <param>
+          <type>Default</type>
+          <declname>def</declname>
+        </param>
+        <briefdescription>
+<para>see <ref refid="pipelines_1pipelines-or_else" kindref="member">pipelines documentation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/nothing.hpp" line="157" column="21" bodyfile="ml/movar/internal/type/nothing.hpp" bodystart="157" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1nothing_1a7c6d2ead1a8c8af5598489f47ecd40fb" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::nothing::take</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>take</name>
+        <qualifiedname>ml::movar::nothing::take</qualifiedname>
+        <briefdescription>
+<para>see <ref refid="pipelines_1pipelines-take" kindref="member">pipelines documentation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/nothing.hpp" line="165" column="21" bodyfile="ml/movar/internal/type/nothing.hpp" bodystart="165" bodyend="168"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Friends</header>
+      <memberdef kind="friend" id="structml_1_1movar_1_1nothing_1a1e59e233836c4138797d91546927d17b" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>long</type>
+            <declname>I</declname>
+            <defname>I</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto is</definition>
+        <argsstring>(nothing const &amp;) noexcept</argsstring>
+        <name>is</name>
+        <qualifiedname>ml::movar::nothing::is</qualifiedname>
+        <param>
+          <type><ref refid="structml_1_1movar_1_1nothing" kindref="compound">nothing</ref> const &amp;</type>
+        </param>
+    <requiresclause>(I == -1)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true </para>
+</simplesect>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>I</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be -1 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/nothing.hpp" line="86" column="28" bodyfile="ml/movar/internal/type/nothing.hpp" bodystart="86" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="friend" id="structml_1_1movar_1_1nothing_1af039e3b39f6695c604d3331f042f06b2" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::same_as&lt; <ref refid="structml_1_1movar_1_1nothing" kindref="compound">nothing</ref> &gt;</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto is</definition>
+        <argsstring>(nothing const &amp;) noexcept</argsstring>
+        <name>is</name>
+        <qualifiedname>ml::movar::nothing::is</qualifiedname>
+        <param>
+          <type><ref refid="structml_1_1movar_1_1nothing" kindref="compound">nothing</ref> const &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true </para>
+</simplesect>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be <ref refid="structml_1_1movar_1_1nothing" kindref="compound">ml::movar::nothing</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/nothing.hpp" line="96" column="28" bodyfile="ml/movar/internal/type/nothing.hpp" bodystart="96" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="friend" id="structml_1_1movar_1_1nothing_1a7bb3fc0329191b53bc884a235b3fff6d" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>long</type>
+            <declname>Index</declname>
+            <defname>Index</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto get</definition>
+        <argsstring>(nothing const &amp;) noexcept=delete</argsstring>
+        <name>get</name>
+        <qualifiedname>ml::movar::nothing::get</qualifiedname>
+        <param>
+          <type><ref refid="structml_1_1movar_1_1nothing" kindref="compound">nothing</ref> const &amp;</type>
+        </param>
+        <briefdescription>
+<para>deleted </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/nothing.hpp" line="105" column="28"/>
+      </memberdef>
+      <memberdef kind="friend" id="structml_1_1movar_1_1nothing_1a7bb3fc0329191b53bc884a235b3fff6d" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto get</definition>
+        <argsstring>(nothing const &amp;) noexcept=delete</argsstring>
+        <name>get</name>
+        <qualifiedname>ml::movar::nothing::get</qualifiedname>
+        <param>
+          <type><ref refid="structml_1_1movar_1_1nothing" kindref="compound">nothing</ref> const &amp;</type>
+        </param>
+        <briefdescription>
+<para>deleted </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/nothing.hpp" line="111" column="28"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structml_1_1movar_1_1nothing_1aa2722a710ffd3919de5061553f36a21e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ml::movar::nothing::operator==</definition>
+        <argsstring>(nothing const &amp;) const =default</argsstring>
+        <name>operator==</name>
+        <qualifiedname>ml::movar::nothing::operator==</qualifiedname>
+        <param>
+          <type><ref refid="structml_1_1movar_1_1nothing" kindref="compound">nothing</ref> const &amp;</type>
+        </param>
+        <briefdescription>
+<para>default equality </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/nothing.hpp" line="175" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1nothing_1ade67bec0ac848e41fc464913d77a23cf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto ml::movar::nothing::operator&lt;=&gt;</definition>
+        <argsstring>(nothing const &amp;) const =default</argsstring>
+        <name>operator&lt;=&gt;</name>
+        <qualifiedname>ml::movar::nothing::operator&lt;=&gt;</qualifiedname>
+        <param>
+          <type><ref refid="structml_1_1movar_1_1nothing" kindref="compound">nothing</ref> const &amp;</type>
+        </param>
+        <briefdescription>
+<para>default compare </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/nothing.hpp" line="180" column="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A variant with zero alternatives. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ml/movar/internal/type/nothing.hpp" line="10" column="3" bodyfile="ml/movar/internal/type/nothing.hpp" bodystart="11" bodyend="181"/>
+    <listofallmembers>
+      <member refid="structml_1_1movar_1_1nothing_1a5d7f994993e37faaa98b002b789a963f" prot="public" virt="non-virtual"><scope>ml::movar::nothing</scope><name>get</name></member>
+      <member refid="structml_1_1movar_1_1nothing_1a5d7f994993e37faaa98b002b789a963f" prot="public" virt="non-virtual"><scope>ml::movar::nothing</scope><name>get</name></member>
+      <member refid="structml_1_1movar_1_1nothing_1a7bb3fc0329191b53bc884a235b3fff6d" prot="public" virt="non-virtual"><scope>ml::movar::nothing</scope><name>get</name></member>
+      <member refid="structml_1_1movar_1_1nothing_1a7bb3fc0329191b53bc884a235b3fff6d" prot="public" virt="non-virtual"><scope>ml::movar::nothing</scope><name>get</name></member>
+      <member refid="structml_1_1movar_1_1nothing_1a45c63ab5b901daa8351c64d254fa9c27" prot="public" virt="non-virtual"><scope>ml::movar::nothing</scope><name>index</name></member>
+      <member refid="structml_1_1movar_1_1nothing_1aea84a9bcced9ec334f1694b803312637" prot="public" virt="non-virtual"><scope>ml::movar::nothing</scope><name>is</name></member>
+      <member refid="structml_1_1movar_1_1nothing_1a5bd8cd6e7b1fd92c272f27646c8750cc" prot="public" virt="non-virtual"><scope>ml::movar::nothing</scope><name>is</name></member>
+      <member refid="structml_1_1movar_1_1nothing_1a1e59e233836c4138797d91546927d17b" prot="public" virt="non-virtual"><scope>ml::movar::nothing</scope><name>is</name></member>
+      <member refid="structml_1_1movar_1_1nothing_1af039e3b39f6695c604d3331f042f06b2" prot="public" virt="non-virtual"><scope>ml::movar::nothing</scope><name>is</name></member>
+      <member refid="structml_1_1movar_1_1nothing_1a66da1a2c3bf7388d9f6440bdd4f23a77" prot="public" virt="non-virtual"><scope>ml::movar::nothing</scope><name>is_nothing</name></member>
+      <member refid="structml_1_1movar_1_1nothing_1a9df3f9d7b642d7abc9e5c04006623462" prot="public" virt="non-virtual"><scope>ml::movar::nothing</scope><name>is_something</name></member>
+      <member refid="structml_1_1movar_1_1nothing_1a0862ed8cd0ca1cfcbc886b80af0fb12d" prot="public" virt="non-virtual"><scope>ml::movar::nothing</scope><name>map</name></member>
+      <member refid="structml_1_1movar_1_1nothing_1a3e0c0f36b33502423b2c130781be4411" prot="public" virt="non-virtual"><scope>ml::movar::nothing</scope><name>map_or</name></member>
+      <member refid="structml_1_1movar_1_1nothing_1aa561982835fceef0ec75942188d44ba8" prot="public" virt="non-virtual"><scope>ml::movar::nothing</scope><name>map_or_else</name></member>
+      <member refid="structml_1_1movar_1_1nothing_1a3bbbde94ae8cce156ad26c1b1af5ffc2" prot="public" virt="non-virtual"><scope>ml::movar::nothing</scope><name>match</name></member>
+      <member refid="structml_1_1movar_1_1nothing_1ade67bec0ac848e41fc464913d77a23cf" prot="public" virt="non-virtual"><scope>ml::movar::nothing</scope><name>operator&lt;=&gt;</name></member>
+      <member refid="structml_1_1movar_1_1nothing_1aa2722a710ffd3919de5061553f36a21e" prot="public" virt="non-virtual"><scope>ml::movar::nothing</scope><name>operator==</name></member>
+      <member refid="structml_1_1movar_1_1nothing_1a248677ef059dcc2bee733094e539821d" prot="public" virt="non-virtual"><scope>ml::movar::nothing</scope><name>or_else</name></member>
+      <member refid="structml_1_1movar_1_1nothing_1a7c6d2ead1a8c8af5598489f47ecd40fb" prot="public" virt="non-virtual"><scope>ml::movar::nothing</scope><name>take</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,560 @@
+\hypertarget{structml_1_1movar_1_1option}{}\doxysection{ml\+::movar\+::option\texorpdfstring{$<$}{<} Value\+Type \texorpdfstring{$>$}{>} Class Template Reference}
+\label{structml_1_1movar_1_1option}\index{ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}}
+
+
+A variant with one alternative that can also be empty.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structml_1_1movar_1_1option_a63ad23d089c8ed331fae4b6c8b92760f}{option}} ()=default
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{structml_1_1movar_1_1option_af4595de37f17c9faa0aa0a914fbde8c3}{option}} (Value\+Type value) noexcept
+\begin{DoxyCompactList}\small\item\em Move-\/constructs Value\+Type. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{structml_1_1movar_1_1option_a95ff5cef6d0989938fa32e2afe1bc842}{option}} (\mbox{\hyperlink{structml_1_1movar_1_1nothing}{nothing}}) noexcept
+\begin{DoxyCompactList}\small\item\em Leaves the option empty. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{structml_1_1movar_1_1option_a7f6a7f6bdc883fb81d5ad2c4863789a9}{option}} (std\+::nullopt\+\_\+t) noexcept
+\begin{DoxyCompactList}\small\item\em Leaves the option empty. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structml_1_1movar_1_1option_a10a82245d737ad02bb4af6f8534e8fe7}{operator==}} (\mbox{\hyperlink{structml_1_1movar_1_1option}{option}} const \&) const =default
+\begin{DoxyCompactList}\small\item\em defautl equality \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{structml_1_1movar_1_1option_aaa7626d16e624b218913d52eb1a5d272}{operator$<$=$>$}} (\mbox{\hyperlink{structml_1_1movar_1_1option}{option}} const \&) const =default
+\begin{DoxyCompactList}\small\item\em default compare \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Observers}\par
+\begin{DoxyCompactItemize}
+\item 
+constexpr long \mbox{\hyperlink{structml_1_1movar_1_1option_a9bd0dc4dc71f5bc2c5aa0503462b1427}{index}} () const noexcept
+\item 
+constexpr bool \mbox{\hyperlink{structml_1_1movar_1_1option_a77fbd7249200ecad960be5aa7b3df119}{is\+\_\+nothing}} () const noexcept
+\item 
+constexpr bool \mbox{\hyperlink{structml_1_1movar_1_1option_a9e8cc983d8cc3ae3833dea92b1e9d004}{is\+\_\+something}} () const noexcept
+\item 
+{\footnotesize template$<$long Index$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Index$<$\mbox{\hyperlink{structml_1_1movar_1_1option}{option}}, Index$>$ $\vert$$\vert$ Index == -\/1)}\\constexpr bool \mbox{\hyperlink{structml_1_1movar_1_1option_a49e1a14f62ad4a6af5c27bf2bfa8911e}{is}} () const noexcept
+\item 
+{\footnotesize template$<$class T $>$ \newline
+requires (internal\+::movar\+::\+Contains\+Alternative$<$\mbox{\hyperlink{structml_1_1movar_1_1option}{option}}, T$>$ $\vert$$\vert$ std\+::same\+\_\+as$<$T, \mbox{\hyperlink{structml_1_1movar_1_1nothing}{nothing}}$>$)}\\constexpr bool \mbox{\hyperlink{structml_1_1movar_1_1option_aed962cc3b5fb9e1a41ae03b95a426d7c}{is}} () const noexcept
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Getters}\par
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$long Index$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Index$<$\mbox{\hyperlink{structml_1_1movar_1_1option}{option}}, Index$>$)}\\constexpr const\+\_\+reference \mbox{\hyperlink{structml_1_1movar_1_1option_a0ac4caef6ac3fe4437639806b275aedb}{get}} () const \&noexcept
+\begin{DoxyCompactList}\small\item\em getter given index (overload 1) \end{DoxyCompactList}\item 
+{\footnotesize template$<$long Index$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Index$<$\mbox{\hyperlink{structml_1_1movar_1_1option}{option}}, Index$>$)}\\constexpr reference \mbox{\hyperlink{structml_1_1movar_1_1option_a326194f000d752d6f6323b903d7022f2}{get}} () \&noexcept
+\begin{DoxyCompactList}\small\item\em getter given index (overload 2) \end{DoxyCompactList}\item 
+{\footnotesize template$<$long Index$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Index$<$\mbox{\hyperlink{structml_1_1movar_1_1option}{option}}, Index$>$)}\\constexpr value\+\_\+type \mbox{\hyperlink{structml_1_1movar_1_1option_a36920e2c72074fad726d1fa4bc9a0c95}{get}} () \&\&noexcept(std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ value\+\_\+type $>$)
+\begin{DoxyCompactList}\small\item\em getter given index (overload 3) \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T  = value\+\_\+type$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Alternative$<$\mbox{\hyperlink{structml_1_1movar_1_1option}{option}}, T$>$)}\\constexpr const\+\_\+reference \mbox{\hyperlink{structml_1_1movar_1_1option_a5b488c06bf3f4f41d88b9064c9ca9525}{get}} () const \&noexcept
+\begin{DoxyCompactList}\small\item\em getter given type (overload 1) \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T  = value\+\_\+type$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Alternative$<$\mbox{\hyperlink{structml_1_1movar_1_1option}{option}}, T$>$)}\\constexpr reference \mbox{\hyperlink{structml_1_1movar_1_1option_a964efab7de28a7d49b614457498d1f90}{get}} () \&noexcept
+\begin{DoxyCompactList}\small\item\em getter given type (overload 1) \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T  = value\+\_\+type$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Alternative$<$\mbox{\hyperlink{structml_1_1movar_1_1option}{option}}, T$>$)}\\constexpr value\+\_\+type \mbox{\hyperlink{structml_1_1movar_1_1option_a768753ddc57d68aadadfbf7eece5068f}{get}} () \&\&noexcept(std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ value\+\_\+type $>$)
+\begin{DoxyCompactList}\small\item\em getter given type (overload 1) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Pipeline}\par
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$internal\+::movar\+::\+Weak\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1option}{option}} const \& $>$ Vis$>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1option_a2269475cff5e40046b2a77837446bc54}{map}} (Vis vis) const \&
+\begin{DoxyCompactList}\small\item\em see \mbox{\hyperlink{pipelines_pipelines-map}{pipelines documentation}} \end{DoxyCompactList}\item 
+{\footnotesize template$<$internal\+::movar\+::\+Weak\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1option}{option}} \&\& $>$ Vis$>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1option_ac4c977c1c130e5c5d05fb78c24cdec66}{map}} (Vis vis) \&\&
+\begin{DoxyCompactList}\small\item\em see \mbox{\hyperlink{pipelines_pipelines-map}{pipelines documentation}} \end{DoxyCompactList}\item 
+{\footnotesize template$<$internal\+::movar\+::\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1option}{option}} const \& $>$ Vis$>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1option_a36b1184f4ca5ffdd1eda3dfc1e83c8ee}{match}} (Vis vis) const \&
+\begin{DoxyCompactList}\small\item\em see \mbox{\hyperlink{pipelines_pipelines-match}{pipelines documentation}} \end{DoxyCompactList}\item 
+{\footnotesize template$<$internal\+::movar\+::\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1option}{option}} \&\& $>$ Vis$>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1option_a09c82ff5c5d3980df6e582a7ea43e4ac}{match}} (Vis vis) \&\&
+\begin{DoxyCompactList}\small\item\em see \mbox{\hyperlink{pipelines_pipelines-match}{pipelines documentation}} \end{DoxyCompactList}\item 
+{\footnotesize template$<$internal\+::movar\+::\+Weak\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1option}{option}} const \& $>$ Vis, std\+::move\+\_\+constructible Default$>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1option_a3db3e17244951c35c47eebf45354e8dd}{map\+\_\+or}} (Vis vis, Default def) const \&
+\begin{DoxyCompactList}\small\item\em see \mbox{\hyperlink{pipelines_pipelines-map_or}{pipelines documentation}} \end{DoxyCompactList}\item 
+{\footnotesize template$<$internal\+::movar\+::\+Weak\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1option}{option}} \&\& $>$ Vis, std\+::move\+\_\+constructible Default$>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1option_ac895f2643943b09883dba97d545691ee}{map\+\_\+or}} (Vis vis, Default def) \&\&
+\begin{DoxyCompactList}\small\item\em see \mbox{\hyperlink{pipelines_pipelines-map_or}{pipelines documentation}} \end{DoxyCompactList}\item 
+{\footnotesize template$<$internal\+::movar\+::\+Weak\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1option}{option}} const \& $>$ Vis, internal\+::movar\+::\+Lazy Default$>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1option_a572e8dc152162672f8103c4a9346cde7}{map\+\_\+or\+\_\+else}} (Vis vis, Default def) const \&
+\begin{DoxyCompactList}\small\item\em see \mbox{\hyperlink{pipelines_pipelines-map_or_else}{pipelines documentation}} \end{DoxyCompactList}\item 
+{\footnotesize template$<$internal\+::movar\+::\+Weak\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1option}{option}} \&\& $>$ Vis, internal\+::movar\+::\+Lazy Default$>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1option_ad2c06aeed1114c9cefaaecc111c0a204}{map\+\_\+or\+\_\+else}} (Vis vis, Default def) \&\&
+\begin{DoxyCompactList}\small\item\em see \mbox{\hyperlink{pipelines_pipelines-map_or_else}{pipelines documentation}} \end{DoxyCompactList}\item 
+{\footnotesize template$<$internal\+::movar\+::\+Lazy Default$>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1option_aa329de883a202b7efe14142b360c6136}{or\+\_\+else}} (Default def) const \&
+\begin{DoxyCompactList}\small\item\em see \mbox{\hyperlink{pipelines_pipelines-or_else}{pipelines documentation}} \end{DoxyCompactList}\item 
+{\footnotesize template$<$internal\+::movar\+::\+Lazy Default$>$ }\\constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1option_a55f44ff34556efe406751c269582e741}{or\+\_\+else}} (Default def) \&\&
+\begin{DoxyCompactList}\small\item\em see \mbox{\hyperlink{pipelines_pipelines-or_else}{pipelines documentation}} \end{DoxyCompactList}\item 
+constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1option_af2994fb9d144bec96fd40ac4c8cc2ccf}{take}} ()
+\begin{DoxyCompactList}\small\item\em see \mbox{\hyperlink{pipelines_pipelines-take}{pipelines documentation}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsection*{Friends}
+\begin{Indent}\textbf{ Friends}\par
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$long Index$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Index$<$\mbox{\hyperlink{structml_1_1movar_1_1option}{option}}, Index$>$ $\vert$$\vert$ Index == -\/1)}\\constexpr bool \mbox{\hyperlink{structml_1_1movar_1_1option_a363ed3200b9e7768d9ba5bbc03105887}{is}} (\mbox{\hyperlink{structml_1_1movar_1_1option}{option}} const \&self) noexcept
+\item 
+{\footnotesize template$<$class T $>$ \newline
+requires (internal\+::movar\+::\+Contains\+Alternative$<$\mbox{\hyperlink{structml_1_1movar_1_1option}{option}}, T$>$ $\vert$$\vert$ std\+::same\+\_\+as$<$T, \mbox{\hyperlink{structml_1_1movar_1_1nothing}{nothing}}$>$)}\\constexpr bool \mbox{\hyperlink{structml_1_1movar_1_1option_a08a15a6f16503b165ebfd427cdb28850}{is}} (\mbox{\hyperlink{structml_1_1movar_1_1option}{option}} const \&self) noexcept
+\item 
+{\footnotesize template$<$long Index, internal\+::movar\+::\+Same\+Unqual$<$ \mbox{\hyperlink{structml_1_1movar_1_1option}{option}} $>$ Self$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Index$<$\mbox{\hyperlink{structml_1_1movar_1_1option}{option}}, Index$>$)}\\constexpr decltype(auto) \mbox{\hyperlink{structml_1_1movar_1_1option_a33630de5a69e1c5babccb0d087feeb5c}{get}} (Self \&\&self) noexcept(noexcept(std\+::forward$<$ Self $>$(self).template get$<$ Index $>$()))
+\begin{DoxyCompactList}\small\item\em getter given index \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T , internal\+::movar\+::\+Same\+Unqual$<$ \mbox{\hyperlink{structml_1_1movar_1_1option}{option}} $>$ Self$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Alternative$<$\mbox{\hyperlink{structml_1_1movar_1_1option}{option}}, T$>$)}\\constexpr decltype(auto) \mbox{\hyperlink{structml_1_1movar_1_1option_a62fd2dc862ebfb1c2c81e7989f16ba1e}{get}} (Self \&\&self) noexcept(noexcept(std\+::forward$<$ Self $>$(self).template get$<$ T $>$()))
+\begin{DoxyCompactList}\small\item\em getter given type \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class Value\+Type$>$\newline
+class ml\+::movar\+::option$<$ Value\+Type $>$}
+A variant with one alternative that can also be empty. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structml_1_1movar_1_1option_a63ad23d089c8ed331fae4b6c8b92760f}\label{structml_1_1movar_1_1option_a63ad23d089c8ed331fae4b6c8b92760f}} 
+\index{ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}!option@{option}}
+\index{option@{option}!ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{option()}{option()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$class Value\+Type $>$ \\
+\mbox{\hyperlink{structml_1_1movar_1_1option}{ml\+::movar\+::option}}$<$ Value\+Type $>$\+::option (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+default constructor 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1option_af4595de37f17c9faa0aa0a914fbde8c3}\label{structml_1_1movar_1_1option_af4595de37f17c9faa0aa0a914fbde8c3}} 
+\index{ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}!option@{option}}
+\index{option@{option}!ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{option()}{option()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$class Value\+Type $>$ \\
+constexpr \mbox{\hyperlink{structml_1_1movar_1_1option}{ml\+::movar\+::option}}$<$ Value\+Type $>$\+::option (\begin{DoxyParamCaption}\item[{Value\+Type}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Move-\/constructs Value\+Type. 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1option_a95ff5cef6d0989938fa32e2afe1bc842}\label{structml_1_1movar_1_1option_a95ff5cef6d0989938fa32e2afe1bc842}} 
+\index{ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}!option@{option}}
+\index{option@{option}!ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{option()}{option()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$class Value\+Type $>$ \\
+constexpr \mbox{\hyperlink{structml_1_1movar_1_1option}{ml\+::movar\+::option}}$<$ Value\+Type $>$\+::option (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structml_1_1movar_1_1nothing}{nothing}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Leaves the option empty. 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1option_a7f6a7f6bdc883fb81d5ad2c4863789a9}\label{structml_1_1movar_1_1option_a7f6a7f6bdc883fb81d5ad2c4863789a9}} 
+\index{ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}!option@{option}}
+\index{option@{option}!ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{option()}{option()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$class Value\+Type $>$ \\
+constexpr \mbox{\hyperlink{structml_1_1movar_1_1option}{ml\+::movar\+::option}}$<$ Value\+Type $>$\+::option (\begin{DoxyParamCaption}\item[{std\+::nullopt\+\_\+t}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Leaves the option empty. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structml_1_1movar_1_1option_a36920e2c72074fad726d1fa4bc9a0c95}\label{structml_1_1movar_1_1option_a36920e2c72074fad726d1fa4bc9a0c95}} 
+\index{ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}!get@{get}}
+\index{get@{get}!ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily template$<$class Value\+Type $>$ \\
+template$<$long Index$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Index$<$\mbox{\hyperlink{structml_1_1movar_1_1option}{option}}, Index$>$)\\
+constexpr value\+\_\+type \mbox{\hyperlink{structml_1_1movar_1_1option}{ml\+::movar\+::option}}$<$ Value\+Type $>$\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+getter given index (overload 3) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Index} & must be 0 \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{structml_1_1movar_1_1option_a768753ddc57d68aadadfbf7eece5068f}\label{structml_1_1movar_1_1option_a768753ddc57d68aadadfbf7eece5068f}} 
+\index{ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}!get@{get}}
+\index{get@{get}!ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily template$<$class Value\+Type $>$ \\
+template$<$class T  = value\+\_\+type$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Alternative$<$\mbox{\hyperlink{structml_1_1movar_1_1option}{option}}, T$>$)\\
+constexpr value\+\_\+type \mbox{\hyperlink{structml_1_1movar_1_1option}{ml\+::movar\+::option}}$<$ Value\+Type $>$\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+getter given type (overload 1) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & must be {\itshape Value\+Type} \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{structml_1_1movar_1_1option_a326194f000d752d6f6323b903d7022f2}\label{structml_1_1movar_1_1option_a326194f000d752d6f6323b903d7022f2}} 
+\index{ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}!get@{get}}
+\index{get@{get}!ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily template$<$class Value\+Type $>$ \\
+template$<$long Index$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Index$<$\mbox{\hyperlink{structml_1_1movar_1_1option}{option}}, Index$>$)\\
+constexpr reference \mbox{\hyperlink{structml_1_1movar_1_1option}{ml\+::movar\+::option}}$<$ Value\+Type $>$\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+getter given index (overload 2) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Index} & must be 0 \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{structml_1_1movar_1_1option_a964efab7de28a7d49b614457498d1f90}\label{structml_1_1movar_1_1option_a964efab7de28a7d49b614457498d1f90}} 
+\index{ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}!get@{get}}
+\index{get@{get}!ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily template$<$class Value\+Type $>$ \\
+template$<$class T  = value\+\_\+type$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Alternative$<$\mbox{\hyperlink{structml_1_1movar_1_1option}{option}}, T$>$)\\
+constexpr reference \mbox{\hyperlink{structml_1_1movar_1_1option}{ml\+::movar\+::option}}$<$ Value\+Type $>$\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+getter given type (overload 1) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & must be {\itshape Value\+Type} \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{structml_1_1movar_1_1option_a0ac4caef6ac3fe4437639806b275aedb}\label{structml_1_1movar_1_1option_a0ac4caef6ac3fe4437639806b275aedb}} 
+\index{ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}!get@{get}}
+\index{get@{get}!ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily template$<$class Value\+Type $>$ \\
+template$<$long Index$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Index$<$\mbox{\hyperlink{structml_1_1movar_1_1option}{option}}, Index$>$)\\
+constexpr const\+\_\+reference \mbox{\hyperlink{structml_1_1movar_1_1option}{ml\+::movar\+::option}}$<$ Value\+Type $>$\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+getter given index (overload 1) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Index} & must be 0 \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{structml_1_1movar_1_1option_a5b488c06bf3f4f41d88b9064c9ca9525}\label{structml_1_1movar_1_1option_a5b488c06bf3f4f41d88b9064c9ca9525}} 
+\index{ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}!get@{get}}
+\index{get@{get}!ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily template$<$class Value\+Type $>$ \\
+template$<$class T  = value\+\_\+type$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Alternative$<$\mbox{\hyperlink{structml_1_1movar_1_1option}{option}}, T$>$)\\
+constexpr const\+\_\+reference \mbox{\hyperlink{structml_1_1movar_1_1option}{ml\+::movar\+::option}}$<$ Value\+Type $>$\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+getter given type (overload 1) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & must be {\itshape Value\+Type} \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{structml_1_1movar_1_1option_a9bd0dc4dc71f5bc2c5aa0503462b1427}\label{structml_1_1movar_1_1option_a9bd0dc4dc71f5bc2c5aa0503462b1427}} 
+\index{ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}!index@{index}}
+\index{index@{index}!ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily template$<$class Value\+Type $>$ \\
+constexpr long \mbox{\hyperlink{structml_1_1movar_1_1option}{ml\+::movar\+::option}}$<$ Value\+Type $>$\+::index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+the active index, 0 or -\/1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structml_1_1movar_1_1option_a49e1a14f62ad4a6af5c27bf2bfa8911e}\label{structml_1_1movar_1_1option_a49e1a14f62ad4a6af5c27bf2bfa8911e}} 
+\index{ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}!is@{is}}
+\index{is@{is}!ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{is()}{is()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Type $>$ \\
+template$<$long Index$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Index$<$\mbox{\hyperlink{structml_1_1movar_1_1option}{option}}, Index$>$ $\vert$$\vert$ Index == -\/1)\\
+constexpr bool \mbox{\hyperlink{structml_1_1movar_1_1option}{ml\+::movar\+::option}}$<$ Value\+Type $>$\+::is (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+true if {\itshape Index} equals the active index 
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Index} & can be 0 or -\/1 \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{structml_1_1movar_1_1option_aed962cc3b5fb9e1a41ae03b95a426d7c}\label{structml_1_1movar_1_1option_aed962cc3b5fb9e1a41ae03b95a426d7c}} 
+\index{ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}!is@{is}}
+\index{is@{is}!ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{is()}{is()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Type $>$ \\
+template$<$class T $>$ \newline
+requires (internal\+::movar\+::\+Contains\+Alternative$<$\mbox{\hyperlink{structml_1_1movar_1_1option}{option}}, T$>$ $\vert$$\vert$ std\+::same\+\_\+as$<$T, \mbox{\hyperlink{structml_1_1movar_1_1nothing}{nothing}}$>$)\\
+constexpr bool \mbox{\hyperlink{structml_1_1movar_1_1option}{ml\+::movar\+::option}}$<$ Value\+Type $>$\+::is (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+true if {\itshape T} equals the active type 
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & can be {\itshape Value\+Type} or \mbox{\hyperlink{structml_1_1movar_1_1nothing}{ml\+::movar\+::nothing}} \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{structml_1_1movar_1_1option_a77fbd7249200ecad960be5aa7b3df119}\label{structml_1_1movar_1_1option_a77fbd7249200ecad960be5aa7b3df119}} 
+\index{ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}!is\_nothing@{is\_nothing}}
+\index{is\_nothing@{is\_nothing}!ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{is\_nothing()}{is\_nothing()}}
+{\footnotesize\ttfamily template$<$class Value\+Type $>$ \\
+constexpr bool \mbox{\hyperlink{structml_1_1movar_1_1option}{ml\+::movar\+::option}}$<$ Value\+Type $>$\+::is\+\_\+nothing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+true if the option is empty 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structml_1_1movar_1_1option_a9e8cc983d8cc3ae3833dea92b1e9d004}\label{structml_1_1movar_1_1option_a9e8cc983d8cc3ae3833dea92b1e9d004}} 
+\index{ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}!is\_something@{is\_something}}
+\index{is\_something@{is\_something}!ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{is\_something()}{is\_something()}}
+{\footnotesize\ttfamily template$<$class Value\+Type $>$ \\
+constexpr bool \mbox{\hyperlink{structml_1_1movar_1_1option}{ml\+::movar\+::option}}$<$ Value\+Type $>$\+::is\+\_\+something (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+false if the option is empty 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structml_1_1movar_1_1option_ac4c977c1c130e5c5d05fb78c24cdec66}\label{structml_1_1movar_1_1option_ac4c977c1c130e5c5d05fb78c24cdec66}} 
+\index{ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}!map@{map}}
+\index{map@{map}!ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{map()}{map()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Type $>$ \\
+template$<$internal\+::movar\+::\+Weak\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1option}{option}} \&\& $>$ Vis$>$ \\
+constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1option}{ml\+::movar\+::option}}$<$ Value\+Type $>$\+::map (\begin{DoxyParamCaption}\item[{Vis}]{vis }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+see \mbox{\hyperlink{pipelines_pipelines-map}{pipelines documentation}} 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1option_a2269475cff5e40046b2a77837446bc54}\label{structml_1_1movar_1_1option_a2269475cff5e40046b2a77837446bc54}} 
+\index{ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}!map@{map}}
+\index{map@{map}!ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{map()}{map()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Type $>$ \\
+template$<$internal\+::movar\+::\+Weak\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1option}{option}} const \& $>$ Vis$>$ \\
+constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1option}{ml\+::movar\+::option}}$<$ Value\+Type $>$\+::map (\begin{DoxyParamCaption}\item[{Vis}]{vis }\end{DoxyParamCaption}) const \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+see \mbox{\hyperlink{pipelines_pipelines-map}{pipelines documentation}} 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1option_ac895f2643943b09883dba97d545691ee}\label{structml_1_1movar_1_1option_ac895f2643943b09883dba97d545691ee}} 
+\index{ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}!map\_or@{map\_or}}
+\index{map\_or@{map\_or}!ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{map\_or()}{map\_or()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Type $>$ \\
+template$<$internal\+::movar\+::\+Weak\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1option}{option}} \&\& $>$ Vis, std\+::move\+\_\+constructible Default$>$ \\
+constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1option}{ml\+::movar\+::option}}$<$ Value\+Type $>$\+::map\+\_\+or (\begin{DoxyParamCaption}\item[{Vis}]{vis,  }\item[{Default}]{def }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+see \mbox{\hyperlink{pipelines_pipelines-map_or}{pipelines documentation}} 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1option_a3db3e17244951c35c47eebf45354e8dd}\label{structml_1_1movar_1_1option_a3db3e17244951c35c47eebf45354e8dd}} 
+\index{ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}!map\_or@{map\_or}}
+\index{map\_or@{map\_or}!ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{map\_or()}{map\_or()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Type $>$ \\
+template$<$internal\+::movar\+::\+Weak\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1option}{option}} const \& $>$ Vis, std\+::move\+\_\+constructible Default$>$ \\
+constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1option}{ml\+::movar\+::option}}$<$ Value\+Type $>$\+::map\+\_\+or (\begin{DoxyParamCaption}\item[{Vis}]{vis,  }\item[{Default}]{def }\end{DoxyParamCaption}) const \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+see \mbox{\hyperlink{pipelines_pipelines-map_or}{pipelines documentation}} 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1option_ad2c06aeed1114c9cefaaecc111c0a204}\label{structml_1_1movar_1_1option_ad2c06aeed1114c9cefaaecc111c0a204}} 
+\index{ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}!map\_or\_else@{map\_or\_else}}
+\index{map\_or\_else@{map\_or\_else}!ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{map\_or\_else()}{map\_or\_else()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Type $>$ \\
+template$<$internal\+::movar\+::\+Weak\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1option}{option}} \&\& $>$ Vis, internal\+::movar\+::\+Lazy Default$>$ \\
+constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1option}{ml\+::movar\+::option}}$<$ Value\+Type $>$\+::map\+\_\+or\+\_\+else (\begin{DoxyParamCaption}\item[{Vis}]{vis,  }\item[{Default}]{def }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+see \mbox{\hyperlink{pipelines_pipelines-map_or_else}{pipelines documentation}} 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1option_a572e8dc152162672f8103c4a9346cde7}\label{structml_1_1movar_1_1option_a572e8dc152162672f8103c4a9346cde7}} 
+\index{ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}!map\_or\_else@{map\_or\_else}}
+\index{map\_or\_else@{map\_or\_else}!ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{map\_or\_else()}{map\_or\_else()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Type $>$ \\
+template$<$internal\+::movar\+::\+Weak\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1option}{option}} const \& $>$ Vis, internal\+::movar\+::\+Lazy Default$>$ \\
+constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1option}{ml\+::movar\+::option}}$<$ Value\+Type $>$\+::map\+\_\+or\+\_\+else (\begin{DoxyParamCaption}\item[{Vis}]{vis,  }\item[{Default}]{def }\end{DoxyParamCaption}) const \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+see \mbox{\hyperlink{pipelines_pipelines-map_or_else}{pipelines documentation}} 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1option_a09c82ff5c5d3980df6e582a7ea43e4ac}\label{structml_1_1movar_1_1option_a09c82ff5c5d3980df6e582a7ea43e4ac}} 
+\index{ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}!match@{match}}
+\index{match@{match}!ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{match()}{match()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Type $>$ \\
+template$<$internal\+::movar\+::\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1option}{option}} \&\& $>$ Vis$>$ \\
+constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1option}{ml\+::movar\+::option}}$<$ Value\+Type $>$\+::match (\begin{DoxyParamCaption}\item[{Vis}]{vis }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+see \mbox{\hyperlink{pipelines_pipelines-match}{pipelines documentation}} 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1option_a36b1184f4ca5ffdd1eda3dfc1e83c8ee}\label{structml_1_1movar_1_1option_a36b1184f4ca5ffdd1eda3dfc1e83c8ee}} 
+\index{ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}!match@{match}}
+\index{match@{match}!ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{match()}{match()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Type $>$ \\
+template$<$internal\+::movar\+::\+Visitor$<$ \mbox{\hyperlink{structml_1_1movar_1_1option}{option}} const \& $>$ Vis$>$ \\
+constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1option}{ml\+::movar\+::option}}$<$ Value\+Type $>$\+::match (\begin{DoxyParamCaption}\item[{Vis}]{vis }\end{DoxyParamCaption}) const \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+see \mbox{\hyperlink{pipelines_pipelines-match}{pipelines documentation}} 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1option_aaa7626d16e624b218913d52eb1a5d272}\label{structml_1_1movar_1_1option_aaa7626d16e624b218913d52eb1a5d272}} 
+\index{ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}!operator$<$=$>$@{operator$<$=$>$}}
+\index{operator$<$=$>$@{operator$<$=$>$}!ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{operator$<$=$>$()}{operator<=>()}}
+{\footnotesize\ttfamily template$<$class Value\+Type $>$ \\
+auto \mbox{\hyperlink{structml_1_1movar_1_1option}{ml\+::movar\+::option}}$<$ Value\+Type $>$\+::operator$<$=$>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structml_1_1movar_1_1option}{option}}$<$ Value\+Type $>$ const \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+default compare 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1option_a10a82245d737ad02bb4af6f8534e8fe7}\label{structml_1_1movar_1_1option_a10a82245d737ad02bb4af6f8534e8fe7}} 
+\index{ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$class Value\+Type $>$ \\
+bool \mbox{\hyperlink{structml_1_1movar_1_1option}{ml\+::movar\+::option}}$<$ Value\+Type $>$\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structml_1_1movar_1_1option}{option}}$<$ Value\+Type $>$ const \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+defautl equality 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1option_a55f44ff34556efe406751c269582e741}\label{structml_1_1movar_1_1option_a55f44ff34556efe406751c269582e741}} 
+\index{ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}!or\_else@{or\_else}}
+\index{or\_else@{or\_else}!ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{or\_else()}{or\_else()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Type $>$ \\
+template$<$internal\+::movar\+::\+Lazy Default$>$ \\
+constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1option}{ml\+::movar\+::option}}$<$ Value\+Type $>$\+::or\+\_\+else (\begin{DoxyParamCaption}\item[{Default}]{def }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+see \mbox{\hyperlink{pipelines_pipelines-or_else}{pipelines documentation}} 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1option_aa329de883a202b7efe14142b360c6136}\label{structml_1_1movar_1_1option_aa329de883a202b7efe14142b360c6136}} 
+\index{ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}!or\_else@{or\_else}}
+\index{or\_else@{or\_else}!ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{or\_else()}{or\_else()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Type $>$ \\
+template$<$internal\+::movar\+::\+Lazy Default$>$ \\
+constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1option}{ml\+::movar\+::option}}$<$ Value\+Type $>$\+::or\+\_\+else (\begin{DoxyParamCaption}\item[{Default}]{def }\end{DoxyParamCaption}) const \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+see \mbox{\hyperlink{pipelines_pipelines-or_else}{pipelines documentation}} 
+
+\mbox{\Hypertarget{structml_1_1movar_1_1option_af2994fb9d144bec96fd40ac4c8cc2ccf}\label{structml_1_1movar_1_1option_af2994fb9d144bec96fd40ac4c8cc2ccf}} 
+\index{ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}!take@{take}}
+\index{take@{take}!ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{take()}{take()}}
+{\footnotesize\ttfamily template$<$class Value\+Type $>$ \\
+constexpr auto \mbox{\hyperlink{structml_1_1movar_1_1option}{ml\+::movar\+::option}}$<$ Value\+Type $>$\+::take (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+see \mbox{\hyperlink{pipelines_pipelines-take}{pipelines documentation}} 
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{structml_1_1movar_1_1option_a33630de5a69e1c5babccb0d087feeb5c}\label{structml_1_1movar_1_1option_a33630de5a69e1c5babccb0d087feeb5c}} 
+\index{ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}!get@{get}}
+\index{get@{get}!ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{get}{get}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Type $>$ \\
+template$<$long Index, internal\+::movar\+::\+Same\+Unqual$<$ \mbox{\hyperlink{structml_1_1movar_1_1option}{option}} $>$ Self$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Index$<$\mbox{\hyperlink{structml_1_1movar_1_1option}{option}}, Index$>$)\\
+constexpr decltype(auto) get (\begin{DoxyParamCaption}\item[{Self \&\&}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+getter given index 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Index} & must be 0 \\
+\hline
+{\em Self} & must be an instance of \mbox{\hyperlink{structml_1_1movar_1_1option}{ml\+::movar\+::option}} \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{structml_1_1movar_1_1option_a62fd2dc862ebfb1c2c81e7989f16ba1e}\label{structml_1_1movar_1_1option_a62fd2dc862ebfb1c2c81e7989f16ba1e}} 
+\index{ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}!get@{get}}
+\index{get@{get}!ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{get}{get}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Type $>$ \\
+template$<$class T , internal\+::movar\+::\+Same\+Unqual$<$ \mbox{\hyperlink{structml_1_1movar_1_1option}{option}} $>$ Self$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Alternative$<$\mbox{\hyperlink{structml_1_1movar_1_1option}{option}}, T$>$)\\
+constexpr decltype(auto) get (\begin{DoxyParamCaption}\item[{Self \&\&}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+getter given type 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & must be {\itshape Value\+Type} \\
+\hline
+{\em Self} & must be an instance of \mbox{\hyperlink{structml_1_1movar_1_1option}{ml\+::movar\+::option}} \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{structml_1_1movar_1_1option_a363ed3200b9e7768d9ba5bbc03105887}\label{structml_1_1movar_1_1option_a363ed3200b9e7768d9ba5bbc03105887}} 
+\index{ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}!is@{is}}
+\index{is@{is}!ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{is}{is}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Type $>$ \\
+template$<$long Index$>$ \newline
+requires (internal\+::movar\+::\+Contains\+Index$<$\mbox{\hyperlink{structml_1_1movar_1_1option}{option}}, Index$>$ $\vert$$\vert$ Index == -\/1)\\
+constexpr bool is (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structml_1_1movar_1_1option}{option}}$<$ Value\+Type $>$ const \&}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\begin{DoxyReturn}{Returns}
+true if {\itshape Index} equals the active index 
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Index} & must be 0 or -\/1 \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{structml_1_1movar_1_1option_a08a15a6f16503b165ebfd427cdb28850}\label{structml_1_1movar_1_1option_a08a15a6f16503b165ebfd427cdb28850}} 
+\index{ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}!is@{is}}
+\index{is@{is}!ml::movar::option$<$ ValueType $>$@{ml::movar::option$<$ ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{is}{is}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Type $>$ \\
+template$<$class T $>$ \newline
+requires (internal\+::movar\+::\+Contains\+Alternative$<$\mbox{\hyperlink{structml_1_1movar_1_1option}{option}}, T$>$ $\vert$$\vert$ std\+::same\+\_\+as$<$T, \mbox{\hyperlink{structml_1_1movar_1_1nothing}{nothing}}$>$)\\
+constexpr bool is (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structml_1_1movar_1_1option}{option}}$<$ Value\+Type $>$ const \&}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\begin{DoxyReturn}{Returns}
+true if {\itshape T} equals the active type 
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & must be {\itshape Value\+Type} or \mbox{\hyperlink{structml_1_1movar_1_1nothing}{ml\+::movar\+::nothing}} \\
+\hline
+\end{DoxyTemplParams}

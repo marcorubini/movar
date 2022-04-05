@@ -1,0 +1,1018 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="structml_1_1movar_1_1maybe" kind="class" language="C++" prot="public">
+    <compoundname>ml::movar::maybe</compoundname>
+    <includes local="no">ml/movar/internal/type/maybe.hpp</includes>
+    <innerclass refid="structml_1_1movar_1_1maybe_1_1empty__tag" prot="public">ml::movar::maybe::empty_tag</innerclass>
+    <templateparamlist>
+      <param>
+        <type>class...</type>
+        <declname>Ts</declname>
+        <defname>Ts</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="user-defined">
+      <header>Observers</header>
+      <memberdef kind="function" id="structml_1_1movar_1_1maybe_1a8f226e152973f04c860998168158e802" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr long</type>
+        <definition>constexpr long ml::movar::maybe&lt; Ts &gt;::index</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>index</name>
+        <qualifiedname>ml::movar::maybe::index</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the active index </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="71" column="21" bodyfile="ml/movar/internal/type/maybe.hpp" bodystart="71" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1maybe_1a71873495626dd08ee203ba98ed53fe31" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr bool</type>
+        <definition>constexpr bool ml::movar::maybe&lt; Ts &gt;::is_nothing</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>is_nothing</name>
+        <qualifiedname>ml::movar::maybe::is_nothing</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if the option is empty </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="79" column="21" bodyfile="ml/movar/internal/type/maybe.hpp" bodystart="79" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1maybe_1abe49098acd7ec7109c2e71ba6c21e882" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr bool</type>
+        <definition>constexpr bool ml::movar::maybe&lt; Ts &gt;::is_something</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>is_something</name>
+        <qualifiedname>ml::movar::maybe::is_something</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>false if the option is empty </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="87" column="21" bodyfile="ml/movar/internal/type/maybe.hpp" bodystart="87" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1maybe_1aacd71223188fa012fc31c1254909a1b4" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>long</type>
+            <declname>Index</declname>
+            <defname>Index</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr bool</type>
+        <definition>constexpr bool ml::movar::maybe&lt; Ts &gt;::is</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>is</name>
+        <qualifiedname>ml::movar::maybe::is</qualifiedname>
+    <requiresclause>(internal::movar::ContainsIndex&lt;maybe, Index&gt; || Index == -1)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if <emphasis>Index</emphasis> equals the active index </para>
+</simplesect>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be in [-1, size) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="98" column="21" bodyfile="ml/movar/internal/type/maybe.hpp" bodystart="98" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1maybe_1a47bf345478ebe6c0837b0a912ccc5b4d" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr bool</type>
+        <definition>constexpr bool ml::movar::maybe&lt; Ts &gt;::is</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>is</name>
+        <qualifiedname>ml::movar::maybe::is</qualifiedname>
+    <requiresclause>(internal::movar::ContainsAlternative&lt;maybe, T&gt; || std::same_as&lt;T, nothing&gt;)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if <emphasis>T</emphasis> equals the active type </para>
+</simplesect>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be an alternative or <ref refid="structml_1_1movar_1_1nothing" kindref="compound">ml::movar::nothing</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="113" column="21" bodyfile="ml/movar/internal/type/maybe.hpp" bodystart="113" bodyend="120"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Getters</header>
+      <memberdef kind="function" id="structml_1_1movar_1_1maybe_1a0ebcaef70d1b2efeec6b29e025a6f26f" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" refqual="lvalue" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>long</type>
+            <declname>Index</declname>
+            <defname>Index</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto const &amp;</type>
+        <definition>constexpr auto const  &amp; ml::movar::maybe&lt; Ts &gt;::get</definition>
+        <argsstring>() const &amp;noexcept</argsstring>
+        <name>get</name>
+        <qualifiedname>ml::movar::maybe::get</qualifiedname>
+    <requiresclause>(internal::movar::ContainsIndex&lt;maybe, Index&gt;)    </requiresclause>
+        <briefdescription>
+<para>getter given index (overload 1) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be in [0, size) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="132" column="27" bodyfile="ml/movar/internal/type/maybe.hpp" bodystart="132" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1maybe_1aa4485b86c3c161e7f2de901440d9d598" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" refqual="lvalue" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>long</type>
+            <declname>Index</declname>
+            <defname>Index</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto &amp;</type>
+        <definition>constexpr auto &amp; ml::movar::maybe&lt; Ts &gt;::get</definition>
+        <argsstring>() &amp;noexcept</argsstring>
+        <name>get</name>
+        <qualifiedname>ml::movar::maybe::get</qualifiedname>
+    <requiresclause>(internal::movar::ContainsIndex&lt;maybe, Index&gt;)    </requiresclause>
+        <briefdescription>
+<para>getter given index (overload 2) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be in [0, size) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="143" column="21" bodyfile="ml/movar/internal/type/maybe.hpp" bodystart="143" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1maybe_1a2feb4580d5cfeb36bb97ba39b8b117c8" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" refqual="rvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>long</type>
+            <declname>Index</declname>
+            <defname>Index</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::maybe&lt; Ts &gt;::get</definition>
+        <argsstring>() &amp;&amp;</argsstring>
+        <name>get</name>
+        <qualifiedname>ml::movar::maybe::get</qualifiedname>
+    <requiresclause>(internal::movar::ContainsIndex&lt;maybe, Index&gt;)    </requiresclause>
+        <briefdescription>
+<para>getter given index (overload 3) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be in [0, size) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="154" column="21" bodyfile="ml/movar/internal/type/maybe.hpp" bodystart="154" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1maybe_1a9bd5b0e38f4eed940a48ae37947857f8" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" refqual="lvalue" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr T const &amp;</type>
+        <definition>constexpr T const  &amp; ml::movar::maybe&lt; Ts &gt;::get</definition>
+        <argsstring>() const &amp;noexcept</argsstring>
+        <name>get</name>
+        <qualifiedname>ml::movar::maybe::get</qualifiedname>
+    <requiresclause>(internal::movar::ContainsAlternative&lt;maybe, T&gt;)    </requiresclause>
+        <briefdescription>
+<para>getter given type (overload 1) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be an alternative </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="165" column="24" bodyfile="ml/movar/internal/type/maybe.hpp" bodystart="165" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1maybe_1a189c99c3af59bbba0972c97bc743a172" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" refqual="lvalue" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr T &amp;</type>
+        <definition>constexpr T &amp; ml::movar::maybe&lt; Ts &gt;::get</definition>
+        <argsstring>() &amp;noexcept</argsstring>
+        <name>get</name>
+        <qualifiedname>ml::movar::maybe::get</qualifiedname>
+    <requiresclause>(internal::movar::ContainsAlternative&lt;maybe, T&gt;)    </requiresclause>
+        <briefdescription>
+<para>getter given type (overload 2) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be an alternative </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="176" column="18" bodyfile="ml/movar/internal/type/maybe.hpp" bodystart="176" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1maybe_1a4f8cdfbe137d273034cf2494ef8b82b5" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" refqual="rvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr T</type>
+        <definition>constexpr T ml::movar::maybe&lt; Ts &gt;::get</definition>
+        <argsstring>() &amp;&amp;</argsstring>
+        <name>get</name>
+        <qualifiedname>ml::movar::maybe::get</qualifiedname>
+    <requiresclause>(internal::movar::ContainsAlternative&lt;maybe, T&gt;)    </requiresclause>
+        <briefdescription>
+<para>getter given type (overload 3) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be an alternative </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="187" column="18" bodyfile="ml/movar/internal/type/maybe.hpp" bodystart="187" bodyend="190"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Pipeline</header>
+      <memberdef kind="function" id="structml_1_1movar_1_1maybe_1a45dd20b72e18e1ba8da00285edb95666" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" refqual="lvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>internal::movar::WeakVisitor&lt; <ref refid="structml_1_1movar_1_1maybe" kindref="compound">maybe</ref> const &amp; &gt;</type>
+            <declname>Vis</declname>
+            <defname>Vis</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::maybe&lt; Ts &gt;::map</definition>
+        <argsstring>(Vis vis) const &amp;</argsstring>
+        <name>map</name>
+        <qualifiedname>ml::movar::maybe::map</qualifiedname>
+        <param>
+          <type>Vis</type>
+          <declname>vis</declname>
+        </param>
+        <briefdescription>
+<para>see <ref refid="pipelines_1pipelines-map" kindref="member">pipelines documentation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="252" column="21" bodyfile="ml/movar/internal/type/maybe.hpp" bodystart="252" bodyend="255"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1maybe_1a1dab136e002534ba032cc7f190c55b22" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" refqual="rvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>internal::movar::WeakVisitor&lt; <ref refid="structml_1_1movar_1_1maybe" kindref="compound">maybe</ref> &amp;&amp; &gt;</type>
+            <declname>Vis</declname>
+            <defname>Vis</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::maybe&lt; Ts &gt;::map</definition>
+        <argsstring>(Vis vis) &amp;&amp;</argsstring>
+        <name>map</name>
+        <qualifiedname>ml::movar::maybe::map</qualifiedname>
+        <param>
+          <type>Vis</type>
+          <declname>vis</declname>
+        </param>
+        <briefdescription>
+<para>see <ref refid="pipelines_1pipelines-map" kindref="member">pipelines documentation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="261" column="21" bodyfile="ml/movar/internal/type/maybe.hpp" bodystart="261" bodyend="264"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1maybe_1aba3f42face456a8c527f14480d388469" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" refqual="lvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>internal::movar::Visitor&lt; <ref refid="structml_1_1movar_1_1maybe" kindref="compound">maybe</ref> const &amp; &gt;</type>
+            <declname>Vis</declname>
+            <defname>Vis</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::maybe&lt; Ts &gt;::match</definition>
+        <argsstring>(Vis vis) const &amp;</argsstring>
+        <name>match</name>
+        <qualifiedname>ml::movar::maybe::match</qualifiedname>
+        <param>
+          <type>Vis</type>
+          <declname>vis</declname>
+        </param>
+        <briefdescription>
+<para>see <ref refid="pipelines_1pipelines-match" kindref="member">pipelines documentation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="270" column="20" bodyfile="ml/movar/internal/type/maybe.hpp" bodystart="270" bodyend="273"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1maybe_1a52c09dfb3c8147d3817c85c041e7aed1" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" refqual="rvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>internal::movar::Visitor&lt; <ref refid="structml_1_1movar_1_1maybe" kindref="compound">maybe</ref> &amp;&amp; &gt;</type>
+            <declname>Vis</declname>
+            <defname>Vis</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::maybe&lt; Ts &gt;::match</definition>
+        <argsstring>(Vis vis) &amp;&amp;</argsstring>
+        <name>match</name>
+        <qualifiedname>ml::movar::maybe::match</qualifiedname>
+        <param>
+          <type>Vis</type>
+          <declname>vis</declname>
+        </param>
+        <briefdescription>
+<para>see <ref refid="pipelines_1pipelines-match" kindref="member">pipelines documentation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="279" column="20" bodyfile="ml/movar/internal/type/maybe.hpp" bodystart="279" bodyend="282"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1maybe_1a4feb4ab68d4f036aadfe1df08033df6b" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" refqual="lvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>internal::movar::WeakVisitor&lt; <ref refid="structml_1_1movar_1_1maybe" kindref="compound">maybe</ref> const &amp; &gt;</type>
+            <declname>Vis</declname>
+            <defname>Vis</defname>
+          </param>
+          <param>
+            <type>std::move_constructible</type>
+            <declname>Default</declname>
+            <defname>Default</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::maybe&lt; Ts &gt;::map_or</definition>
+        <argsstring>(Vis vis, Default def) const &amp;</argsstring>
+        <name>map_or</name>
+        <qualifiedname>ml::movar::maybe::map_or</qualifiedname>
+        <param>
+          <type>Vis</type>
+          <declname>vis</declname>
+        </param>
+        <param>
+          <type>Default</type>
+          <declname>def</declname>
+        </param>
+        <briefdescription>
+<para>see <ref refid="pipelines_1pipelines-map_or" kindref="member">pipelines documentation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="288" column="21" bodyfile="ml/movar/internal/type/maybe.hpp" bodystart="288" bodyend="291"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1maybe_1a18169326e6befc4b50b5e89d0388dc3e" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" refqual="rvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>internal::movar::WeakVisitor&lt; <ref refid="structml_1_1movar_1_1maybe" kindref="compound">maybe</ref> &amp;&amp; &gt;</type>
+            <declname>Vis</declname>
+            <defname>Vis</defname>
+          </param>
+          <param>
+            <type>std::move_constructible</type>
+            <declname>Default</declname>
+            <defname>Default</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::maybe&lt; Ts &gt;::map_or</definition>
+        <argsstring>(Vis vis, Default def) &amp;&amp;</argsstring>
+        <name>map_or</name>
+        <qualifiedname>ml::movar::maybe::map_or</qualifiedname>
+        <param>
+          <type>Vis</type>
+          <declname>vis</declname>
+        </param>
+        <param>
+          <type>Default</type>
+          <declname>def</declname>
+        </param>
+        <briefdescription>
+<para>see <ref refid="pipelines_1pipelines-map_or" kindref="member">pipelines documentation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="297" column="21" bodyfile="ml/movar/internal/type/maybe.hpp" bodystart="297" bodyend="300"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1maybe_1a6c6e14457dd238f59b001bdb4b54892d" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" refqual="lvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>internal::movar::WeakVisitor&lt; <ref refid="structml_1_1movar_1_1maybe" kindref="compound">maybe</ref> const &amp; &gt;</type>
+            <declname>Vis</declname>
+            <defname>Vis</defname>
+          </param>
+          <param>
+            <type>internal::movar::Lazy</type>
+            <declname>Default</declname>
+            <defname>Default</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::maybe&lt; Ts &gt;::map_or_else</definition>
+        <argsstring>(Vis vis, Default def) const &amp;</argsstring>
+        <name>map_or_else</name>
+        <qualifiedname>ml::movar::maybe::map_or_else</qualifiedname>
+        <param>
+          <type>Vis</type>
+          <declname>vis</declname>
+        </param>
+        <param>
+          <type>Default</type>
+          <declname>def</declname>
+        </param>
+        <briefdescription>
+<para>see <ref refid="pipelines_1pipelines-map_or_else" kindref="member">pipelines documentation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="306" column="21" bodyfile="ml/movar/internal/type/maybe.hpp" bodystart="306" bodyend="309"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1maybe_1a8d8eb3742508fe2cd6a1111d1508613c" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" refqual="rvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>internal::movar::WeakVisitor&lt; <ref refid="structml_1_1movar_1_1maybe" kindref="compound">maybe</ref> &amp;&amp; &gt;</type>
+            <declname>Vis</declname>
+            <defname>Vis</defname>
+          </param>
+          <param>
+            <type>internal::movar::Lazy</type>
+            <declname>Default</declname>
+            <defname>Default</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::maybe&lt; Ts &gt;::map_or_else</definition>
+        <argsstring>(Vis vis, Default def) &amp;&amp;</argsstring>
+        <name>map_or_else</name>
+        <qualifiedname>ml::movar::maybe::map_or_else</qualifiedname>
+        <param>
+          <type>Vis</type>
+          <declname>vis</declname>
+        </param>
+        <param>
+          <type>Default</type>
+          <declname>def</declname>
+        </param>
+        <briefdescription>
+<para>see <ref refid="pipelines_1pipelines-map_or_else" kindref="member">pipelines documentation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="315" column="21" bodyfile="ml/movar/internal/type/maybe.hpp" bodystart="315" bodyend="318"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1maybe_1a1e67fbcd1bd67fdcc367130688820f53" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" refqual="lvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>internal::movar::Lazy</type>
+            <declname>Default</declname>
+            <defname>Default</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::maybe&lt; Ts &gt;::or_else</definition>
+        <argsstring>(Default def) const &amp;</argsstring>
+        <name>or_else</name>
+        <qualifiedname>ml::movar::maybe::or_else</qualifiedname>
+        <param>
+          <type>Default</type>
+          <declname>def</declname>
+        </param>
+        <briefdescription>
+<para>see <ref refid="pipelines_1pipelines-or_else" kindref="member">pipelines documentation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="324" column="21" bodyfile="ml/movar/internal/type/maybe.hpp" bodystart="324" bodyend="327"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1maybe_1a7a5451efb444b2d75deca0295d72f5b1" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" refqual="rvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>internal::movar::Lazy</type>
+            <declname>Default</declname>
+            <defname>Default</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::maybe&lt; Ts &gt;::or_else</definition>
+        <argsstring>(Default def) &amp;&amp;</argsstring>
+        <name>or_else</name>
+        <qualifiedname>ml::movar::maybe::or_else</qualifiedname>
+        <param>
+          <type>Default</type>
+          <declname>def</declname>
+        </param>
+        <briefdescription>
+<para>see <ref refid="pipelines_1pipelines-or_else" kindref="member">pipelines documentation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="333" column="21" bodyfile="ml/movar/internal/type/maybe.hpp" bodystart="333" bodyend="336"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1maybe_1a1ee43246c8fd38996b40433ceb73dc90" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::maybe&lt; Ts &gt;::take</definition>
+        <argsstring>()</argsstring>
+        <name>take</name>
+        <qualifiedname>ml::movar::maybe::take</qualifiedname>
+        <briefdescription>
+<para>see <ref refid="pipelines_1pipelines-take" kindref="member">pipelines documentation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="341" column="21" bodyfile="ml/movar/internal/type/maybe.hpp" bodystart="341" bodyend="344"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1maybe_1a6a4eb436f3b6af3a230a0a65e2e1630c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ml::movar::maybe&lt; Ts &gt;::operator==</definition>
+        <argsstring>(maybe const &amp;) const =default</argsstring>
+        <name>operator==</name>
+        <qualifiedname>ml::movar::maybe::operator==</qualifiedname>
+        <param>
+          <type><ref refid="structml_1_1movar_1_1maybe" kindref="compound">maybe</ref> const &amp;</type>
+        </param>
+        <briefdescription>
+<para>default equality </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="349" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1maybe_1ad08e67443221b14e97661cadcc6361d5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto ml::movar::maybe&lt; Ts &gt;::operator&lt;=&gt;</definition>
+        <argsstring>(maybe const &amp;) const =default</argsstring>
+        <name>operator&lt;=&gt;</name>
+        <qualifiedname>ml::movar::maybe::operator&lt;=&gt;</qualifiedname>
+        <param>
+          <type><ref refid="structml_1_1movar_1_1maybe" kindref="compound">maybe</ref> const &amp;</type>
+        </param>
+        <briefdescription>
+<para>default compare </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="354" column="5"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Friends</header>
+      <memberdef kind="friend" id="structml_1_1movar_1_1maybe_1af12a48c09af9f33c65d0c41b8739e8b5" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>long</type>
+            <declname>Index</declname>
+            <defname>Index</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr bool</type>
+        <definition>constexpr bool is</definition>
+        <argsstring>(maybe const &amp;self) noexcept</argsstring>
+        <name>is</name>
+        <qualifiedname>ml::movar::maybe::is</qualifiedname>
+        <param>
+          <type><ref refid="structml_1_1movar_1_1maybe" kindref="compound">maybe</ref> const &amp;</type>
+          <declname>self</declname>
+        </param>
+    <requiresclause>(internal::movar::ContainsIndex&lt;maybe, Index&gt; || Index == -1)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if <emphasis>Index</emphasis> equals the active index </para>
+</simplesect>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must in [-1, size) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="202" column="28" bodyfile="ml/movar/internal/type/maybe.hpp" bodystart="202" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="friend" id="structml_1_1movar_1_1maybe_1a7bc802c4ff1355b493748f10e339b469" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr bool</type>
+        <definition>constexpr bool is</definition>
+        <argsstring>(maybe const &amp;self) noexcept</argsstring>
+        <name>is</name>
+        <qualifiedname>ml::movar::maybe::is</qualifiedname>
+        <param>
+          <type><ref refid="structml_1_1movar_1_1maybe" kindref="compound">maybe</ref> const &amp;</type>
+          <declname>self</declname>
+        </param>
+    <requiresclause>(internal::movar::ContainsAlternative&lt;maybe, T&gt; || std::same_as&lt;T, nothing&gt;)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if <emphasis>T</emphasis> equals the active type </para>
+</simplesect>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be an alternative or <ref refid="structml_1_1movar_1_1nothing" kindref="compound">ml::movar::nothing</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="213" column="28" bodyfile="ml/movar/internal/type/maybe.hpp" bodystart="213" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="friend" id="structml_1_1movar_1_1maybe_1af53db8e45c9636fc8a1a071828dbe350" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>long</type>
+            <declname>Index</declname>
+            <defname>Index</defname>
+          </param>
+          <param>
+            <type>internal::movar::SameUnqual&lt; <ref refid="structml_1_1movar_1_1maybe" kindref="compound">maybe</ref> &gt;</type>
+            <declname>Self</declname>
+            <defname>Self</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr decltype(auto)</type>
+        <definition>constexpr decltype(auto) get</definition>
+        <argsstring>(Self &amp;&amp;self) noexcept(noexcept(std::forward&lt; Self &gt;(self).template get&lt; Index &gt;()))</argsstring>
+        <name>get</name>
+        <qualifiedname>ml::movar::maybe::get</qualifiedname>
+        <param>
+          <type>Self &amp;&amp;</type>
+          <declname>self</declname>
+        </param>
+    <requiresclause>(internal::movar::ContainsIndex&lt;maybe, Index&gt;)    </requiresclause>
+        <briefdescription>
+<para>getter given index </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be in [0, size) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be an instance of <ref refid="structml_1_1movar_1_1maybe" kindref="compound">ml::movar::maybe</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="225" column="33" bodyfile="ml/movar/internal/type/maybe.hpp" bodystart="225" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="friend" id="structml_1_1movar_1_1maybe_1aa9856743c59690659f01f6027932e329" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+          <param>
+            <type>internal::movar::SameUnqual&lt; <ref refid="structml_1_1movar_1_1maybe" kindref="compound">maybe</ref> &gt;</type>
+            <declname>Self</declname>
+            <defname>Self</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr decltype(auto)</type>
+        <definition>constexpr decltype(auto) get</definition>
+        <argsstring>(Self &amp;&amp;self) noexcept(noexcept(std::forward&lt; Self &gt;(self).template get&lt; T &gt;()))</argsstring>
+        <name>get</name>
+        <qualifiedname>ml::movar::maybe::get</qualifiedname>
+        <param>
+          <type>Self &amp;&amp;</type>
+          <declname>self</declname>
+        </param>
+    <requiresclause>(internal::movar::ContainsAlternative&lt;maybe, T&gt;)    </requiresclause>
+        <briefdescription>
+<para>getter given type </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be an alternative </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be an instance of <ref refid="structml_1_1movar_1_1maybe" kindref="compound">ml::movar::maybe</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="238" column="33" bodyfile="ml/movar/internal/type/maybe.hpp" bodystart="238" bodyend="242"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structml_1_1movar_1_1maybe_1aa61d5c046579d319a599c40e8665eff8" prot="public" static="no" mutable="no">
+        <type>std::variant&lt; empty_tag, Ts... &gt;</type>
+        <definition>std::variant&lt;empty_tag, Ts...&gt; ml::movar::maybe&lt; Ts &gt;::_value</definition>
+        <argsstring></argsstring>
+        <name>_value</name>
+        <qualifiedname>ml::movar::maybe::_value</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="27" column="18" bodyfile="ml/movar/internal/type/maybe.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structml_1_1movar_1_1maybe_1a9bb04e5235efb76cc4d7934a548de8ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ml::movar::maybe&lt; Ts &gt;::maybe</definition>
+        <argsstring>()=default</argsstring>
+        <name>maybe</name>
+        <qualifiedname>ml::movar::maybe::maybe</qualifiedname>
+        <briefdescription>
+<para>default constructor </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="32" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1maybe_1a79db99c1455b7f588083a51543fa2845" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Init</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr</type>
+        <definition>constexpr ml::movar::maybe&lt; Ts &gt;::maybe</definition>
+        <argsstring>(Init value) noexcept(std::is_nothrow_move_constructible_v&lt; Init &gt;)</argsstring>
+        <name>maybe</name>
+        <qualifiedname>ml::movar::maybe::maybe</qualifiedname>
+        <param>
+          <type>Init</type>
+          <declname>value</declname>
+        </param>
+    <requiresclause>(std::same_as&lt;Init, Ts&gt; || ...)    </requiresclause>
+        <briefdescription>
+<para>Move-construct the alternative. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="39" column="15" bodyfile="ml/movar/internal/type/maybe.hpp" bodystart="39" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1maybe_1a651746f7feb9bf9ec8b1605f48c560e2" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr ml::movar::maybe&lt; Ts &gt;::maybe</definition>
+        <argsstring>(nothing) noexcept</argsstring>
+        <name>maybe</name>
+        <qualifiedname>ml::movar::maybe::maybe</qualifiedname>
+        <param>
+          <type><ref refid="structml_1_1movar_1_1nothing" kindref="compound">nothing</ref></type>
+        </param>
+        <briefdescription>
+<para>leaves the variant empty </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="47" column="15" bodyfile="ml/movar/internal/type/maybe.hpp" bodystart="47" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1maybe_1a16ce02fa5106993d62ab4e6d66172079" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr ml::movar::maybe&lt; Ts &gt;::maybe</definition>
+        <argsstring>(std::nullopt_t) noexcept</argsstring>
+        <name>maybe</name>
+        <qualifiedname>ml::movar::maybe::maybe</qualifiedname>
+        <param>
+          <type>std::nullopt_t</type>
+        </param>
+        <briefdescription>
+<para>leaves the variant empty </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="54" column="15" bodyfile="ml/movar/internal/type/maybe.hpp" bodystart="54" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1maybe_1a688237f5051c22ca12d30106e5aa7a68" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>internal::movar::DiffUnqual&lt; <ref refid="structml_1_1movar_1_1maybe" kindref="compound">maybe</ref> &gt;</type>
+            <declname>Other</declname>
+            <defname>Other</defname>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ml::movar::maybe&lt; Ts &gt;::explicit</definition>
+        <argsstring>(!internal::movar::can_implicit_cast&lt; Other, maybe &gt;) const expr maybe(Other other) noexcept(noexcept(maybe(internal::movar::impl::cast&lt; maybe &gt;(std::move(other)))))</argsstring>
+        <name>explicit</name>
+        <qualifiedname>ml::movar::maybe::explicit</qualifiedname>
+        <param>
+          <type>!internal::movar::can_implicit_cast&lt; Other, <ref refid="structml_1_1movar_1_1maybe" kindref="compound">maybe</ref> &gt;</type>
+        </param>
+    <requiresclause>(internal::movar::can_explicit_cast&lt;Other, maybe&gt;)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/type/maybe.hpp" line="60" column="5" bodyfile="ml/movar/internal/type/maybe.hpp" bodystart="60" bodyend="63"/>
+      </memberdef>
+      </sectiondef>
+    <requiresclause>(sizeof...(Ts) &gt; 0)    </requiresclause>
+    <briefdescription>
+<para>A variant with many alternatives that can be empty. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ml/movar/internal/type/maybe.hpp" line="14" column="3" bodyfile="ml/movar/internal/type/maybe.hpp" bodystart="15" bodyend="355"/>
+    <listofallmembers>
+      <member refid="structml_1_1movar_1_1maybe_1aa61d5c046579d319a599c40e8665eff8" prot="public" virt="non-virtual"><scope>ml::movar::maybe</scope><name>_value</name></member>
+      <member refid="structml_1_1movar_1_1maybe_1a688237f5051c22ca12d30106e5aa7a68" prot="public" virt="non-virtual"><scope>ml::movar::maybe</scope><name>explicit</name></member>
+      <member refid="structml_1_1movar_1_1maybe_1a0ebcaef70d1b2efeec6b29e025a6f26f" prot="public" virt="non-virtual"><scope>ml::movar::maybe</scope><name>get</name></member>
+      <member refid="structml_1_1movar_1_1maybe_1aa4485b86c3c161e7f2de901440d9d598" prot="public" virt="non-virtual"><scope>ml::movar::maybe</scope><name>get</name></member>
+      <member refid="structml_1_1movar_1_1maybe_1a2feb4580d5cfeb36bb97ba39b8b117c8" prot="public" virt="non-virtual"><scope>ml::movar::maybe</scope><name>get</name></member>
+      <member refid="structml_1_1movar_1_1maybe_1a9bd5b0e38f4eed940a48ae37947857f8" prot="public" virt="non-virtual"><scope>ml::movar::maybe</scope><name>get</name></member>
+      <member refid="structml_1_1movar_1_1maybe_1a189c99c3af59bbba0972c97bc743a172" prot="public" virt="non-virtual"><scope>ml::movar::maybe</scope><name>get</name></member>
+      <member refid="structml_1_1movar_1_1maybe_1a4f8cdfbe137d273034cf2494ef8b82b5" prot="public" virt="non-virtual"><scope>ml::movar::maybe</scope><name>get</name></member>
+      <member refid="structml_1_1movar_1_1maybe_1af53db8e45c9636fc8a1a071828dbe350" prot="public" virt="non-virtual"><scope>ml::movar::maybe</scope><name>get</name></member>
+      <member refid="structml_1_1movar_1_1maybe_1aa9856743c59690659f01f6027932e329" prot="public" virt="non-virtual"><scope>ml::movar::maybe</scope><name>get</name></member>
+      <member refid="structml_1_1movar_1_1maybe_1a8f226e152973f04c860998168158e802" prot="public" virt="non-virtual"><scope>ml::movar::maybe</scope><name>index</name></member>
+      <member refid="structml_1_1movar_1_1maybe_1aacd71223188fa012fc31c1254909a1b4" prot="public" virt="non-virtual"><scope>ml::movar::maybe</scope><name>is</name></member>
+      <member refid="structml_1_1movar_1_1maybe_1a47bf345478ebe6c0837b0a912ccc5b4d" prot="public" virt="non-virtual"><scope>ml::movar::maybe</scope><name>is</name></member>
+      <member refid="structml_1_1movar_1_1maybe_1af12a48c09af9f33c65d0c41b8739e8b5" prot="public" virt="non-virtual"><scope>ml::movar::maybe</scope><name>is</name></member>
+      <member refid="structml_1_1movar_1_1maybe_1a7bc802c4ff1355b493748f10e339b469" prot="public" virt="non-virtual"><scope>ml::movar::maybe</scope><name>is</name></member>
+      <member refid="structml_1_1movar_1_1maybe_1a71873495626dd08ee203ba98ed53fe31" prot="public" virt="non-virtual"><scope>ml::movar::maybe</scope><name>is_nothing</name></member>
+      <member refid="structml_1_1movar_1_1maybe_1abe49098acd7ec7109c2e71ba6c21e882" prot="public" virt="non-virtual"><scope>ml::movar::maybe</scope><name>is_something</name></member>
+      <member refid="structml_1_1movar_1_1maybe_1a45dd20b72e18e1ba8da00285edb95666" prot="public" virt="non-virtual"><scope>ml::movar::maybe</scope><name>map</name></member>
+      <member refid="structml_1_1movar_1_1maybe_1a1dab136e002534ba032cc7f190c55b22" prot="public" virt="non-virtual"><scope>ml::movar::maybe</scope><name>map</name></member>
+      <member refid="structml_1_1movar_1_1maybe_1a4feb4ab68d4f036aadfe1df08033df6b" prot="public" virt="non-virtual"><scope>ml::movar::maybe</scope><name>map_or</name></member>
+      <member refid="structml_1_1movar_1_1maybe_1a18169326e6befc4b50b5e89d0388dc3e" prot="public" virt="non-virtual"><scope>ml::movar::maybe</scope><name>map_or</name></member>
+      <member refid="structml_1_1movar_1_1maybe_1a6c6e14457dd238f59b001bdb4b54892d" prot="public" virt="non-virtual"><scope>ml::movar::maybe</scope><name>map_or_else</name></member>
+      <member refid="structml_1_1movar_1_1maybe_1a8d8eb3742508fe2cd6a1111d1508613c" prot="public" virt="non-virtual"><scope>ml::movar::maybe</scope><name>map_or_else</name></member>
+      <member refid="structml_1_1movar_1_1maybe_1aba3f42face456a8c527f14480d388469" prot="public" virt="non-virtual"><scope>ml::movar::maybe</scope><name>match</name></member>
+      <member refid="structml_1_1movar_1_1maybe_1a52c09dfb3c8147d3817c85c041e7aed1" prot="public" virt="non-virtual"><scope>ml::movar::maybe</scope><name>match</name></member>
+      <member refid="structml_1_1movar_1_1maybe_1a9bb04e5235efb76cc4d7934a548de8ce" prot="public" virt="non-virtual"><scope>ml::movar::maybe</scope><name>maybe</name></member>
+      <member refid="structml_1_1movar_1_1maybe_1a79db99c1455b7f588083a51543fa2845" prot="public" virt="non-virtual"><scope>ml::movar::maybe</scope><name>maybe</name></member>
+      <member refid="structml_1_1movar_1_1maybe_1a651746f7feb9bf9ec8b1605f48c560e2" prot="public" virt="non-virtual"><scope>ml::movar::maybe</scope><name>maybe</name></member>
+      <member refid="structml_1_1movar_1_1maybe_1a16ce02fa5106993d62ab4e6d66172079" prot="public" virt="non-virtual"><scope>ml::movar::maybe</scope><name>maybe</name></member>
+      <member refid="structml_1_1movar_1_1maybe_1ad08e67443221b14e97661cadcc6361d5" prot="public" virt="non-virtual"><scope>ml::movar::maybe</scope><name>operator&lt;=&gt;</name></member>
+      <member refid="structml_1_1movar_1_1maybe_1a6a4eb436f3b6af3a230a0a65e2e1630c" prot="public" virt="non-virtual"><scope>ml::movar::maybe</scope><name>operator==</name></member>
+      <member refid="structml_1_1movar_1_1maybe_1a1e67fbcd1bd67fdcc367130688820f53" prot="public" virt="non-virtual"><scope>ml::movar::maybe</scope><name>or_else</name></member>
+      <member refid="structml_1_1movar_1_1maybe_1a7a5451efb444b2d75deca0295d72f5b1" prot="public" virt="non-virtual"><scope>ml::movar::maybe</scope><name>or_else</name></member>
+      <member refid="structml_1_1movar_1_1maybe_1a1ee43246c8fd38996b40433ceb73dc90" prot="public" virt="non-virtual"><scope>ml::movar::maybe</scope><name>take</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

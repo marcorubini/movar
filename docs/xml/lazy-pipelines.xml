@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="lazy-pipelines" kind="page">
+    <compoundname>lazy-pipelines</compoundname>
+    <title>Lazy Pipelines</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="lazy-pipelines_1md__home_malorubi_projects_tmp_movar_build_docs_lazy_pipelines"/></para>
+<sect1 id="lazy-pipelines_1autotoc_md0">
+<title>Examples</title>
+<sect2 id="lazy-pipelines_1autotoc_md1">
+<title>Sequence</title>
+<para><programlisting filename=".cpp"><codeline><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="structml_1_1movar_1_1sequence" kindref="compound">ml::movar::sequence</ref>;</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="structml_1_1movar_1_1option" kindref="compound">ml::movar::option</ref>;</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="structml_1_1movar_1_1nothing" kindref="compound">ml::movar::nothing</ref>;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>add1<sp/>=<sp/>[](</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x+1;<sp/>};</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>mul2<sp/>=<sp/>[](</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x*2;<sp/>};</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>pipe<sp/>=<sp/>sequence()<sp/>&gt;&gt;<sp/>add1<sp/>&gt;&gt;<sp/>mul2;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>deduced<sp/>to<sp/>option&lt;int&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>value<sp/>is<sp/>22</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>result1<sp/>=<sp/>option(10).match(pipe);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>deduced<sp/>to<sp/>option&lt;int&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>value<sp/>is<sp/>nothing</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>result2<sp/>=<sp/>option&lt;int&gt;().match(pipe);</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="lazy-pipelines_1autotoc_md2">
+<title>Filter and fork</title>
+<para><programlisting filename=".cpp"><codeline><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="structml_1_1movar_1_1sequence" kindref="compound">ml::movar::sequence</ref>;</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="structml_1_1movar_1_1option" kindref="compound">ml::movar::option</ref>;</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="structml_1_1movar_1_1filter" kindref="compound">ml::movar::filter</ref>;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>add1<sp/>=<sp/>[](</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x+1;<sp/>};</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>iszero<sp/>=<sp/>[]<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x<sp/>==<sp/>0;<sp/>};</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>pipe<sp/>=<sp/>(filter(iszero)<sp/>&gt;&gt;<sp/>add1)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>|<sp/>(sequence()<sp/>&gt;&gt;<sp/>add1<sp/>&gt;&gt;<sp/>add1);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>deduced<sp/>to<sp/>option&lt;int&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>result<sp/>is<sp/>12<sp/>(enter<sp/>the<sp/>filter)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>result1<sp/>=<sp/>option(10).match(pipe);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>deduced<sp/>to<sp/>option&lt;int&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>result<sp/>is<sp/>1<sp/>(does<sp/>not<sp/>enter<sp/>the<sp/>filter)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>result2<sp/>=<sp/>option(1).match(pipe);</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="lazy-pipelines_1autotoc_md3">
+<title>Filter type and fork</title>
+<para><programlisting filename=".cpp"><codeline><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="structml_1_1movar_1_1sequence" kindref="compound">ml::movar::sequence</ref>;</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="structml_1_1movar_1_1option" kindref="compound">ml::movar::option</ref>;</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="structml_1_1movar_1_1maybe" kindref="compound">ml::movar::maybe</ref>;</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="structml_1_1movar_1_1filter__type" kindref="compound">ml::movar::filter_type</ref>;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>add1<sp/>=<sp/>[](</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x+1;<sp/>};</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>pipe<sp/>=<sp/>(filter_type&lt;int&gt;()<sp/>&gt;&gt;<sp/>add1)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>|<sp/>(filter_type&lt;double&gt;()<sp/>&gt;&gt;<sp/>add1<sp/>&gt;&gt;<sp/>add1);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(option(10).match(pipe)<sp/>==<sp/>11);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(option(10.).match(pipe)<sp/>==<sp/>12);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal"><sp/>(maybe&lt;int,<sp/>double&gt;<sp/>(10).match<sp/>(pipe)<sp/>==<sp/>11);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal"><sp/>(maybe&lt;int,<sp/>double&gt;<sp/>(10.0).match<sp/>(pipe)<sp/>==<sp/>12);</highlight></codeline>
+</programlisting> </para>
+</sect2>
+</sect1>
+    </detaileddescription>
+    <location file="/home/malorubi/projects/tmp/movar/build/docs/lazy-pipelines.md"/>
+  </compounddef>
+</doxygen>

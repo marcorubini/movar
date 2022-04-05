@@ -1,0 +1,357 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.3" xml:lang="en-US">
+  <compound refid="structml_1_1movar_1_1either" kind="class"><name>ml::movar::either</name>
+    <member refid="structml_1_1movar_1_1either_1afc90161c5008fe756b4d3eb0d58af881" kind="function"><name>index</name></member>
+    <member refid="structml_1_1movar_1_1either_1ad599c6230af91595fab18e1adbff1316" kind="function"><name>is_nothing</name></member>
+    <member refid="structml_1_1movar_1_1either_1ac576547644cf58fc96def76bc99922d0" kind="function"><name>is_something</name></member>
+    <member refid="structml_1_1movar_1_1either_1a7ecc412256c70b2132d4053d109f171c" kind="function"><name>is</name></member>
+    <member refid="structml_1_1movar_1_1either_1ab0f88c3e2a3464f54db1e0e527f80104" kind="function"><name>is</name></member>
+    <member refid="structml_1_1movar_1_1either_1a9ad46e06d12e34ac068b3d7c43a3d221" kind="function"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1either_1a525ee481ea495a3ad1481757d62d21bf" kind="function"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1either_1a11b9e5cd56b3378977924eefc7b85e18" kind="function"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1either_1a84efa6eb0e478381da5ae8bba91a2b67" kind="function"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1either_1a044a812dee94baaedfb66c4c1475eab8" kind="function"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1either_1af0df64f1679021e4a43003666bb4785b" kind="function"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1either_1adbc8a974e9f2a0056124871978e04ccf" kind="function"><name>map</name></member>
+    <member refid="structml_1_1movar_1_1either_1ac75b5be2de337b52f827c536ecd388be" kind="function"><name>map</name></member>
+    <member refid="structml_1_1movar_1_1either_1ab15d03d3b3afe208fdc0c64c07a6ede0" kind="function"><name>match</name></member>
+    <member refid="structml_1_1movar_1_1either_1aa046fc5dae6434e08e80985151f792df" kind="function"><name>match</name></member>
+    <member refid="structml_1_1movar_1_1either_1a67575998e49fe669adbd6cc19eaefaf3" kind="function"><name>map_or</name></member>
+    <member refid="structml_1_1movar_1_1either_1a7ef75c4e9ee0b0eca6a29cffea7304f8" kind="function"><name>map_or</name></member>
+    <member refid="structml_1_1movar_1_1either_1abcb072de128461d360f7b91553fbfe40" kind="function"><name>map_or_else</name></member>
+    <member refid="structml_1_1movar_1_1either_1a756f01934fcf37fe08924741f89fb72c" kind="function"><name>map_or_else</name></member>
+    <member refid="structml_1_1movar_1_1either_1a1a943c5bd4552fe963c80703b6d9734a" kind="function"><name>or_else</name></member>
+    <member refid="structml_1_1movar_1_1either_1ab998e790ff529301062be23c6145fd84" kind="function"><name>or_else</name></member>
+    <member refid="structml_1_1movar_1_1either_1a6dab623fafb77477b5560b66a1f08b6b" kind="function"><name>take</name></member>
+    <member refid="structml_1_1movar_1_1either_1a67536cc0e8a041806741b95220dd5442" kind="friend"><name>is</name></member>
+    <member refid="structml_1_1movar_1_1either_1a021343ca4c54d37c8e102cb5af94fa9f" kind="friend"><name>is</name></member>
+    <member refid="structml_1_1movar_1_1either_1acd91369713d227368381ce72c6292389" kind="friend"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1either_1af180e8de0d9aeb6815765ba41b039e2b" kind="friend"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1either_1ad73b2aa2f3937f9148c29e3a5d2b16d3" kind="typedef"><name>first_type</name></member>
+    <member refid="structml_1_1movar_1_1either_1a218fa1988bf3a19a55f2645317966a1b" kind="typedef"><name>second_type</name></member>
+    <member refid="structml_1_1movar_1_1either_1a509faac5848e48c87792b2ae3ddf1314" kind="variable"><name>_value</name></member>
+    <member refid="structml_1_1movar_1_1either_1a6e74df0931ffa32e13756a543713dde6" kind="function"><name>either</name></member>
+    <member refid="structml_1_1movar_1_1either_1a423f2e56f77a10554dbf1172e85afb64" kind="function"><name>either</name></member>
+    <member refid="structml_1_1movar_1_1either_1a0dbf4efea6c175c894d731fad18fc2fd" kind="function"><name>either</name></member>
+    <member refid="structml_1_1movar_1_1either_1a2d56b425bdfa594a53270c39e77a59a1" kind="function"><name>explicit</name></member>
+    <member refid="structml_1_1movar_1_1either_1a5b4c2175cf148968d706ab56a1edbb58" kind="function"><name>operator==</name></member>
+    <member refid="structml_1_1movar_1_1either_1a8b9ecbe54869bec0aa25b8f0db8a2d55" kind="function"><name>operator&lt;=&gt;</name></member>
+  </compound>
+  <compound refid="structml_1_1movar_1_1maybe_1_1empty__tag" kind="struct"><name>ml::movar::maybe::empty_tag</name>
+    <member refid="structml_1_1movar_1_1maybe_1_1empty__tag_1a2f838dcc2bb732320834652b9d96c4f0" kind="function"><name>operator==</name></member>
+    <member refid="structml_1_1movar_1_1maybe_1_1empty__tag_1a1ad42a5ed42aa95ad1225bfe0a9a7618" kind="function"><name>operator&lt;=&gt;</name></member>
+  </compound>
+  <compound refid="structml_1_1movar_1_1filter" kind="class"><name>ml::movar::filter</name>
+    <member refid="structml_1_1movar_1_1filter_1a680eb539e7bc7f571bd5e5485f888f92" kind="variable"><name>_pred</name></member>
+    <member refid="structml_1_1movar_1_1filter_1ace03a3a63fd068d706e03aea190d5e3d" kind="function"><name>filter</name></member>
+    <member refid="structml_1_1movar_1_1filter_1a726310e89e7c8d58cb345d944089c5f5" kind="function"><name>operator()</name></member>
+    <member refid="structml_1_1movar_1_1filter_1a063b01a49b3baa0841715d9492ca2b95" kind="function"><name>operator&gt;&gt;</name></member>
+    <member refid="structml_1_1movar_1_1filter_1acc470a39daf945b853417be18f9145ac" kind="function"><name>operator&gt;&gt;</name></member>
+    <member refid="structml_1_1movar_1_1filter_1a4857c1efcc91dc0ed9759cae3f5701d1" kind="function"><name>operator|</name></member>
+    <member refid="structml_1_1movar_1_1filter_1a0700ce0132a401e867d61dff5f59a800" kind="function"><name>operator|</name></member>
+  </compound>
+  <compound refid="structml_1_1movar_1_1filter__type" kind="class"><name>ml::movar::filter_type</name>
+    <member refid="structml_1_1movar_1_1filter__type_1a3703ad9af29edff09a5673a94cc5b2ec" kind="function"><name>operator()</name></member>
+    <member refid="structml_1_1movar_1_1filter__type_1a1565cfadf215cf95e46795ade936806a" kind="function"><name>operator()</name></member>
+    <member refid="structml_1_1movar_1_1filter__type_1ade953e9c0c57d727e653704d7b74e593" kind="function"><name>operator&gt;&gt;</name></member>
+    <member refid="structml_1_1movar_1_1filter__type_1a7979644f0a5e440b11680ec52a1efe17" kind="function"><name>operator|</name></member>
+  </compound>
+  <compound refid="structml_1_1movar_1_1fork" kind="class"><name>ml::movar::fork</name>
+  </compound>
+  <compound refid="structml_1_1movar_1_1fork_3_01T1_01_4" kind="struct"><name>ml::movar::fork&lt; T1 &gt;</name>
+    <member refid="structml_1_1movar_1_1fork_3_01T1_01_4_1a134a38cf61cfd2a282f0791a6f2b41aa" kind="variable"><name>_fn</name></member>
+    <member refid="structml_1_1movar_1_1fork_3_01T1_01_4_1a3170aff79d9aecbfe6e0454e431beb5f" kind="function"><name>fork</name></member>
+    <member refid="structml_1_1movar_1_1fork_3_01T1_01_4_1a49a1254627da56de0ec546664317bdcc" kind="function"><name>operator()</name></member>
+    <member refid="structml_1_1movar_1_1fork_3_01T1_01_4_1aecb9157b9efd0aa100a03926208cfe0b" kind="function"><name>operator&gt;&gt;</name></member>
+    <member refid="structml_1_1movar_1_1fork_3_01T1_01_4_1a4200eafc0aff1589485712fa667f0671" kind="function"><name>operator&gt;&gt;</name></member>
+    <member refid="structml_1_1movar_1_1fork_3_01T1_01_4_1add0fcd5155d593fb004b9022d6eb6528" kind="function"><name>operator|</name></member>
+    <member refid="structml_1_1movar_1_1fork_3_01T1_01_4_1a87fb1eeb087e67ad7c51cb816adcc9ae" kind="function"><name>operator|</name></member>
+  </compound>
+  <compound refid="structml_1_1movar_1_1fork_3_01T1_00_01T2_01_4" kind="struct"><name>ml::movar::fork&lt; T1, T2 &gt;</name>
+    <member refid="structml_1_1movar_1_1fork_3_01T1_00_01T2_01_4_1ac43b12c18703422a193f9cf448ea6d58" kind="variable"><name>_first</name></member>
+    <member refid="structml_1_1movar_1_1fork_3_01T1_00_01T2_01_4_1a93376b231ab42935c7a3838cc20aea29" kind="variable"><name>_second</name></member>
+    <member refid="structml_1_1movar_1_1fork_3_01T1_00_01T2_01_4_1aeef09af2fb63a6c05a07a060c1458f26" kind="function"><name>fork</name></member>
+    <member refid="structml_1_1movar_1_1fork_3_01T1_00_01T2_01_4_1a70e236bfd5d523a42df986b95d3d2b8b" kind="function"><name>operator()</name></member>
+    <member refid="structml_1_1movar_1_1fork_3_01T1_00_01T2_01_4_1a337e6e46ab06f4e45058e667f06c0f8e" kind="function"><name>operator&gt;&gt;</name></member>
+    <member refid="structml_1_1movar_1_1fork_3_01T1_00_01T2_01_4_1a874746c0abb773b3a07b00fee3ed8101" kind="function"><name>operator&gt;&gt;</name></member>
+    <member refid="structml_1_1movar_1_1fork_3_01T1_00_01T2_01_4_1a91af71fd58b419088e8a392657634c90" kind="function"><name>operator|</name></member>
+    <member refid="structml_1_1movar_1_1fork_3_01T1_00_01T2_01_4_1a2bc33d47493cdd500480b987511cbe63" kind="function"><name>operator|</name></member>
+  </compound>
+  <compound refid="structml_1_1movar_1_1just" kind="class"><name>ml::movar::just</name>
+    <member refid="structml_1_1movar_1_1just_1a12d5be0c2e2cece60460ffa412be84d7" kind="function"><name>index</name></member>
+    <member refid="structml_1_1movar_1_1just_1a5f8aa4b52ca4515b07cd1d81553fd8c9" kind="function"><name>is_nothing</name></member>
+    <member refid="structml_1_1movar_1_1just_1a7523a3ecc4e5e365507abdea92111ea8" kind="function"><name>is_something</name></member>
+    <member refid="structml_1_1movar_1_1just_1aa9642649c724790b017af9f6d0a9578c" kind="function"><name>is</name></member>
+    <member refid="structml_1_1movar_1_1just_1a91b30cd7890f91b6f04862ff1639df14" kind="function"><name>is</name></member>
+    <member refid="structml_1_1movar_1_1just_1a88a42265cc9580bcbb6c2efe56369162" kind="function"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1just_1aa277cece3db3f4e9ee9da00af166d01d" kind="function"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1just_1a4cbe4fd30b69b09d66fd31fc6b93596a" kind="function"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1just_1aeb49354d3aeb5cf3f5d24b82ab2bff72" kind="function"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1just_1adfc414e4c19ccc4b462ab76e32bfed18" kind="function"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1just_1a2767c65cbec5a68e83c4a55a808ade9b" kind="function"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1just_1ad627f30f018de2ecaeb87f1c70964c91" kind="function"><name>map</name></member>
+    <member refid="structml_1_1movar_1_1just_1a65423113067ead8f73c711cc714f020d" kind="function"><name>map</name></member>
+    <member refid="structml_1_1movar_1_1just_1a2327da00ba684998b5f5a58de73b140b" kind="function"><name>match</name></member>
+    <member refid="structml_1_1movar_1_1just_1a56984d020fe36254c9a77007e9476123" kind="function"><name>match</name></member>
+    <member refid="structml_1_1movar_1_1just_1ad6ede402c5fcf7e0f05a0b8015944c71" kind="function"><name>map_or</name></member>
+    <member refid="structml_1_1movar_1_1just_1af8ae471725d509332ee82c3bd6b70be1" kind="function"><name>map_or</name></member>
+    <member refid="structml_1_1movar_1_1just_1a5a3e699dc7ce24a37ba5f85c940ab90e" kind="function"><name>map_or_else</name></member>
+    <member refid="structml_1_1movar_1_1just_1ac4ad52af4286a41c829895c22333f7b1" kind="function"><name>map_or_else</name></member>
+    <member refid="structml_1_1movar_1_1just_1abf3caeb22efa5234f4378ea23372c93c" kind="function"><name>or_else</name></member>
+    <member refid="structml_1_1movar_1_1just_1aede4e3e6c02d068a0374a7a1ed9292ca" kind="function"><name>or_else</name></member>
+    <member refid="structml_1_1movar_1_1just_1a050df688f41243a9155ede3f7919b6d7" kind="function"><name>take</name></member>
+    <member refid="structml_1_1movar_1_1just_1a801f484360bd24b1c7ccc7deb57c7a57" kind="friend"><name>is</name></member>
+    <member refid="structml_1_1movar_1_1just_1af5c82b7d8a437302ba9a358b3429db57" kind="friend"><name>is</name></member>
+    <member refid="structml_1_1movar_1_1just_1a28ad67e2000f364ffb12a4079c30cbbb" kind="friend"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1just_1a0472a46ae6497ade1ebdda3556d5ce90" kind="friend"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1just_1ac077a27fb54c3328dcb1516862bb7409" kind="typedef"><name>value_type</name></member>
+    <member refid="structml_1_1movar_1_1just_1a094887e243c7256c1523552680d463a5" kind="typedef"><name>reference</name></member>
+    <member refid="structml_1_1movar_1_1just_1a66ce0ab9d998fd5931d72df5c600a0a0" kind="typedef"><name>const_reference</name></member>
+    <member refid="structml_1_1movar_1_1just_1a28203ccc65570e44dbbdbc2f7214d5da" kind="variable"><name>_value</name></member>
+    <member refid="structml_1_1movar_1_1just_1a49b6a9fa5df8d6ce75119a3d4ec15237" kind="function"><name>just</name></member>
+    <member refid="structml_1_1movar_1_1just_1a63cc7721d13863b277b3e71e6c9908ce" kind="function"><name>just</name></member>
+    <member refid="structml_1_1movar_1_1just_1a316ec08dc4e7462a9946f65b641426b9" kind="function"><name>explicit</name></member>
+    <member refid="structml_1_1movar_1_1just_1a1784e20ac1ea623df1100a96a19f5dbd" kind="function"><name>operator const_reference</name></member>
+    <member refid="structml_1_1movar_1_1just_1af61c37a9e562c198a464910b038f1790" kind="function"><name>operator reference</name></member>
+    <member refid="structml_1_1movar_1_1just_1ac46c72ac43ff56ccbfeb63be0f9f427c" kind="function"><name>operator value_type</name></member>
+    <member refid="structml_1_1movar_1_1just_1a3b7b1c43cc64dbe6e8127077ad39c119" kind="function"><name>operator==</name></member>
+    <member refid="structml_1_1movar_1_1just_1ab7d9ae3320e642c88fa620e0ef6671a3" kind="function"><name>operator&lt;=&gt;</name></member>
+  </compound>
+  <compound refid="structml_1_1movar_1_1maybe" kind="class"><name>ml::movar::maybe</name>
+    <member refid="structml_1_1movar_1_1maybe_1a8f226e152973f04c860998168158e802" kind="function"><name>index</name></member>
+    <member refid="structml_1_1movar_1_1maybe_1a71873495626dd08ee203ba98ed53fe31" kind="function"><name>is_nothing</name></member>
+    <member refid="structml_1_1movar_1_1maybe_1abe49098acd7ec7109c2e71ba6c21e882" kind="function"><name>is_something</name></member>
+    <member refid="structml_1_1movar_1_1maybe_1aacd71223188fa012fc31c1254909a1b4" kind="function"><name>is</name></member>
+    <member refid="structml_1_1movar_1_1maybe_1a47bf345478ebe6c0837b0a912ccc5b4d" kind="function"><name>is</name></member>
+    <member refid="structml_1_1movar_1_1maybe_1a0ebcaef70d1b2efeec6b29e025a6f26f" kind="function"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1maybe_1aa4485b86c3c161e7f2de901440d9d598" kind="function"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1maybe_1a2feb4580d5cfeb36bb97ba39b8b117c8" kind="function"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1maybe_1a9bd5b0e38f4eed940a48ae37947857f8" kind="function"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1maybe_1a189c99c3af59bbba0972c97bc743a172" kind="function"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1maybe_1a4f8cdfbe137d273034cf2494ef8b82b5" kind="function"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1maybe_1a45dd20b72e18e1ba8da00285edb95666" kind="function"><name>map</name></member>
+    <member refid="structml_1_1movar_1_1maybe_1a1dab136e002534ba032cc7f190c55b22" kind="function"><name>map</name></member>
+    <member refid="structml_1_1movar_1_1maybe_1aba3f42face456a8c527f14480d388469" kind="function"><name>match</name></member>
+    <member refid="structml_1_1movar_1_1maybe_1a52c09dfb3c8147d3817c85c041e7aed1" kind="function"><name>match</name></member>
+    <member refid="structml_1_1movar_1_1maybe_1a4feb4ab68d4f036aadfe1df08033df6b" kind="function"><name>map_or</name></member>
+    <member refid="structml_1_1movar_1_1maybe_1a18169326e6befc4b50b5e89d0388dc3e" kind="function"><name>map_or</name></member>
+    <member refid="structml_1_1movar_1_1maybe_1a6c6e14457dd238f59b001bdb4b54892d" kind="function"><name>map_or_else</name></member>
+    <member refid="structml_1_1movar_1_1maybe_1a8d8eb3742508fe2cd6a1111d1508613c" kind="function"><name>map_or_else</name></member>
+    <member refid="structml_1_1movar_1_1maybe_1a1e67fbcd1bd67fdcc367130688820f53" kind="function"><name>or_else</name></member>
+    <member refid="structml_1_1movar_1_1maybe_1a7a5451efb444b2d75deca0295d72f5b1" kind="function"><name>or_else</name></member>
+    <member refid="structml_1_1movar_1_1maybe_1a1ee43246c8fd38996b40433ceb73dc90" kind="function"><name>take</name></member>
+    <member refid="structml_1_1movar_1_1maybe_1a6a4eb436f3b6af3a230a0a65e2e1630c" kind="function"><name>operator==</name></member>
+    <member refid="structml_1_1movar_1_1maybe_1ad08e67443221b14e97661cadcc6361d5" kind="function"><name>operator&lt;=&gt;</name></member>
+    <member refid="structml_1_1movar_1_1maybe_1af12a48c09af9f33c65d0c41b8739e8b5" kind="friend"><name>is</name></member>
+    <member refid="structml_1_1movar_1_1maybe_1a7bc802c4ff1355b493748f10e339b469" kind="friend"><name>is</name></member>
+    <member refid="structml_1_1movar_1_1maybe_1af53db8e45c9636fc8a1a071828dbe350" kind="friend"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1maybe_1aa9856743c59690659f01f6027932e329" kind="friend"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1maybe_1aa61d5c046579d319a599c40e8665eff8" kind="variable"><name>_value</name></member>
+    <member refid="structml_1_1movar_1_1maybe_1a9bb04e5235efb76cc4d7934a548de8ce" kind="function"><name>maybe</name></member>
+    <member refid="structml_1_1movar_1_1maybe_1a79db99c1455b7f588083a51543fa2845" kind="function"><name>maybe</name></member>
+    <member refid="structml_1_1movar_1_1maybe_1a651746f7feb9bf9ec8b1605f48c560e2" kind="function"><name>maybe</name></member>
+    <member refid="structml_1_1movar_1_1maybe_1a16ce02fa5106993d62ab4e6d66172079" kind="function"><name>maybe</name></member>
+    <member refid="structml_1_1movar_1_1maybe_1a688237f5051c22ca12d30106e5aa7a68" kind="function"><name>explicit</name></member>
+  </compound>
+  <compound refid="structml_1_1movar_1_1nothing" kind="class"><name>ml::movar::nothing</name>
+    <member refid="structml_1_1movar_1_1nothing_1a45c63ab5b901daa8351c64d254fa9c27" kind="function"><name>index</name></member>
+    <member refid="structml_1_1movar_1_1nothing_1a66da1a2c3bf7388d9f6440bdd4f23a77" kind="function"><name>is_nothing</name></member>
+    <member refid="structml_1_1movar_1_1nothing_1a9df3f9d7b642d7abc9e5c04006623462" kind="function"><name>is_something</name></member>
+    <member refid="structml_1_1movar_1_1nothing_1aea84a9bcced9ec334f1694b803312637" kind="function"><name>is</name></member>
+    <member refid="structml_1_1movar_1_1nothing_1a5bd8cd6e7b1fd92c272f27646c8750cc" kind="function"><name>is</name></member>
+    <member refid="structml_1_1movar_1_1nothing_1a5d7f994993e37faaa98b002b789a963f" kind="function"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1nothing_1a5d7f994993e37faaa98b002b789a963f" kind="function"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1nothing_1a0862ed8cd0ca1cfcbc886b80af0fb12d" kind="function"><name>map</name></member>
+    <member refid="structml_1_1movar_1_1nothing_1a3bbbde94ae8cce156ad26c1b1af5ffc2" kind="function"><name>match</name></member>
+    <member refid="structml_1_1movar_1_1nothing_1a3e0c0f36b33502423b2c130781be4411" kind="function"><name>map_or</name></member>
+    <member refid="structml_1_1movar_1_1nothing_1aa561982835fceef0ec75942188d44ba8" kind="function"><name>map_or_else</name></member>
+    <member refid="structml_1_1movar_1_1nothing_1a248677ef059dcc2bee733094e539821d" kind="function"><name>or_else</name></member>
+    <member refid="structml_1_1movar_1_1nothing_1a7c6d2ead1a8c8af5598489f47ecd40fb" kind="function"><name>take</name></member>
+    <member refid="structml_1_1movar_1_1nothing_1a1e59e233836c4138797d91546927d17b" kind="friend"><name>is</name></member>
+    <member refid="structml_1_1movar_1_1nothing_1af039e3b39f6695c604d3331f042f06b2" kind="friend"><name>is</name></member>
+    <member refid="structml_1_1movar_1_1nothing_1a7bb3fc0329191b53bc884a235b3fff6d" kind="friend"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1nothing_1a7bb3fc0329191b53bc884a235b3fff6d" kind="friend"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1nothing_1aa2722a710ffd3919de5061553f36a21e" kind="function"><name>operator==</name></member>
+    <member refid="structml_1_1movar_1_1nothing_1ade67bec0ac848e41fc464913d77a23cf" kind="function"><name>operator&lt;=&gt;</name></member>
+  </compound>
+  <compound refid="structml_1_1movar_1_1option" kind="class"><name>ml::movar::option</name>
+    <member refid="structml_1_1movar_1_1option_1a9bd0dc4dc71f5bc2c5aa0503462b1427" kind="function"><name>index</name></member>
+    <member refid="structml_1_1movar_1_1option_1a77fbd7249200ecad960be5aa7b3df119" kind="function"><name>is_nothing</name></member>
+    <member refid="structml_1_1movar_1_1option_1a9e8cc983d8cc3ae3833dea92b1e9d004" kind="function"><name>is_something</name></member>
+    <member refid="structml_1_1movar_1_1option_1a49e1a14f62ad4a6af5c27bf2bfa8911e" kind="function"><name>is</name></member>
+    <member refid="structml_1_1movar_1_1option_1aed962cc3b5fb9e1a41ae03b95a426d7c" kind="function"><name>is</name></member>
+    <member refid="structml_1_1movar_1_1option_1a0ac4caef6ac3fe4437639806b275aedb" kind="function"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1option_1a326194f000d752d6f6323b903d7022f2" kind="function"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1option_1a36920e2c72074fad726d1fa4bc9a0c95" kind="function"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1option_1a5b488c06bf3f4f41d88b9064c9ca9525" kind="function"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1option_1a964efab7de28a7d49b614457498d1f90" kind="function"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1option_1a768753ddc57d68aadadfbf7eece5068f" kind="function"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1option_1a2269475cff5e40046b2a77837446bc54" kind="function"><name>map</name></member>
+    <member refid="structml_1_1movar_1_1option_1ac4c977c1c130e5c5d05fb78c24cdec66" kind="function"><name>map</name></member>
+    <member refid="structml_1_1movar_1_1option_1a36b1184f4ca5ffdd1eda3dfc1e83c8ee" kind="function"><name>match</name></member>
+    <member refid="structml_1_1movar_1_1option_1a09c82ff5c5d3980df6e582a7ea43e4ac" kind="function"><name>match</name></member>
+    <member refid="structml_1_1movar_1_1option_1a3db3e17244951c35c47eebf45354e8dd" kind="function"><name>map_or</name></member>
+    <member refid="structml_1_1movar_1_1option_1ac895f2643943b09883dba97d545691ee" kind="function"><name>map_or</name></member>
+    <member refid="structml_1_1movar_1_1option_1a572e8dc152162672f8103c4a9346cde7" kind="function"><name>map_or_else</name></member>
+    <member refid="structml_1_1movar_1_1option_1ad2c06aeed1114c9cefaaecc111c0a204" kind="function"><name>map_or_else</name></member>
+    <member refid="structml_1_1movar_1_1option_1aa329de883a202b7efe14142b360c6136" kind="function"><name>or_else</name></member>
+    <member refid="structml_1_1movar_1_1option_1a55f44ff34556efe406751c269582e741" kind="function"><name>or_else</name></member>
+    <member refid="structml_1_1movar_1_1option_1af2994fb9d144bec96fd40ac4c8cc2ccf" kind="function"><name>take</name></member>
+    <member refid="structml_1_1movar_1_1option_1a363ed3200b9e7768d9ba5bbc03105887" kind="friend"><name>is</name></member>
+    <member refid="structml_1_1movar_1_1option_1a08a15a6f16503b165ebfd427cdb28850" kind="friend"><name>is</name></member>
+    <member refid="structml_1_1movar_1_1option_1a33630de5a69e1c5babccb0d087feeb5c" kind="friend"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1option_1a62fd2dc862ebfb1c2c81e7989f16ba1e" kind="friend"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1option_1acc3ae4488e0e95d89f17ff6b097f6a50" kind="typedef"><name>value_type</name></member>
+    <member refid="structml_1_1movar_1_1option_1a067bcc1688c116b51fc022c512b4be58" kind="typedef"><name>reference</name></member>
+    <member refid="structml_1_1movar_1_1option_1a90fadb3e534193939db82eaddf211f5e" kind="typedef"><name>const_reference</name></member>
+    <member refid="structml_1_1movar_1_1option_1a9add3082ef6096e4775586b394d751d3" kind="variable"><name>_value</name></member>
+    <member refid="structml_1_1movar_1_1option_1a63ad23d089c8ed331fae4b6c8b92760f" kind="function"><name>option</name></member>
+    <member refid="structml_1_1movar_1_1option_1af4595de37f17c9faa0aa0a914fbde8c3" kind="function"><name>option</name></member>
+    <member refid="structml_1_1movar_1_1option_1a95ff5cef6d0989938fa32e2afe1bc842" kind="function"><name>option</name></member>
+    <member refid="structml_1_1movar_1_1option_1a7f6a7f6bdc883fb81d5ad2c4863789a9" kind="function"><name>option</name></member>
+    <member refid="structml_1_1movar_1_1option_1a962f2378214acdaf76cea8d80aa2ee46" kind="function"><name>explicit</name></member>
+    <member refid="structml_1_1movar_1_1option_1a10a82245d737ad02bb4af6f8534e8fe7" kind="function"><name>operator==</name></member>
+    <member refid="structml_1_1movar_1_1option_1aaa7626d16e624b218913d52eb1a5d272" kind="function"><name>operator&lt;=&gt;</name></member>
+  </compound>
+  <compound refid="structml_1_1movar_1_1sequence" kind="class"><name>ml::movar::sequence</name>
+  </compound>
+  <compound refid="structml_1_1movar_1_1sequence_3_01T1_01_4" kind="struct"><name>ml::movar::sequence&lt; T1 &gt;</name>
+    <member refid="structml_1_1movar_1_1sequence_3_01T1_01_4_1abe048635c217ad2ebaccbc93c3767b7f" kind="variable"><name>_fn</name></member>
+    <member refid="structml_1_1movar_1_1sequence_3_01T1_01_4_1aba65ffee5862707ddb1af64bd0726a44" kind="function"><name>sequence</name></member>
+    <member refid="structml_1_1movar_1_1sequence_3_01T1_01_4_1a638d67d0b1f031e2af9f2d1c315eedff" kind="function"><name>operator()</name></member>
+    <member refid="structml_1_1movar_1_1sequence_3_01T1_01_4_1a035e2c201015f8b162c2a41fab32ddf0" kind="function"><name>operator&gt;&gt;</name></member>
+    <member refid="structml_1_1movar_1_1sequence_3_01T1_01_4_1afd86cc16bf2b7f86bdf25af31c914074" kind="function"><name>operator&gt;&gt;</name></member>
+    <member refid="structml_1_1movar_1_1sequence_3_01T1_01_4_1a91c80e387e1214043fec34e826dc1944" kind="function"><name>operator|</name></member>
+    <member refid="structml_1_1movar_1_1sequence_3_01T1_01_4_1a7caa5ff6cc963a759c79fbc09ee9d2cb" kind="function"><name>operator|</name></member>
+  </compound>
+  <compound refid="structml_1_1movar_1_1sequence_3_01T1_00_01T2_01_4" kind="struct"><name>ml::movar::sequence&lt; T1, T2 &gt;</name>
+    <member refid="structml_1_1movar_1_1sequence_3_01T1_00_01T2_01_4_1a10236372edf13da726f684eb597adeaf" kind="variable"><name>_fn1</name></member>
+    <member refid="structml_1_1movar_1_1sequence_3_01T1_00_01T2_01_4_1a1c3d0a65cf07fbc5fce96d23ebc9d7f6" kind="variable"><name>_fn2</name></member>
+    <member refid="structml_1_1movar_1_1sequence_3_01T1_00_01T2_01_4_1aaea9c9b3fd3d51c99e6e5845b47c0d19" kind="function"><name>sequence</name></member>
+    <member refid="structml_1_1movar_1_1sequence_3_01T1_00_01T2_01_4_1a0f8e0525fe5436b817ee1413e831c78d" kind="function"><name>operator()</name></member>
+    <member refid="structml_1_1movar_1_1sequence_3_01T1_00_01T2_01_4_1a2283d9517b3364e3297bed1f4edb27fd" kind="function"><name>operator&gt;&gt;</name></member>
+    <member refid="structml_1_1movar_1_1sequence_3_01T1_00_01T2_01_4_1ad7673710b62b945c56ad2b39137d54bd" kind="function"><name>operator&gt;&gt;</name></member>
+    <member refid="structml_1_1movar_1_1sequence_3_01T1_00_01T2_01_4_1a9827b475ef2de2cf19227f610d8a1f4b" kind="function"><name>operator|</name></member>
+    <member refid="structml_1_1movar_1_1sequence_3_01T1_00_01T2_01_4_1a7e6e8b1eecac340d1f797672c6b02061" kind="function"><name>operator|</name></member>
+  </compound>
+  <compound refid="structml_1_1movar_1_1sequence_3_4" kind="struct"><name>ml::movar::sequence&lt;&gt;</name>
+    <member refid="structml_1_1movar_1_1sequence_3_4_1ae6153f817795320cc78655148c589b76" kind="function"><name>operator()</name></member>
+    <member refid="structml_1_1movar_1_1sequence_3_4_1aaea393a4b0058cd270c1c81f9e0601c7" kind="function"><name>operator&gt;&gt;</name></member>
+    <member refid="structml_1_1movar_1_1sequence_3_4_1a705033eb3e0d8b9ad9b6c1b1684eac33" kind="function"><name>operator&gt;&gt;</name></member>
+    <member refid="structml_1_1movar_1_1sequence_3_4_1aad061382ac6dc3196315302f296405e5" kind="function"><name>operator|</name></member>
+    <member refid="structml_1_1movar_1_1sequence_3_4_1a7d717c554804ce3717133977762edb94" kind="function"><name>operator|</name></member>
+  </compound>
+  <compound refid="structml_1_1movar_1_1variant" kind="class"><name>ml::movar::variant</name>
+    <member refid="structml_1_1movar_1_1variant_1a20e910b35b3e51c9090d6ae7acb604ae" kind="function"><name>index</name></member>
+    <member refid="structml_1_1movar_1_1variant_1a77ae003912d65cd9deee0524ad62dfb5" kind="function"><name>is_nothing</name></member>
+    <member refid="structml_1_1movar_1_1variant_1a41294ad6e4638d6a22d335886d9443ff" kind="function"><name>is_something</name></member>
+    <member refid="structml_1_1movar_1_1variant_1a4c7b3973aad13462cee56d07779ee130" kind="function"><name>is</name></member>
+    <member refid="structml_1_1movar_1_1variant_1a941a111246eefe4e8c2d92bdb9e70c1e" kind="function"><name>is</name></member>
+    <member refid="structml_1_1movar_1_1variant_1a07126931f131025979248a1fd1cd35f5" kind="function"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1variant_1abbc93ff176b938610a266930d7a7adda" kind="function"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1variant_1af0db916d62adc3679671385aabfdf37b" kind="function"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1variant_1a4437317d19e82b541876f31170692531" kind="function"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1variant_1a3ebf574522ee74d59c755a424ef3a59a" kind="function"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1variant_1a09a9b5c572cb16ef01ad6d1236a64423" kind="function"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1variant_1ae04a1dc3b7ccaf8e783b7b08dcad25d3" kind="function"><name>map</name></member>
+    <member refid="structml_1_1movar_1_1variant_1a20633258d2e655d63d3f1c00416b4529" kind="function"><name>map</name></member>
+    <member refid="structml_1_1movar_1_1variant_1a60a93ab68dd5a72f17194c64f96b4bda" kind="function"><name>match</name></member>
+    <member refid="structml_1_1movar_1_1variant_1a81a6193808075eea4187420dbc924074" kind="function"><name>match</name></member>
+    <member refid="structml_1_1movar_1_1variant_1a245fcd0ad6acd23d78076f844699cd55" kind="function"><name>map_or</name></member>
+    <member refid="structml_1_1movar_1_1variant_1a5df20111ac766c161f5cb99167480f6a" kind="function"><name>map_or</name></member>
+    <member refid="structml_1_1movar_1_1variant_1ad389892d48ab68a14069345be4026dd2" kind="function"><name>map_or_else</name></member>
+    <member refid="structml_1_1movar_1_1variant_1a9db7ed8ad9338972b3a1a049706dca59" kind="function"><name>map_or_else</name></member>
+    <member refid="structml_1_1movar_1_1variant_1a5c08fef3e377e6e3f18c263884696c93" kind="function"><name>or_else</name></member>
+    <member refid="structml_1_1movar_1_1variant_1a6fe4c0bc9a828e9df54951af47f3621a" kind="function"><name>or_else</name></member>
+    <member refid="structml_1_1movar_1_1variant_1a41a24b8d1cb297e568016516b3c43604" kind="function"><name>take</name></member>
+    <member refid="structml_1_1movar_1_1variant_1a88be8509168f48d54993d9c3cd6c9e86" kind="friend"><name>is</name></member>
+    <member refid="structml_1_1movar_1_1variant_1ad8c7659b9aa091391674ebd83232ccdf" kind="friend"><name>is</name></member>
+    <member refid="structml_1_1movar_1_1variant_1a399f1b3bba898b95954fcdf35092d48c" kind="friend"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1variant_1abbb016418a410a982fe7c6451d94eb0a" kind="friend"><name>get</name></member>
+    <member refid="structml_1_1movar_1_1variant_1a43497f8c29a1615a88759fcdc180120c" kind="variable"><name>_value</name></member>
+    <member refid="structml_1_1movar_1_1variant_1ad86c1a464ad0c213a1100108c1fa558b" kind="function"><name>variant</name></member>
+    <member refid="structml_1_1movar_1_1variant_1a68975c0e1eb9b3891040c8ccb7981e45" kind="function"><name>variant</name></member>
+    <member refid="structml_1_1movar_1_1variant_1a3bf2c7f43033beded481bd5d718d2348" kind="function"><name>explicit</name></member>
+    <member refid="structml_1_1movar_1_1variant_1a481b1d765e88b27e58b186002faaa034" kind="function"><name>operator==</name></member>
+    <member refid="structml_1_1movar_1_1variant_1a7996ccf34be11b00e8e663236b2b30eb" kind="function"><name>operator&lt;=&gt;</name></member>
+  </compound>
+  <compound refid="namespaceml" kind="namespace"><name>ml</name>
+  </compound>
+  <compound refid="namespaceml_1_1movar" kind="namespace"><name>ml::movar</name>
+    <member refid="namespaceml_1_1movar_1a04519f44f711a7473cc893ab79681aac" kind="function"><name>filter</name></member>
+    <member refid="namespaceml_1_1movar_1a87df131db5d2c040496d22221f791464" kind="function"><name>fork</name></member>
+    <member refid="namespaceml_1_1movar_1a5f8e1642cbd933f77942312507bb138c" kind="function"><name>fork</name></member>
+    <member refid="namespaceml_1_1movar_1afa63e5f19a2e753aeabb9c3a58c26a0b" kind="function"><name>sequence</name></member>
+    <member refid="namespaceml_1_1movar_1a014e8b970c37cad44180143ea7be69a0" kind="function"><name>sequence</name></member>
+    <member refid="namespaceml_1_1movar_1ab62b7f468a05ddadf4dbc16d84a16a51" kind="function"><name>sequence</name></member>
+    <member refid="namespaceml_1_1movar_1a325fcc998a3898bc41f54d83f96a2ae8" kind="function"><name>either</name></member>
+    <member refid="namespaceml_1_1movar_1a4f3c4c2e2b7b811f2b87e319b43d0cf7" kind="function"><name>either</name></member>
+    <member refid="namespaceml_1_1movar_1ad688be43b2c07ebabe06c52960f58543" kind="function"><name>either</name></member>
+    <member refid="namespaceml_1_1movar_1a65fa2f8f83a44ef28eb8852738b751b2" kind="function"><name>just</name></member>
+    <member refid="namespaceml_1_1movar_1acd2674e96e9ddc79a24713c8d163618f" kind="function"><name>just</name></member>
+    <member refid="namespaceml_1_1movar_1aeca84915fcc9c855fe4f6ce5480fba84" kind="function"><name>just</name></member>
+    <member refid="namespaceml_1_1movar_1ae968bb6a983033fbfde0bee5a626c485" kind="function"><name>just</name></member>
+    <member refid="namespaceml_1_1movar_1a7fd9a36bc06e946f1fc5ef14c1c43c9f" kind="function"><name>maybe</name></member>
+    <member refid="namespaceml_1_1movar_1a2549af4bf959c781ac3e6f39d1cfd17b" kind="function"><name>maybe</name></member>
+    <member refid="namespaceml_1_1movar_1ac3e077950406a2314c52f25a5d9d0b26" kind="function"><name>maybe</name></member>
+    <member refid="namespaceml_1_1movar_1af4a904fb5aeaa232386f7b21c4b99ef3" kind="function"><name>maybe</name></member>
+    <member refid="namespaceml_1_1movar_1a64f9d5c3630e3c87600954ccc259e28c" kind="function"><name>option</name></member>
+    <member refid="namespaceml_1_1movar_1a6562221fd8c3955b80c945726cc8a16f" kind="function"><name>option</name></member>
+    <member refid="namespaceml_1_1movar_1a94cfff03bd212bf60eec5762ea7894a5" kind="function"><name>option</name></member>
+    <member refid="namespaceml_1_1movar_1a82e4690e9f6167a65ef359809670fca4" kind="function"><name>option</name></member>
+    <member refid="namespaceml_1_1movar_1a66b15dcec8e126d099745d76a2b3985a" kind="function"><name>variant</name></member>
+    <member refid="namespaceml_1_1movar_1a9ab52ccbdb92821d1789698e79400a16" kind="function"><name>variant</name></member>
+    <member refid="namespaceml_1_1movar_1ae349e088ee5dce6c2e4e9c306d0afa61" kind="function"><name>variant</name></member>
+    <member refid="namespaceml_1_1movar_1a69b2d3779ec4a7857b5f412417574f6f" kind="function"><name>variant</name></member>
+  </compound>
+  <compound refid="lazy-pipelines_8md" kind="file"><name>lazy-pipelines.md</name>
+  </compound>
+  <compound refid="pipelines_8md" kind="file"><name>pipelines.md</name>
+  </compound>
+  <compound refid="filter_8hpp" kind="file"><name>filter.hpp</name>
+  </compound>
+  <compound refid="fork_8hpp" kind="file"><name>fork.hpp</name>
+  </compound>
+  <compound refid="pipe_8hpp" kind="file"><name>pipe.hpp</name>
+  </compound>
+  <compound refid="sequence_8hpp" kind="file"><name>sequence.hpp</name>
+  </compound>
+  <compound refid="either_8hpp" kind="file"><name>either.hpp</name>
+  </compound>
+  <compound refid="just_8hpp" kind="file"><name>just.hpp</name>
+  </compound>
+  <compound refid="maybe_8hpp" kind="file"><name>maybe.hpp</name>
+  </compound>
+  <compound refid="nothing_8hpp" kind="file"><name>nothing.hpp</name>
+  </compound>
+  <compound refid="option_8hpp" kind="file"><name>option.hpp</name>
+  </compound>
+  <compound refid="type_8hpp" kind="file"><name>type.hpp</name>
+  </compound>
+  <compound refid="variant_8hpp" kind="file"><name>variant.hpp</name>
+  </compound>
+  <compound refid="movar_8hpp" kind="file"><name>movar.hpp</name>
+  </compound>
+  <compound refid="group__LazyPipeline" kind="group"><name>LazyPipeline</name>
+  </compound>
+  <compound refid="group__Variant" kind="group"><name>Variant</name>
+  </compound>
+  <compound refid="pipelines" kind="page"><name>pipelines</name>
+  </compound>
+  <compound refid="lazy-pipelines" kind="page"><name>lazy-pipelines</name>
+  </compound>
+  <compound refid="dir_4fef79e7177ba769987a8da36c892c5f" kind="dir"><name>/home/malorubi/projects/tmp/movar/build</name>
+  </compound>
+  <compound refid="dir_e2cf8ecc49c41cbc53d71e2f6f58b926" kind="dir"><name>/home/malorubi/projects/tmp/movar/build/docs</name>
+  </compound>
+  <compound refid="dir_35660000be3c137c4c9059122220f9dd" kind="dir"><name>ml/movar/internal</name>
+  </compound>
+  <compound refid="dir_36e427adfd2ff85bd929df9f95861d57" kind="dir"><name>ml</name>
+  </compound>
+  <compound refid="dir_c58829cbb972a2dbdb03d3c295c37e9c" kind="dir"><name>ml/movar</name>
+  </compound>
+  <compound refid="dir_773aa0dcfb0fe438f6e5317775a9614e" kind="dir"><name>ml/movar/internal/pipe</name>
+  </compound>
+  <compound refid="dir_e2e3fd60d52027ae6e958a6298282c11" kind="dir"><name>ml/movar/internal/type</name>
+  </compound>
+</doxygenindex>

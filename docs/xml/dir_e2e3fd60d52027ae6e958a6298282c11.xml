@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="dir_e2e3fd60d52027ae6e958a6298282c11" kind="dir">
+    <compoundname>ml/movar/internal/type</compoundname>
+    <innerfile refid="either_8hpp">either.hpp</innerfile>
+    <innerfile refid="just_8hpp">just.hpp</innerfile>
+    <innerfile refid="maybe_8hpp">maybe.hpp</innerfile>
+    <innerfile refid="nothing_8hpp">nothing.hpp</innerfile>
+    <innerfile refid="option_8hpp">option.hpp</innerfile>
+    <innerfile refid="type_8hpp">type.hpp</innerfile>
+    <innerfile refid="variant_8hpp">variant.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ml/movar/internal/type/"/>
+  </compounddef>
+</doxygen>

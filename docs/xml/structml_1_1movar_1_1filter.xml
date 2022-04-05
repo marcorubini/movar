@@ -1,0 +1,186 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="structml_1_1movar_1_1filter" kind="class" language="C++" prot="public">
+    <compoundname>ml::movar::filter</compoundname>
+    <includes local="no">ml/movar/internal/pipe/filter.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>std::move_constructible</type>
+        <declname>Predicate</declname>
+        <defname>Predicate</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structml_1_1movar_1_1filter_1a680eb539e7bc7f571bd5e5485f888f92" prot="public" static="no" mutable="no">
+        <type>Predicate</type>
+        <definition>Predicate ml::movar::filter&lt; Predicate &gt;::_pred</definition>
+        <argsstring></argsstring>
+        <name>_pred</name>
+        <qualifiedname>ml::movar::filter::_pred</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/pipe/filter.hpp" line="27" column="15" bodyfile="ml/movar/internal/pipe/filter.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structml_1_1movar_1_1filter_1ace03a3a63fd068d706e03aea190d5e3d" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr ml::movar::filter&lt; Predicate &gt;::filter</definition>
+        <argsstring>(Predicate pred) noexcept(std::is_nothrow_move_constructible_v&lt; Predicate &gt;)</argsstring>
+        <name>filter</name>
+        <qualifiedname>ml::movar::filter::filter</qualifiedname>
+        <param>
+          <type>Predicate</type>
+          <declname>pred</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/pipe/filter.hpp" line="29" column="15" bodyfile="ml/movar/internal/pipe/filter.hpp" bodystart="29" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1filter_1a726310e89e7c8d58cb345d944089c5f5" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Arg</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::filter&lt; Predicate &gt;::operator()</definition>
+        <argsstring>(Arg &amp;&amp;arg) const noexcept(std::is_nothrow_invocable_v&lt; Predicate const &amp;, Arg &amp; &gt;)</argsstring>
+        <name>operator()</name>
+        <qualifiedname>ml::movar::filter::operator()</qualifiedname>
+        <param>
+          <type>Arg &amp;&amp;</type>
+          <declname>arg</declname>
+        </param>
+    <requiresclause>(std::predicate&lt;Predicate const&amp;, Arg&amp;&gt;)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/pipe/filter.hpp" line="35" column="21" bodyfile="ml/movar/internal/pipe/filter.hpp" bodystart="35" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1filter_1a063b01a49b3baa0841715d9492ca2b95" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" refqual="lvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Other</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::filter&lt; Predicate &gt;::operator&gt;&gt;</definition>
+        <argsstring>(Other &amp;&amp;rhs) const &amp;</argsstring>
+        <name>operator&gt;&gt;</name>
+        <qualifiedname>ml::movar::filter::operator&gt;&gt;</qualifiedname>
+        <param>
+          <type>Other &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/pipe/filter.hpp" line="49" column="21" bodyfile="ml/movar/internal/pipe/filter.hpp" bodystart="49" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1filter_1acc470a39daf945b853417be18f9145ac" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" refqual="rvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Other</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::filter&lt; Predicate &gt;::operator&gt;&gt;</definition>
+        <argsstring>(Other &amp;&amp;rhs) &amp;&amp;</argsstring>
+        <name>operator&gt;&gt;</name>
+        <qualifiedname>ml::movar::filter::operator&gt;&gt;</qualifiedname>
+        <param>
+          <type>Other &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/pipe/filter.hpp" line="56" column="21" bodyfile="ml/movar/internal/pipe/filter.hpp" bodystart="56" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1filter_1a4857c1efcc91dc0ed9759cae3f5701d1" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" refqual="lvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Other</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::filter&lt; Predicate &gt;::operator|</definition>
+        <argsstring>(Other &amp;&amp;rhs) const &amp;</argsstring>
+        <name>operator|</name>
+        <qualifiedname>ml::movar::filter::operator|</qualifiedname>
+        <param>
+          <type>Other &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/pipe/filter.hpp" line="63" column="21" bodyfile="ml/movar/internal/pipe/filter.hpp" bodystart="63" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="structml_1_1movar_1_1filter_1a0700ce0132a401e867d61dff5f59a800" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" refqual="rvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Other</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ml::movar::filter&lt; Predicate &gt;::operator|</definition>
+        <argsstring>(Other &amp;&amp;rhs) &amp;&amp;</argsstring>
+        <name>operator|</name>
+        <qualifiedname>ml::movar::filter::operator|</qualifiedname>
+        <param>
+          <type>Other &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ml/movar/internal/pipe/filter.hpp" line="70" column="21" bodyfile="ml/movar/internal/pipe/filter.hpp" bodystart="70" bodyend="74"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Forwards the argument if it satisfies a predicate, or returns <ref refid="structml_1_1movar_1_1nothing" kindref="compound">ml::movar::nothing</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>A filter is a lazy pipeline component that is constructed from a boolean predicate.</para>
+<para>The predicate is invoked with the piped argument.</para>
+<para>If the predicate returns true, the piped argument is forwarded to the next operation in the pipeline.</para>
+<para>Otherwise, <ref refid="structml_1_1movar_1_1nothing" kindref="compound">ml::movar::nothing</ref> is returned.</para>
+<para>See <ref refid="lazy-pipelines" kindref="compound">lazy-pipelines documentation</ref> for example usage. </para>
+    </detaileddescription>
+    <location file="ml/movar/internal/pipe/filter.hpp" line="25" column="3" bodyfile="ml/movar/internal/pipe/filter.hpp" bodystart="26" bodyend="75"/>
+    <listofallmembers>
+      <member refid="structml_1_1movar_1_1filter_1a680eb539e7bc7f571bd5e5485f888f92" prot="public" virt="non-virtual"><scope>ml::movar::filter</scope><name>_pred</name></member>
+      <member refid="structml_1_1movar_1_1filter_1ace03a3a63fd068d706e03aea190d5e3d" prot="public" virt="non-virtual"><scope>ml::movar::filter</scope><name>filter</name></member>
+      <member refid="structml_1_1movar_1_1filter_1a726310e89e7c8d58cb345d944089c5f5" prot="public" virt="non-virtual"><scope>ml::movar::filter</scope><name>operator()</name></member>
+      <member refid="structml_1_1movar_1_1filter_1a063b01a49b3baa0841715d9492ca2b95" prot="public" virt="non-virtual"><scope>ml::movar::filter</scope><name>operator&gt;&gt;</name></member>
+      <member refid="structml_1_1movar_1_1filter_1acc470a39daf945b853417be18f9145ac" prot="public" virt="non-virtual"><scope>ml::movar::filter</scope><name>operator&gt;&gt;</name></member>
+      <member refid="structml_1_1movar_1_1filter_1a4857c1efcc91dc0ed9759cae3f5701d1" prot="public" virt="non-virtual"><scope>ml::movar::filter</scope><name>operator|</name></member>
+      <member refid="structml_1_1movar_1_1filter_1a0700ce0132a401e867d61dff5f59a800" prot="public" virt="non-virtual"><scope>ml::movar::filter</scope><name>operator|</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="dir_35660000be3c137c4c9059122220f9dd" kind="dir">
+    <compoundname>ml/movar/internal</compoundname>
+    <innerdir refid="dir_773aa0dcfb0fe438f6e5317775a9614e">ml/movar/internal/pipe</innerdir>
+    <innerdir refid="dir_e2e3fd60d52027ae6e958a6298282c11">ml/movar/internal/type</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ml/movar/internal/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="pipe_8hpp" kind="file" language="C++">
+    <compoundname>pipe.hpp</compoundname>
+    <includes refid="filter_8hpp" local="no">ml/movar/internal/pipe/filter.hpp</includes>
+    <includes refid="fork_8hpp" local="no">ml/movar/internal/pipe/fork.hpp</includes>
+    <includes refid="sequence_8hpp" local="no">ml/movar/internal/pipe/sequence.hpp</includes>
+    <includedby refid="movar_8hpp" local="no">ml/movar/movar.hpp</includedby>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ml/movar/internal/pipe/pipe.hpp"/>
+  </compounddef>
+</doxygen>

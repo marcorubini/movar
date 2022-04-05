@@ -1,0 +1,122 @@
+\label{pipelines_md__home_malorubi_projects_tmp_movar_build_docs_pipelines}%
+\Hypertarget{pipelines_md__home_malorubi_projects_tmp_movar_build_docs_pipelines}%
+
+
+Pipelines allow to describe a sequence of operations on a variant type.
+
+Every pipeline operation returns an instance of one of\+:
+
+
+\begin{DoxyEnumerate}
+\item \mbox{\hyperlink{structml_1_1movar_1_1nothing}{ml\+::movar\+::nothing}}
+\item \mbox{\hyperlink{structml_1_1movar_1_1just}{ml\+::movar\+::just}}
+\item \mbox{\hyperlink{structml_1_1movar_1_1either}{ml\+::movar\+::either}}
+\item \mbox{\hyperlink{structml_1_1movar_1_1variant}{ml\+::movar\+::variant}}
+\item \mbox{\hyperlink{structml_1_1movar_1_1option}{ml\+::movar\+::option}}
+\item \mbox{\hyperlink{structml_1_1movar_1_1maybe}{ml\+::movar\+::maybe}}
+\end{DoxyEnumerate}
+
+All operations visit the variant so they must be invocable with every variant alternative.\hypertarget{pipelines_pipelines-map}{}\doxysection{map}\label{pipelines_pipelines-map}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{auto} map(unary-\/invocable fn);}
+
+\end{DoxyCode}
+
+
+{\bfseries{fn}}\+: a transformation to apply to the active alternative. \begin{DoxyVerb}auto add_one = [](int x) { return x+1; };
+auto result = option(10).map(add_one);
+// the result type is deduced to be ml::movar::option<int>
+// the result value is 11
+\end{DoxyVerb}
+ If the variant has value {\bfseries{x}}, returns {\bfseries{fn}}( {\bfseries{x}} ) Otherwise, returns \mbox{\hyperlink{structml_1_1movar_1_1nothing}{ml\+::movar\+::nothing}}.\hypertarget{pipelines_pipelines-map_or}{}\doxysection{map\+\_\+or}\label{pipelines_pipelines-map_or}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{auto} map\_or(unary-\/invocable fn, move-\/constructible \textcolor{keywordflow}{default});}
+
+\end{DoxyCode}
+
+
+{\bfseries{fn}}\+: a transformation to apply to the active alternative.
+
+{\bfseries{default}}\+: a default value
+
+If the variant has value {\bfseries{x}}, returns {\bfseries{fn}}( {\bfseries{x}} ) Otherwise, returns {\bfseries{default}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{auto} add\_one = [](\textcolor{keywordtype}{int} x) \{ \textcolor{keywordflow}{return} x+1; \};}
+\DoxyCodeLine{\textcolor{keyword}{auto} result = option<int>().map\_or(add\_one, 42);}
+\DoxyCodeLine{\textcolor{comment}{// the result type is deduced to be ml::movar::just<int>}}
+\DoxyCodeLine{\textcolor{comment}{// the result value is 42}}
+
+\end{DoxyCode}
+\hypertarget{pipelines_pipelines-map_or_else}{}\doxysection{map\+\_\+or\+\_\+else}\label{pipelines_pipelines-map_or_else}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{auto} map\_or\_else(unary-\/invocable fn, invocable \textcolor{keywordflow}{default});}
+
+\end{DoxyCode}
+
+
+{\bfseries{fn}}\+: a transformation to apply to the active alternative.
+
+{\bfseries{default}}\+: a lazy default value
+
+If the variant has value {\bfseries{x}}, returns {\bfseries{fn}}( {\bfseries{x}} ) Otherwise, returns {\bfseries{defaut}}()
+
+This overload is similar to {\bfseries{map\+\_\+or}}, but the default value is computed lazily by invoking a function object.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{auto} add\_one = [](\textcolor{keywordtype}{int} x) \{ \textcolor{keywordflow}{return} x+1; \};}
+\DoxyCodeLine{\textcolor{keyword}{auto} lazy\_42 = []() \{ \textcolor{keywordflow}{return} 42; \};}
+\DoxyCodeLine{\textcolor{keyword}{auto} result = option<int>().map\_or\_else(add\_one, lazy\_42);}
+\DoxyCodeLine{\textcolor{comment}{// the result type is deduced to be ml::movar::just<int>}}
+\DoxyCodeLine{\textcolor{comment}{// the result value is 42}}
+
+\end{DoxyCode}
+\hypertarget{pipelines_pipelines-or_else}{}\doxysection{or\+\_\+else}\label{pipelines_pipelines-or_else}
+\begin{DoxyVerb}auto or_else(invocable default);
+\end{DoxyVerb}
+ {\bfseries{default}}\+: a lazy default value
+
+If the variant has a value {\bfseries{x}}, returns {\bfseries{x}} Otherwise, returns {\bfseries{default}}()
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{auto} lazy\_42 = []() \{ \textcolor{keywordflow}{return} 42; \};}
+\DoxyCodeLine{\textcolor{keyword}{auto} result = option<int>().or\_else(lazy\_42);}
+\DoxyCodeLine{\textcolor{comment}{// the result type is deduced to be ml::movar::just<int>}}
+\DoxyCodeLine{\textcolor{comment}{// the result value is 42}}
+
+\end{DoxyCode}
+\hypertarget{pipelines_pipelines-take}{}\doxysection{take}\label{pipelines_pipelines-take}
+\begin{DoxyVerb}auto take();
+\end{DoxyVerb}
+ This operation moves out the active variant alternative, leaving the variant in an undeterminate state.
+
+Use {\bfseries{take}} to transform a variant that can be empty (like \mbox{\hyperlink{structml_1_1movar_1_1option}{ml\+::movar\+::option}} or \mbox{\hyperlink{structml_1_1movar_1_1maybe}{ml\+::movar\+::maybe}}) to a variant that is never empty.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// result1 is deduced to ml::movar::just<int>}}
+\DoxyCodeLine{\textcolor{keyword}{auto} resul1 = option(10).take(); }
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// result2 is deduced to ml::movar::variant<int, double>}}
+\DoxyCodeLine{\textcolor{keyword}{auto} resul2 = maybe<int, double>(10.).take() }
+
+\end{DoxyCode}
+\hypertarget{pipelines_pipelines-match}{}\doxysection{match}\label{pipelines_pipelines-match}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{auto} match(unary-\/invocable fn);}
+
+\end{DoxyCode}
+
+
+{\bfseries{fn}}\+: a function object to invoke with the active alternative or \mbox{\hyperlink{structml_1_1movar_1_1nothing}{ml\+::movar\+::nothing}}
+
+{\bfseries{match}} invokes fn with the active alternative and returns the result.
+
+Unlike {\bfseries{map}}, {\bfseries{match}} requires {\bfseries{fn}} to handle the \mbox{\hyperlink{structml_1_1movar_1_1nothing}{ml\+::movar\+::nothing}} case. 

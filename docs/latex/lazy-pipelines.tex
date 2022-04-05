@@ -1,0 +1,64 @@
+\label{lazy-pipelines_md__home_malorubi_projects_tmp_movar_build_docs_lazy_pipelines}%
+\Hypertarget{lazy-pipelines_md__home_malorubi_projects_tmp_movar_build_docs_lazy_pipelines}%
+\hypertarget{lazy-pipelines_autotoc_md0}{}\doxysection{Examples}\label{lazy-pipelines_autotoc_md0}
+\hypertarget{lazy-pipelines_autotoc_md1}{}\doxysubsection{Sequence}\label{lazy-pipelines_autotoc_md1}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{using} \mbox{\hyperlink{structml_1_1movar_1_1sequence}{ml::movar::sequence}};}
+\DoxyCodeLine{\textcolor{keyword}{using} \mbox{\hyperlink{structml_1_1movar_1_1option}{ml::movar::option}};}
+\DoxyCodeLine{\textcolor{keyword}{using} \mbox{\hyperlink{structml_1_1movar_1_1nothing}{ml::movar::nothing}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{auto} add1 = [](\textcolor{keywordtype}{int} x) \{ \textcolor{keywordflow}{return} x+1; \};}
+\DoxyCodeLine{\textcolor{keyword}{auto} mul2 = [](\textcolor{keywordtype}{int} x) \{ \textcolor{keywordflow}{return} x*2; \};}
+\DoxyCodeLine{\textcolor{keyword}{auto} pipe = sequence() >> add1 >> mul2;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// deduced to option<int>}}
+\DoxyCodeLine{\textcolor{comment}{// value is 22}}
+\DoxyCodeLine{\textcolor{keyword}{auto} result1 = option(10).match(pipe);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// deduced to option<int>}}
+\DoxyCodeLine{\textcolor{comment}{// value is nothing}}
+\DoxyCodeLine{\textcolor{keyword}{auto} result2 = option<int>().match(pipe);}
+
+\end{DoxyCode}
+\hypertarget{lazy-pipelines_autotoc_md2}{}\doxysubsection{Filter and fork}\label{lazy-pipelines_autotoc_md2}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{using} \mbox{\hyperlink{structml_1_1movar_1_1sequence}{ml::movar::sequence}};}
+\DoxyCodeLine{\textcolor{keyword}{using} \mbox{\hyperlink{structml_1_1movar_1_1option}{ml::movar::option}};}
+\DoxyCodeLine{\textcolor{keyword}{using} \mbox{\hyperlink{structml_1_1movar_1_1filter}{ml::movar::filter}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{auto} add1 = [](\textcolor{keywordtype}{int} x) \{ \textcolor{keywordflow}{return} x+1; \};}
+\DoxyCodeLine{\textcolor{keyword}{auto} iszero = [] (\textcolor{keywordtype}{int} x) \{ \textcolor{keywordflow}{return} x == 0; \};}
+\DoxyCodeLine{\textcolor{keyword}{auto} pipe = (filter(iszero) >> add1)}
+\DoxyCodeLine{  | (sequence() >> add1 >> add1);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// deduced to option<int>}}
+\DoxyCodeLine{\textcolor{comment}{// result is 12 (enter the filter)}}
+\DoxyCodeLine{\textcolor{keyword}{auto} result1 = option(10).match(pipe);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// deduced to option<int>}}
+\DoxyCodeLine{\textcolor{comment}{// result is 1 (does not enter the filter)}}
+\DoxyCodeLine{\textcolor{keyword}{auto} result2 = option(1).match(pipe);}
+
+\end{DoxyCode}
+\hypertarget{lazy-pipelines_autotoc_md3}{}\doxysubsection{Filter type and fork}\label{lazy-pipelines_autotoc_md3}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{using} \mbox{\hyperlink{structml_1_1movar_1_1sequence}{ml::movar::sequence}};}
+\DoxyCodeLine{\textcolor{keyword}{using} \mbox{\hyperlink{structml_1_1movar_1_1option}{ml::movar::option}};}
+\DoxyCodeLine{\textcolor{keyword}{using} \mbox{\hyperlink{structml_1_1movar_1_1maybe}{ml::movar::maybe}};}
+\DoxyCodeLine{\textcolor{keyword}{using} \mbox{\hyperlink{structml_1_1movar_1_1filter__type}{ml::movar::filter\_type}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{auto} add1 = [](\textcolor{keywordtype}{int} x) \{ \textcolor{keywordflow}{return} x+1; \};}
+\DoxyCodeLine{\textcolor{keyword}{auto} pipe = (filter\_type<int>() >> add1)}
+\DoxyCodeLine{  | (filter\_type<double>() >> add1 >> add1);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{static\_assert}(option(10).match(pipe) == 11);}
+\DoxyCodeLine{\textcolor{keyword}{static\_assert}(option(10.).match(pipe) == 12);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{static\_assert} (maybe<int, double> (10).match (pipe) == 11);}
+\DoxyCodeLine{\textcolor{keyword}{static\_assert} (maybe<int, double> (10.0).match (pipe) == 12);}
+
+\end{DoxyCode}
+ 

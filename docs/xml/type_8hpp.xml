@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="type_8hpp" kind="file" language="C++">
+    <compoundname>type.hpp</compoundname>
+    <includes refid="either_8hpp" local="no">ml/movar/internal/type/either.hpp</includes>
+    <includes refid="just_8hpp" local="no">ml/movar/internal/type/just.hpp</includes>
+    <includes refid="maybe_8hpp" local="no">ml/movar/internal/type/maybe.hpp</includes>
+    <includes refid="nothing_8hpp" local="no">ml/movar/internal/type/nothing.hpp</includes>
+    <includes refid="option_8hpp" local="no">ml/movar/internal/type/option.hpp</includes>
+    <includes refid="variant_8hpp" local="no">ml/movar/internal/type/variant.hpp</includes>
+    <includedby refid="movar_8hpp" local="no">ml/movar/movar.hpp</includedby>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ml/movar/internal/type/type.hpp"/>
+  </compounddef>
+</doxygen>
